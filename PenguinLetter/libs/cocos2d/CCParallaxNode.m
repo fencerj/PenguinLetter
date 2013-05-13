@@ -158,4 +158,16 @@
 
 	[super visit];
 }
+
+-(void) incrementOffset:(CGPoint)offset forChild:(CCNode*)node
+{
+	for( unsigned int i=0;i < _parallaxArray->num;i++) {
+		CGPointObject *point = _parallaxArray->arr[i];
+		if( [[point child] isEqual:node] ) {
+			[point setOffset:ccpAdd([point offset], offset)];
+			break;
+		}
+	}
+}
+
 @end

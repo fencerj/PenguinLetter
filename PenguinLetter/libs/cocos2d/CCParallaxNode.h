@@ -46,5 +46,5 @@
  @since v0.8
  */
 -(void) addChild: (CCNode*)node z:(NSInteger)z parallaxRatio:(CGPoint)c positionOffset:(CGPoint)positionOffset;
-
+-(void) incrementOffset:(CGPoint)offset forChild:(CCNode*)node;
 @end
