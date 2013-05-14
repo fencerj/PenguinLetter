@@ -9,18 +9,27 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-typedef struct parallaxArr {
-    __unsafe_unretained CCArray *arr;
+@interface parallaxArr : NSObject
+{
+    CCArray *arr;
     int zOrder;
     BOOL isRandom;
-}parallaxArr;
+    float itemInterval;
+}
+@property (assign,nonatomic) int zOrder;
+@property (assign,nonatomic) BOOL isRandom;
+@property (assign,nonatomic) float itemInterval;
+@property (retain,nonatomic) CCArray *arr;
+@end
+
 
 
 @interface GameScene : CCLayer {
     float _purSpeed;    //追赶者速度
     float _sceneSpeed;  //场景移动速度
     float _deltaDis;    //间距
-    parallaxArr parArr[7];
+    parallaxArr *parArr[9];
+    CCParallaxNode *pNode;
 }
-
++(CCScene *) scene;
 @end

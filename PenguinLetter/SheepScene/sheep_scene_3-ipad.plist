@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>Z6SceneItem0_0</key>
+            <key>Z6SceneItem_0</key>
             <dict>
                 <key>frame</key>
                 <string>{{0,0},{992,206}}</string>
@@ -17,10 +17,10 @@
                 <key>sourceSize</key>
                 <string>{994,768}</string>
             </dict>
-            <key>Z6SceneItem0_1</key>
+            <key>Z6SceneItem_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,206},{863,178}}</string>
+                <string>{{992,0},{863,178}}</string>
                 <key>offset</key>
                 <string>{0,-165}</string>
                 <key>rotated</key>
@@ -30,32 +30,6 @@
                 <key>sourceSize</key>
                 <string>{863,768}</string>
             </dict>
-            <key>Z7SceneItem0_0</key>
-            <dict>
-                <key>frame</key>
-                <string>{{0,384},{239,125}}</string>
-                <key>offset</key>
-                <string>{-11,3}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{8,0},{239,125}}</string>
-                <key>sourceSize</key>
-                <string>{277,131}</string>
-            </dict>
-            <key>Z7SceneItem0_1</key>
-            <dict>
-                <key>frame</key>
-                <string>{{239,384},{271,69}}</string>
-                <key>offset</key>
-                <string>{3,-27}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{6,58},{271,69}}</string>
-                <key>sourceSize</key>
-                <string>{277,131}</string>
-            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -64,9 +38,9 @@
             <key>realTextureFileName</key>
             <string>sheep_scene_3-ipad.pvr.ccz</string>
             <key>size</key>
-            <string>{992,509}</string>
+            <string>{1855,206}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:5c0359bea3bfd22c36efc3e64a2e478a$</string>
+            <string>$TexturePacker:SmartUpdate:3da38522b11d57f1142b3551656c36b3$</string>
             <key>textureFileName</key>
             <string>sheep_scene_3-ipad.pvr.ccz</string>
         </dict>

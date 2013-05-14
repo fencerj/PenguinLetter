@@ -121,7 +121,7 @@
 	[sharedFileUtils setiPadRetinaDisplaySuffix:@"-ipadhd"];	// Default on iPad RetinaDisplay is "-ipadhd"
 	
 	// Assume that PVR images have premultiplied alpha
-	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
+	[CCTexture2D PVRImagesHavePremultipliedAlpha:NO];
 	
 	// Create a Navigation Controller with the Director
 	navController_ = [[MyNavigationController alloc] initWithRootViewController:director_];
