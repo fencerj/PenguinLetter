@@ -7,39 +7,39 @@
             <key>Z4SceneBg_0</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{2048,694}}</string>
+                <string>{{0,0},{2048,690}}</string>
                 <key>offset</key>
-                <string>{0,-180}</string>
+                <string>{0,-104}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,601},{2048,694}}</string>
+                <string>{{0,527},{2048,690}}</string>
                 <key>sourceSize</key>
                 <string>{2048,1536}</string>
             </dict>
             <key>Z4SceneBg_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,694},{2048,620}}</string>
+                <string>{{0,690},{2048,618}}</string>
                 <key>offset</key>
-                <string>{0,-223}</string>
+                <string>{0,-146}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,681},{2048,620}}</string>
+                <string>{{0,605},{2048,618}}</string>
                 <key>sourceSize</key>
                 <string>{2048,1536}</string>
             </dict>
             <key>Z4SceneBg_2</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,1314},{2042,606}}</string>
+                <string>{{0,1308},{2048,562}}</string>
                 <key>offset</key>
-                <string>{-3,-204}</string>
+                <string>{0,-148}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,669},{2042,606}}</string>
+                <string>{{0,635},{2048,562}}</string>
                 <key>sourceSize</key>
                 <string>{2048,1536}</string>
             </dict>
@@ -51,9 +51,9 @@
             <key>realTextureFileName</key>
             <string>sheep_scene_1-ipadhd.pvr.ccz</string>
             <key>size</key>
-            <string>{2048,1920}</string>
+            <string>{2048,1870}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:dab4050e96d36bca5c4c0b976a6e2b7c$</string>
+            <string>$TexturePacker:SmartUpdate:2e0abfa14a0a20fcd068d9cdd582dbcb$</string>
             <key>textureFileName</key>
             <string>sheep_scene_1-ipadhd.pvr.ccz</string>
         </dict>

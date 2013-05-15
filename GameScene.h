@@ -14,11 +14,18 @@
     CCArray *arr;
     int zOrder;
     BOOL isRandom;
-    float itemInterval;
+    float itemIntervalMin;
+    float itemIntervalMax;
+    
+    float showZoneYMin;
+    float showZoneYMax;
 }
 @property (assign,nonatomic) int zOrder;
 @property (assign,nonatomic) BOOL isRandom;
-@property (assign,nonatomic) float itemInterval;
+@property (assign,nonatomic) float itemIntervalMin;
+@property (assign,nonatomic) float itemIntervalMax;
+@property (assign,nonatomic) float showZoneYMin;
+@property (assign,nonatomic) float showZoneYMax;
 @property (retain,nonatomic) CCArray *arr;
 @end
 
