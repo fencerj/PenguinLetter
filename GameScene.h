@@ -19,9 +19,11 @@
     
     float showZoneYMin;
     float showZoneYMax;
+    CGPoint mostX;
 }
 @property (assign,nonatomic) int zOrder;
 @property (assign,nonatomic) BOOL isRandom;
+@property (assign,nonatomic) CGPoint mostX;
 @property (assign,nonatomic) float itemIntervalMin;
 @property (assign,nonatomic) float itemIntervalMax;
 @property (assign,nonatomic) float showZoneYMin;

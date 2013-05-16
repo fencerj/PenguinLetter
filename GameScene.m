@@ -31,6 +31,7 @@
 @synthesize showZoneYMax;
 @synthesize showZoneYMin;
 @synthesize arr;
+@synthesize mostX;
 @end
 
 @implementation GameScene
@@ -62,7 +63,6 @@
     NSInteger randVal = arc4random() % (toInt - fromInt + 1) + fromInt;
     return randVal;
 }
-
 - (double)createRandomsizeValueFloat:(double)fromFloat toFloat:(double)toFloat
 {
     if (toFloat < fromFloat)
@@ -83,189 +83,236 @@
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
         
-        
-        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sheep_scene_0.plist"];
-        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sheep_scene_1.plist"];
-        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sheep_scene_2.plist"];
-        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sheep_scene_3.plist"];
-        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sheep_scene_4.plist"];
-        
-        
-        
-        _purSpeed = -500;
-        CCSprite *bg = [CCSprite spriteWithFile:@"sheep_scene_bg.pvr.ccz"];             //z0
-        bg.anchorPoint = CGPointZero;
-        [self addChild:bg z:0];
-        
-        
-        pNode = [CCParallaxNode node];
-        [self addChild:pNode z:0];
-        
-        for (int i = 0; i < 9; i++) {
-            parArr[i] = [[parallaxArr alloc] init];
-        }
-
-        
-        
-        CCSprite *itemTmp;
-        float velVar;
-        int itemCount;
-        int zOrder;
-        int countInSt;
-        NSString *itemType;
-        int randomNums ;
-        int initPosX;
-        
-
-        //z1 setting
-        velVar = 0.1;
-        itemCount = 4;
-        zOrder = 1;
-        itemType = @"SceneItem_";
-        randomNums = 0;
-        countInSt = 4;
-        parArr[zOrder-1].zOrder = zOrder;
-        parArr[zOrder-1].isRandom = YES;
-        parArr[zOrder-1].itemIntervalMin = itemTmp.contentSize.width;
-        parArr[zOrder-1].itemIntervalMax = 800;
-        
-        
-        
-        for (int i = 0; i < countInSt; i++) {
-            randomNums = [self createRandomsizeValueInt:0 toInt:itemCount];
-            itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
-            [parArr[zOrder-1].arr addObject:itemTmp];
-            [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:
-             ccp((i+1)*itemTmp.contentSize.width/2 +(i+1)*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax] + CCRANDOM_MINUS1_1()*500,[self createRandomsizeValueFloat:503 toFloat:1024-itemTmp.contentSize.height/2]) ];
-        }
-        
-        
-        velVar = 0.2;
-        itemCount = 2;
-        zOrder = 2;
-        itemType = @"SceneItem_";
-        randomNums = 0;
-        countInSt = 2;
-        parArr[zOrder-1].zOrder = zOrder;
-        parArr[zOrder-1].isRandom = YES;
-        parArr[zOrder-1].itemIntervalMin = itemTmp.contentSize.width;
-        parArr[zOrder-1].itemIntervalMax = 800;
-        
-        for (int i = 0; i < itemCount; i++) {
-            itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,i]];
-            [parArr[zOrder-1].arr addObject:itemTmp];
-            [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:ccp(i*CCRANDOM_0_1()*600+200, CCRANDOM_0_1()*100+400)];
-            parArr[zOrder-1].zOrder = zOrder;
-            parArr[zOrder-1].isRandom = YES;
-            parArr[zOrder-1].itemInterval = CCRANDOM_0_1()*100+500;
-        }
-        
-        velVar = 0.3;
-        itemCount = 2;
-        zOrder = 3;
-        itemType = @"SceneItem_";
-        for (int i = 0; i < itemCount; i++) {
-            itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,i]];
-            [parArr[zOrder-1].arr addObject:itemTmp];
-            [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:ccp(i*CCRANDOM_0_1()*400+200, CCRANDOM_0_1()*300+500)];
-            parArr[zOrder-1].zOrder = zOrder;
-            parArr[zOrder-1].isRandom = YES;
-            parArr[zOrder-1].itemInterval = CCRANDOM_0_1()*100+200;
-        }
-        
-        velVar = 0.3;
-        itemCount = 3;
-        zOrder = 4;
-        itemType = @"SceneBg_";
-        for (int i = 0; i < itemCount; i++) {
-            itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,i]];
-            [parArr[zOrder-1].arr addObject:itemTmp];
-            [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:ccp(512+(i)*1024, 384)];
-            parArr[zOrder-1].zOrder = zOrder;
-            parArr[zOrder-1].isRandom = NO;
-            parArr[zOrder-1].itemInterval = 1024*itemCount;
-        }
-        
-        
-        velVar = 0.4;
-        itemCount = 3;
-        zOrder = 5;
-        itemType = @"SceneBg_";
-        for (int i = 0; i < itemCount; i++) {
-            itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,i]];
-            [parArr[zOrder-1].arr addObject:itemTmp];
-            [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:ccp(512+(i)*1024, 384)];
-            parArr[zOrder-1].zOrder = zOrder;
-            parArr[zOrder-1].isRandom = NO;
-            parArr[zOrder-1].itemInterval = 1024*itemCount;
-        }
-        
-        velVar = 0.6;
-        itemCount = 2;
-        zOrder = 6;
-        itemType = @"SceneItem_";
-        for (int i = 0; i < itemCount; i++) {
-            itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,i]];
-            [parArr[zOrder-1].arr addObject:itemTmp];
-            [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:ccp(i*1024+500, 384)];
-            parArr[zOrder-1].zOrder = zOrder;
-            parArr[zOrder-1].isRandom = YES;
-            parArr[zOrder-1].itemInterval = 400;
-
-        }
-        
-        velVar = 1;
-        itemCount = 2;
-        zOrder = 7;
-        itemType = @"SceneBg_";
-        for (int i = 0; i < itemCount; i++) {
-            itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,i]];
-            [parArr[zOrder-1].arr addObject:itemTmp];
-            [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:ccp(512+(i)*1024, 384)];
-            parArr[zOrder-1].zOrder = zOrder;
-            parArr[zOrder-1].isRandom = NO;
-            parArr[zOrder-1].itemInterval = 1024*itemCount;
-
-            
-        }
-        
-        velVar = 1;
-        itemCount = 2;
-        zOrder = 8;
-        itemType = @"SceneItem_";
-        for (int i = 0; i < itemCount; i++) {
-            itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,i]];
-            [parArr[zOrder-1].arr addObject:itemTmp];
-            [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:ccp(i*CCRANDOM_0_1()*600+200, 109)];
-            parArr[zOrder-1].zOrder = zOrder;
-            parArr[zOrder-1].isRandom = YES;
-            parArr[zOrder-1].itemInterval = 1440+CCRANDOM_MINUS1_1()*100;
-        }
-        
-        velVar = 1;
-        itemCount = 1;
-        zOrder = 9;
-        itemType = @"SceneItem_";
-        for (int i = 0; i < itemCount; i++) {
-            itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,i]];
-            [parArr[zOrder-1].arr addObject:itemTmp];
-            [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:ccp(i*CCRANDOM_0_1()*600+200, itemTmp.contentSize.height/2-10)];
-            parArr[zOrder-1].zOrder = zOrder;
-            parArr[zOrder-1].isRandom = YES;
-            parArr[zOrder-1].itemInterval = CCRANDOM_0_1()*300+300;
-        }
-        
-             
-        [self scheduleUpdate];
-        //[pNode runAction:[CCMoveBy actionWithDuration:20 position:ccp(-2000, 0)]];
-        
-       
-        //[pNode addChild:Z1Item0 z:1 parallaxRatio:0.1 positionOffset:60];
-        
-        //CCMenuItemLabel *item1 = [CCMenuItemLabel itemWithLabel:@""];
-        
+        [self initBg];
 	}
 	return self;
+}
+
+-(void)initBg
+{
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sheep_scene_0.plist"];
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sheep_scene_1.plist"];
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sheep_scene_2.plist"];
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sheep_scene_3.plist"];
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sheep_scene_4.plist"];
+    
+    _purSpeed = -500;
+    CCSprite *bg = [CCSprite spriteWithFile:@"sheep_scene_bg.pvr.ccz"];//z0
+    bg.anchorPoint = CGPointZero;
+    [self addChild:bg z:0];
+    
+    
+    pNode = [CCParallaxNode node];
+    [self addChild:pNode z:0];
+    
+    for (int i = 0; i < 9; i++) {
+        parArr[i] = [[parallaxArr alloc] init];
+    }
+    
+    CCSprite *itemTmp;
+    float velVar;
+    int itemCount;
+    int zOrder;
+    int countInSt;
+    NSString *itemType;
+    int randomNums ;
+    int initPosX;
+        
+    //z1 setting
+    velVar = 0.02;
+    itemCount = 4;
+    zOrder = 1;
+    itemType = @"SceneItem_";
+    randomNums = 0;
+    countInSt = 6;
+    parArr[zOrder-1].zOrder = zOrder;
+    parArr[zOrder-1].isRandom = YES;
+    parArr[zOrder-1].itemIntervalMin = 300;
+    parArr[zOrder-1].itemIntervalMax = 800;
+    parArr[zOrder-1].showZoneYMin = 503;
+    parArr[zOrder-1].showZoneYMax = 767;
+    
+    
+    for (int i = 0; i < countInSt; i++) {
+        randomNums = [self createRandomsizeValueInt:0 toInt:itemCount-1];
+        
+        itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
+        [parArr[zOrder-1].arr addObject:itemTmp];
+        [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:
+         ccp((i+1)*itemTmp.contentSize.width/2 +i*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax],[self createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
+        if (i == countInSt-1) {
+            
+            parArr[zOrder-1].mostX = itemTmp.position;
+            
+        }
+    }
+    
+    
+    velVar = 0.08;
+    itemCount = 2;
+    zOrder = 2;
+    itemType = @"SceneItem_";
+    randomNums = 0;
+    countInSt = 7;
+    parArr[zOrder-1].zOrder = zOrder;
+    parArr[zOrder-1].isRandom = YES;
+    parArr[zOrder-1].itemIntervalMin = 350;
+    parArr[zOrder-1].itemIntervalMax = 800;
+    parArr[zOrder-1].showZoneYMin = 520;
+    parArr[zOrder-1].showZoneYMax = 645;
+    
+    for (int i = 0; i < countInSt; i++) {
+        randomNums = [self createRandomsizeValueInt:0 toInt:itemCount-1];
+        itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
+        [parArr[zOrder-1].arr addObject:itemTmp];
+        [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:
+         ccp((i+1)*itemTmp.contentSize.width/2 +i*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax],[self createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
+        if (i == countInSt-1) {
+            parArr[zOrder-1].mostX = itemTmp.position;
+            
+        }
+    }
+    
+    velVar = 0.15;
+    itemCount = 2;
+    zOrder = 3;
+    itemType = @"SceneItem_";
+    countInSt = 6;
+    parArr[zOrder-1].zOrder = zOrder;
+    parArr[zOrder-1].isRandom = YES;
+    parArr[zOrder-1].itemIntervalMin = 400;
+    parArr[zOrder-1].itemIntervalMax = 800;
+    parArr[zOrder-1].showZoneYMin = 370;
+    parArr[zOrder-1].showZoneYMax = 638;
+    
+    for (int i = 0; i < countInSt; i++) {
+        randomNums = [self createRandomsizeValueInt:0 toInt:itemCount-1];
+        itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
+        [parArr[zOrder-1].arr addObject:itemTmp];
+        [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:
+         ccp((i+1)*itemTmp.contentSize.width/2 +i*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax],[self createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
+        if (i == countInSt-1) {
+            
+            parArr[zOrder-1].mostX = itemTmp.position;
+            
+        }
+    }
+    
+    velVar = 0.25;
+    itemCount = 3;
+    zOrder = 4;
+    itemType = @"SceneBg_";
+    countInSt = 3;
+    parArr[zOrder-1].zOrder = zOrder;
+    parArr[zOrder-1].isRandom = NO;
+    for (int i = 0; i < itemCount; i++) {
+        itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,i]];
+        [parArr[zOrder-1].arr addObject:itemTmp];
+        [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:ccp(512+(i)*1024, 384)];
+        //parArr[zOrder-1].itemInterval = 1024*itemCount;
+    }
+    
+    
+    velVar = 0.4;
+    itemCount = 3;
+    zOrder = 5;
+    itemType = @"SceneBg_";
+    countInSt = 4;
+    for (int i = 0; i < itemCount; i++) {
+        itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,i]];
+        [parArr[zOrder-1].arr addObject:itemTmp];
+        [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:ccp(512+(i)*1024, 384)];
+    }
+    
+    velVar = 0.6;
+    itemCount = 2;
+    zOrder = 6;
+    itemType = @"SceneItem_";
+    countInSt = 3;
+    parArr[zOrder-1].zOrder = zOrder;
+    parArr[zOrder-1].isRandom = YES;
+    parArr[zOrder-1].itemIntervalMin = 994;
+    parArr[zOrder-1].itemIntervalMax = 994;
+    parArr[zOrder-1].showZoneYMin = 384;
+    parArr[zOrder-1].showZoneYMax = 384;
+    
+    for (int i = 0; i < countInSt; i++) {
+        randomNums = [self createRandomsizeValueInt:0 toInt:itemCount-1];
+        itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
+        [parArr[zOrder-1].arr addObject:itemTmp];
+        [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:
+         ccp((i+1)*itemTmp.contentSize.width/2 +i*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax],[self createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
+        if (i == countInSt-1) {
+            
+            parArr[zOrder-1].mostX = itemTmp.position;
+            
+        }
+    }
+    
+    velVar = 1;
+    itemCount = 2;
+    zOrder = 7;
+    itemType = @"SceneBg_";
+    for (int i = 0; i < itemCount; i++) {
+        itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,i]];
+        [parArr[zOrder-1].arr addObject:itemTmp];
+        [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:ccp(512+(i)*1024, 384)];
+    }
+    
+    velVar = 1;
+    itemCount = 2;
+    zOrder = 8;
+    itemType = @"SceneItem_";
+    countInSt = 4;
+    parArr[zOrder-1].zOrder = zOrder;
+    parArr[zOrder-1].isRandom = YES;
+    parArr[zOrder-1].itemIntervalMin = 400;
+    parArr[zOrder-1].itemIntervalMax = 600;
+    parArr[zOrder-1].showZoneYMin = 117;
+    parArr[zOrder-1].showZoneYMax = 117;
+    
+    for (int i = 0; i < countInSt; i++) {
+        randomNums = [self createRandomsizeValueInt:0 toInt:itemCount-1];
+        itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
+        [parArr[zOrder-1].arr addObject:itemTmp];
+        [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:
+         ccp((i+1)*itemTmp.contentSize.width/2 +i*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax],[self createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
+        if (i == countInSt-1) {
+            
+            parArr[zOrder-1].mostX = itemTmp.position;
+            
+        }
+    }
+    
+    
+    velVar = 2;
+    itemCount = 1;
+    zOrder = 9;
+    itemType = @"SceneItem_";
+    countInSt = 3;
+    parArr[zOrder-1].zOrder = zOrder;
+    parArr[zOrder-1].isRandom = YES;
+    parArr[zOrder-1].itemIntervalMin = 1024;
+    parArr[zOrder-1].itemIntervalMax = 3000;
+    parArr[zOrder-1].showZoneYMin = 110;
+    parArr[zOrder-1].showZoneYMax = 110;
+    
+    for (int i = 0; i < countInSt; i++) {
+        randomNums = [self createRandomsizeValueInt:0 toInt:itemCount-1];
+        itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
+        [parArr[zOrder-1].arr addObject:itemTmp];
+        [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:
+         ccp((i+1)*itemTmp.contentSize.width/2 +i*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax],[self createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
+        if (i == countInSt-1) {
+            
+            parArr[zOrder-1].mostX = itemTmp.position;
+            
+        }
+    }
+    
+    
+    [self scheduleUpdate];
+
 }
 - (void)update:(ccTime)delta
 {
@@ -273,21 +320,35 @@
     pNode.position = ccpAdd(pNode.position, ccpMult(ccp(_purSpeed, 0), delta));
     for (int i = 0 ; i < 9; i++) {
         par = parArr[i];
-        if (par.isRandom == NO) {
-            CCSprite *tmpSp;
-            CCARRAY_FOREACH(par.arr, tmpSp)
-            {
-                CCSprite *back = (CCSprite*)tmpSp;
-                float  curX = [pNode convertToWorldSpace:back.position].x ;
+       
+        CCSprite *tmpSp;
+        CCARRAY_FOREACH(par.arr, tmpSp)
+        {
+            CCSprite *back = (CCSprite*)tmpSp;
+            float  curX = [pNode convertToWorldSpace:back.position].x ;
+            
+            //float  deltaX = curX + back.contentSize.width/2;
+            if (curX< -back.contentSize.width/2-5) {
                 
-                //float  deltaX = curX + back.contentSize.width/2;
-                if (curX< -back.contentSize.width/2-5) {
-                    CCLOG(@"curX = change%f",par.itemInterval);
-                    [pNode incrementOffset:ccp(par.itemInterval,0) forChild:back];
+                
+                
+                if (par.isRandom == NO) {
+                    
+                    //CCLOG(@"curX = change%f",par.itemInterval);
+                    [pNode incrementOffset:ccp(back.contentSize.width* [par.arr count] ,0) forChild:back];
+                }
+                else
+                {
+                    //CCSprite *lastItem = [par.arr lastObject];
+                    //CCLOG(@"curX = change%f",par.itemInterval);
+                    [pNode incrementOffset:ccp( [par.arr count]*par.itemIntervalMax ,0) forChild:back];
+
                 }
                 
             }
+            
         }
+        
     }
 
 }

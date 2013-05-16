@@ -33,20 +33,20 @@
             <key>Z8SceneItem_0</key>
             <dict>
                 <key>frame</key>
-                <string>{{773,1288},{508,261}}</string>
+                <string>{{773,1288},{508,255}}</string>
                 <key>offset</key>
-                <string>{-23,0}</string>
+                <string>{-23,-3}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{508,261}}</string>
+                <string>{{0,6},{508,255}}</string>
                 <key>sourceSize</key>
                 <string>{554,261}</string>
             </dict>
             <key>Z8SceneItem_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{773,1549},{540,135}}</string>
+                <string>{{773,1543},{540,135}}</string>
                 <key>offset</key>
                 <string>{7,-54}</string>
                 <key>rotated</key>
@@ -79,7 +79,7 @@
             <key>size</key>
             <string>{2048,1792}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:b69938a3385fdfa12572d2ecd4ef5d97$</string>
+            <string>$TexturePacker:SmartUpdate:40c66f080b508db82cd80dedbdcd77e6$</string>
             <key>textureFileName</key>
             <string>sheep_scene_4-ipadhd.pvr.ccz</string>
         </dict>
