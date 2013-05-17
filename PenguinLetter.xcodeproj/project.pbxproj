@@ -30,6 +30,15 @@
 		2C1D55191740EC09006A31A6 /* sheep_scene_3-ipad.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2C1D55151740EC09006A31A6 /* sheep_scene_3-ipad.pvr.ccz */; };
 		2C1D551A1740EC09006A31A6 /* sheep_scene_3-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C1D55161740EC09006A31A6 /* sheep_scene_3-ipadhd.plist */; };
 		2C1D551B1740EC09006A31A6 /* sheep_scene_3-ipadhd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2C1D55171740EC09006A31A6 /* sheep_scene_3-ipadhd.pvr.ccz */; };
+		2CA3687A174612FC007B9C95 /* mask80.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA36879174612FC007B9C95 /* mask80.png */; };
+		2CA3687C1746150B007B9C95 /* sheep.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3687B1746150B007B9C95 /* sheep.png */; };
+		2CA3687F17461768007B9C95 /* MaskedSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3687E17461768007B9C95 /* MaskedSprite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2CA3688117461770007B9C95 /* Shaders in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3688017461770007B9C95 /* Shaders */; };
+		2CA36883174618E8007B9C95 /* Mask.frag in Sources */ = {isa = PBXBuildFile; fileRef = 2CA36882174618E8007B9C95 /* Mask.frag */; };
+		2CA3688417462121007B9C95 /* Mask.frag in Resources */ = {isa = PBXBuildFile; fileRef = 2CA36882174618E8007B9C95 /* Mask.frag */; };
+		2CA3688E174621FB007B9C95 /* mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3688B174621FB007B9C95 /* mask.png */; };
+		2CA3688F174621FB007B9C95 /* mask40.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3688C174621FB007B9C95 /* mask40.png */; };
+		2CA36890174621FB007B9C95 /* mask20.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3688D174621FB007B9C95 /* mask20.png */; };
 		2CC67B06173B4E9600A12452 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC67B05173B4E9600A12452 /* QuartzCore.framework */; };
 		2CC67B08173B4E9600A12452 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC67B07173B4E9600A12452 /* OpenGLES.framework */; };
 		2CC67B0A173B4E9600A12452 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC67B09173B4E9600A12452 /* OpenAL.framework */; };
@@ -163,6 +172,7 @@
 		2CC67CA9173B4E9800A12452 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC67CA8173B4E9800A12452 /* AppDelegate.m */; };
 		2CC67CAC173B4E9900A12452 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC67CAB173B4E9900A12452 /* HelloWorldLayer.m */; };
 		2CC67CAF173B4E9900A12452 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC67CAE173B4E9900A12452 /* IntroLayer.m */; };
+		2CE259891744CDB000796DBF /* QuestionDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE259881744CDB000796DBF /* QuestionDB.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -190,6 +200,15 @@
 		2C1D55151740EC09006A31A6 /* sheep_scene_3-ipad.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sheep_scene_3-ipad.pvr.ccz"; sourceTree = "<group>"; };
 		2C1D55161740EC09006A31A6 /* sheep_scene_3-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "sheep_scene_3-ipadhd.plist"; sourceTree = "<group>"; };
 		2C1D55171740EC09006A31A6 /* sheep_scene_3-ipadhd.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sheep_scene_3-ipadhd.pvr.ccz"; sourceTree = "<group>"; };
+		2CA36879174612FC007B9C95 /* mask80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask80.png; sourceTree = "<group>"; };
+		2CA3687B1746150B007B9C95 /* sheep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sheep.png; sourceTree = "<group>"; };
+		2CA3687D17461768007B9C95 /* MaskedSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskedSprite.h; sourceTree = "<group>"; };
+		2CA3687E17461768007B9C95 /* MaskedSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskedSprite.m; sourceTree = "<group>"; };
+		2CA3688017461770007B9C95 /* Shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shaders; sourceTree = "<group>"; };
+		2CA36882174618E8007B9C95 /* Mask.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Mask.frag; sourceTree = "<group>"; };
+		2CA3688B174621FB007B9C95 /* mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask.png; sourceTree = "<group>"; };
+		2CA3688C174621FB007B9C95 /* mask40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask40.png; sourceTree = "<group>"; };
+		2CA3688D174621FB007B9C95 /* mask20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask20.png; sourceTree = "<group>"; };
 		2CC67B02173B4E9600A12452 /* PenguinLetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenguinLetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC67B05173B4E9600A12452 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2CC67B07173B4E9600A12452 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -469,6 +488,8 @@
 		2CC67CAB173B4E9900A12452 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		2CC67CAD173B4E9900A12452 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		2CC67CAE173B4E9900A12452 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		2CE259871744CDB000796DBF /* QuestionDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDB.h; sourceTree = SOURCE_ROOT; };
+		2CE259881744CDB000796DBF /* QuestionDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDB.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -495,6 +516,12 @@
 		2C7D7787173CE3900031834B /* SheepScene */ = {
 			isa = PBXGroup;
 			children = (
+				2CA36882174618E8007B9C95 /* Mask.frag */,
+				2CA3687B1746150B007B9C95 /* sheep.png */,
+				2CA3688B174621FB007B9C95 /* mask.png */,
+				2CA3688C174621FB007B9C95 /* mask40.png */,
+				2CA3688D174621FB007B9C95 /* mask20.png */,
+				2CA36879174612FC007B9C95 /* mask80.png */,
 				2C1D55081740EB62006A31A6 /* sheep_scene_bg-ipad.pvr.ccz */,
 				2C1D55091740EB62006A31A6 /* sheep_scene_bg-ipadhd.pvr.ccz */,
 				2C1D54ED1740E991006A31A6 /* sheep_scene_0-ipad.plist */,
@@ -558,6 +585,10 @@
 		2CC67B19173B4E9600A12452 /* PenguinLetter */ = {
 			isa = PBXGroup;
 			children = (
+				2CA3687D17461768007B9C95 /* MaskedSprite.h */,
+				2CA3687E17461768007B9C95 /* MaskedSprite.m */,
+				2CE259871744CDB000796DBF /* QuestionDB.h */,
+				2CE259881744CDB000796DBF /* QuestionDB.m */,
 				2C1D55051740EA26006A31A6 /* GameScene.h */,
 				2C1D55061740EA26006A31A6 /* GameScene.m */,
 				2CC67CA7173B4E9800A12452 /* AppDelegate.h */,
@@ -576,6 +607,7 @@
 		2CC67B1A173B4E9600A12452 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2CA3688017461770007B9C95 /* Shaders */,
 				2C7D7787173CE3900031834B /* SheepScene */,
 				2CC67B1B173B4E9600A12452 /* Default.png */,
 				2CC67B1D173B4E9600A12452 /* Default@2x.png */,
@@ -1038,6 +1070,13 @@
 				2C1D55191740EC09006A31A6 /* sheep_scene_3-ipad.pvr.ccz in Resources */,
 				2C1D551A1740EC09006A31A6 /* sheep_scene_3-ipadhd.plist in Resources */,
 				2C1D551B1740EC09006A31A6 /* sheep_scene_3-ipadhd.pvr.ccz in Resources */,
+				2CA3687A174612FC007B9C95 /* mask80.png in Resources */,
+				2CA3687C1746150B007B9C95 /* sheep.png in Resources */,
+				2CA3688417462121007B9C95 /* Mask.frag in Resources */,
+				2CA3688117461770007B9C95 /* Shaders in Resources */,
+				2CA3688E174621FB007B9C95 /* mask.png in Resources */,
+				2CA3688F174621FB007B9C95 /* mask40.png in Resources */,
+				2CA36890174621FB007B9C95 /* mask20.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1160,6 +1199,9 @@
 				2CC67CAC173B4E9900A12452 /* HelloWorldLayer.m in Sources */,
 				2CC67CAF173B4E9900A12452 /* IntroLayer.m in Sources */,
 				2C1D55071740EA26006A31A6 /* GameScene.m in Sources */,
+				2CE259891744CDB000796DBF /* QuestionDB.m in Sources */,
+				2CA3687F17461768007B9C95 /* MaskedSprite.m in Sources */,
+				2CA36883174618E8007B9C95 /* Mask.frag in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

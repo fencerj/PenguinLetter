@@ -7,6 +7,7 @@
 //
 
 #import "GameScene.h"
+#import "MaskedSprite.h"
 #define Z1ItemTag = 100
 #define Z2ItemTag = 200
 #define Z3ItemTag = 300
@@ -84,10 +85,10 @@
 	if( (self=[super init]) ) {
         
         [self initBg];
+        [self initRole];
 	}
 	return self;
 }
-
 -(void)initBg
 {
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sheep_scene_0.plist"];
@@ -141,9 +142,7 @@
         [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:
          ccp((i+1)*itemTmp.contentSize.width/2 +i*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax],[self createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
         if (i == countInSt-1) {
-            
             parArr[zOrder-1].mostX = itemTmp.position;
-            
         }
     }
     
@@ -169,9 +168,9 @@
          ccp((i+1)*itemTmp.contentSize.width/2 +i*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax],[self createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
         if (i == countInSt-1) {
             parArr[zOrder-1].mostX = itemTmp.position;
-            
         }
     }
+    
     
     velVar = 0.15;
     itemCount = 2;
@@ -278,9 +277,7 @@
         [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:
          ccp((i+1)*itemTmp.contentSize.width/2 +i*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax],[self createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
         if (i == countInSt-1) {
-            
             parArr[zOrder-1].mostX = itemTmp.position;
-            
         }
     }
     
@@ -313,6 +310,13 @@
     
     [self scheduleUpdate];
 
+}
+-(void)initRole
+{
+    MaskedSprite *sheep = [MaskedSprite spriteWithFile:@"sheep.png"];
+    [self addChild:sheep z:3];
+    sheep.position = ccp(512,384);
+    
 }
 - (void)update:(ccTime)delta
 {
