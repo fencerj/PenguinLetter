@@ -7,7 +7,7 @@
             <key>Z5SceneBg_0</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,330},{1024,316}}</string>
+                <string>{{0,331},{1024,316}}</string>
                 <key>offset</key>
                 <string>{0,-96}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>Z5SceneBg_2</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,646},{1024,294}}</string>
+                <string>{{0,648},{1024,294}}</string>
                 <key>offset</key>
                 <string>{0,-107}</string>
                 <key>rotated</key>
@@ -51,9 +51,9 @@
             <key>realTextureFileName</key>
             <string>sheep_scene_2-ipad.pvr.ccz</string>
             <key>size</key>
-            <string>{1024,940}</string>
+            <string>{1024,942}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:bfb6d93f818ecb127099af448d52b4c4$</string>
+            <string>$TexturePacker:SmartUpdate:d2c2646f6c6f39e5a13c3af54cc58acd$</string>
             <key>textureFileName</key>
             <string>sheep_scene_2-ipad.pvr.ccz</string>
         </dict>

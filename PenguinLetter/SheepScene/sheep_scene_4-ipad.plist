@@ -7,7 +7,7 @@
             <key>Z7SceneBg_0</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,316},{1024,316}}</string>
+                <string>{{0,318},{1024,316}}</string>
                 <key>offset</key>
                 <string>{0,-226}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>Z8SceneItem_0</key>
             <dict>
                 <key>frame</key>
-                <string>{{387,632},{239,121}}</string>
+                <string>{{389,636},{239,121}}</string>
                 <key>offset</key>
                 <string>{-11,2}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>Z8SceneItem_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{387,753},{271,69}}</string>
+                <string>{{389,759},{271,69}}</string>
                 <key>offset</key>
                 <string>{3,-27}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>Z9SceneItem_0</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,632},{387,252}}</string>
+                <string>{{0,636},{387,252}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -77,9 +77,9 @@
             <key>realTextureFileName</key>
             <string>sheep_scene_4-ipad.pvr.ccz</string>
             <key>size</key>
-            <string>{1024,884}</string>
+            <string>{1024,888}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:41c7b5b15b88b5fc9a6b0c77d54a68c5$</string>
+            <string>$TexturePacker:SmartUpdate:62916319d3012bf6ca7b0702d6c1f31d$</string>
             <key>textureFileName</key>
             <string>sheep_scene_4-ipad.pvr.ccz</string>
         </dict>

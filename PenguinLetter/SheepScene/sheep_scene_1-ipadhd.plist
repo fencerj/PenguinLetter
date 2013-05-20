@@ -20,7 +20,7 @@
             <key>Z4SceneBg_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,690},{2048,618}}</string>
+                <string>{{0,691},{2048,618}}</string>
                 <key>offset</key>
                 <string>{0,-146}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>Z4SceneBg_2</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,1308},{2048,562}}</string>
+                <string>{{0,1310},{2048,562}}</string>
                 <key>offset</key>
                 <string>{0,-148}</string>
                 <key>rotated</key>
@@ -51,9 +51,9 @@
             <key>realTextureFileName</key>
             <string>sheep_scene_1-ipadhd.pvr.ccz</string>
             <key>size</key>
-            <string>{2048,1870}</string>
+            <string>{2048,1872}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:2e0abfa14a0a20fcd068d9cdd582dbcb$</string>
+            <string>$TexturePacker:SmartUpdate:8d3cecfffccabfa642bc857dc000bcfc$</string>
             <key>textureFileName</key>
             <string>sheep_scene_1-ipadhd.pvr.ccz</string>
         </dict>

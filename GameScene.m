@@ -286,7 +286,7 @@
     itemCount = 1;
     zOrder = 9;
     itemType = @"SceneItem_";
-    countInSt = 3;
+    countInSt = 1;
     parArr[zOrder-1].zOrder = zOrder;
     parArr[zOrder-1].isRandom = YES;
     parArr[zOrder-1].itemIntervalMin = 1024;
@@ -306,22 +306,264 @@
             
         }
     }
-    
-    
     [self scheduleUpdate];
 
 }
 -(void)initRole
 {
-    MaskedSprite *sheep = [MaskedSprite spriteWithFile:@"sheep.png"];
-    [self addChild:sheep z:3];
-    sheep.position = ccp(512,384);
+    arr_catcher = [NSMutableArray arrayWithCapacity:20];
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"s_role_ani.plist"];
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"s_catcher_ani.plist"];
+   
+    //NSMutableArray *aniFrames = [NSMutableArray array];
+    
+#pragma catcher init
+    NSMutableArray *animFrames = [NSMutableArray array];
+    for(int i = 2; i <= 5; i++) {
+        
+        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_catcher_run_%d",i]];
+        [animFrames addObject:frame];
+    }
+    CCAnimation *animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.09f];
+    
+    // Add an animation to the Cache
+    [[CCAnimationCache sharedAnimationCache] addAnimation:animation name:@"catcher_run"];
+    animation.restoreOriginalFrame = YES;
+    [animFrames removeAllObjects];
+    
+    for(int i = 2; i <= 5; i++) {
+        
+        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_catcher_run_back_%d",i]];
+        [animFrames addObject:frame];
+    }
+    
+    animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1f];
+    animation.restoreOriginalFrame = YES;
+    // Add an animation to the Cache
+    [[CCAnimationCache sharedAnimationCache] addAnimation:animation name:@"catcher_run_back"];
+    [animFrames removeAllObjects];
+    
+    
+    for(int i = 2; i <= 8; i++) {
+        
+        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_catcher_jump_%d",i]];
+        [animFrames addObject:frame];
+    }
+    
+    animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1f];
+    animation.restoreOriginalFrame = YES;
+    // Add an animation to the Cache
+    [[CCAnimationCache sharedAnimationCache] addAnimation:animation name:@"catcher_jump"];
+    [animFrames removeAllObjects];
+    
+    
+    for(int i = 2; i <= 8; i++) {
+        
+        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_catcher_jump_back_%d",i]];
+        [animFrames addObject:frame];
+    }
+    
+    animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1f];
+    animation.restoreOriginalFrame = YES;
+    // Add an animation to the Cache
+    [[CCAnimationCache sharedAnimationCache] addAnimation:animation name:@"catcher_jump_back"];
+    [animFrames removeAllObjects];
+    
+    CCAnimationCache *aniCache = [CCAnimationCache sharedAnimationCache];
+    for (int i = 0 ; i < 11; i++) {
+        CCSprite *catcher ;
+        if (i<4){
+            animation = [aniCache animationByName:@"catcher_run_back"];
+            catcher = [CCSprite spriteWithSpriteFrameName:@"s_catcher_run_back_1"];
+            catcher.userData = 1;
+        }
+        else
+        {
+            animation = [aniCache animationByName:@"catcher_run"];
+            catcher = [CCSprite spriteWithSpriteFrameName:@"s_catcher_run_1"];
+            catcher.userData = 0;
+        }
+           
+        //CCAnimation *animation = [CCAnimation animationWithSpriteFrames:aniFrames delay:0.2f];
+        CCAnimate *ani = [CCAnimate actionWithAnimation:animation];
+        CCAction * a = [CCRepeatForever actionWithAction:ani];
+        
+        [ani setTag:100];
+        [self runAction:[CCSequence actions:[CCDelayTime actionWithDuration:[self createRandomsizeValueFloat:0.05 toFloat:0.3]],[CCCallBlock actionWithBlock:^{
+            [catcher runAction:a];
+        }], nil]];
+        //[self addChild:catcher z:3];
+        //[animation set]
+        [self addChild:catcher z:8 ];
+        //catcher.position = ccp([self createRandomsizeValueFloat:48 toFloat:430],[self createRandomsizeValueFloat:132 toFloat:241]);
+        [arr_catcher addObject:catcher];
+        switch (i) {
+            case 0:
+                catcher.position = ccp(115,256);
+                break;
+            case 1:
+                catcher.position = ccp(285,262);
+                break;
+            case 2:
+                catcher.position = ccp(394,254);
+                break;
+            case 3:
+                catcher.position = ccp(502.6,247.6);
+                break;
+            case 4:
+                catcher.position = ccp(359,200);
+                break;
+            case 5:
+                catcher.position = ccp(631,222);
+                break;
+            case 6:
+                catcher.position = ccp(542,197.8);
+                break;
+            case 7:
+                catcher.position = ccp(474,166);
+                break;
+            case 8:
+                catcher.position = ccp(207,216);
+                break;
+            case 9:
+                catcher.position = ccp(82.4,176.4);
+                break;
+            case 10:
+                catcher.position = ccp(250,162);
+                break;
+            
+        }
+    }
+    
+    
+    CCMenuItemFont *item1 = [CCMenuItemFont itemWithString:@"+" block:^(id sender){_purSpeed -=100;}];
+    CCMenuItemFont *item2 = [CCMenuItemFont itemWithString:@"-" block:^(id sender){_purSpeed +=100;}];
+    item1.fontSize = 60;
+    item2.fontSize = 60;
+    item1.position = ccp(50,720);
+    item2.position = ccp(100,720);
+    
+    CCMenu *menu = [CCMenu menuWithItems:item1,item2, nil];
+    [self addChild:menu z:4];
+    menu.position=CGPointZero;
+    
+    
+    
+    //CCSprite *spr = (CCSprite*)[arr_catcher objectAtIndex:0];
+    //[pNode set]
+    //[spr runAction:[CCMoveBy actionWithDuration:10 position:CGPointMake(5000, 0)]];
+    
+    
+    
+#pragma role init
+    
+    
+    
+    for(int i = 2; i <= 4; i++) {
+        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_role_run_%d",i]];
+        [animFrames addObject:frame];
+    }
+    animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1f];
+    // Add an animation to the Cache
+    [aniCache addAnimation:animation name:@"role_run"];
+    animation.restoreOriginalFrame = YES;
+    [animFrames removeAllObjects];
+    
+    
+    for(int i = 2; i <= 8; i++) {
+        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_role_jump_%d",i]];
+        [animFrames addObject:frame];
+    }
+    animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.11f];
+    animation.restoreOriginalFrame = YES;
+    [animFrames removeAllObjects];
+    // Add an animation to the Cache
+    [aniCache addAnimation:animation name:@"role_jump"];
+    
+    for(int i = 2; i <= 8; i++) {
+        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_role_fall_%d",i]];
+        [animFrames addObject:frame];
+    }
+    animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.11f];
+    animation.restoreOriginalFrame = YES;
+    [animFrames removeAllObjects];
+    // Add an animation to the Cache
+    [aniCache addAnimation:animation name:@"role_fall"];
+    
+    
+    for(int i = 2; i <= 4; i++) {
+        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_role_scare_%d",i]];
+        [animFrames addObject:frame];
+    }
+    animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.11f];
+    animation.restoreOriginalFrame = YES;
+    [animFrames removeAllObjects];
+    // Add an animation to the Cache
+    [aniCache addAnimation:animation name:@"role_scare"];
+    role = [CCSprite spriteWithSpriteFrameName:@"s_role_run_1"];
+    [self addChild:role z:3];
+    role.position = ccp(877,279);
+    CCAnimation *anion = [aniCache animationByName:@"role_run"];
+    CCAnimate *ani = [CCAnimate actionWithAnimation:anion];
+    CCAction * a = [CCRepeatForever actionWithAction:ani];
+    [role runAction:a];
+    
+    [self schedule:@selector(roleJump:) interval:3];
+    [self schedule:@selector(catcherJump:) interval:2];
+    
     
 }
+-(void)roleJump:(ccTime)dt
+{
+    [role stopAllActions];
+    CCAnimation *ac = [[CCAnimationCache sharedAnimationCache] animationByName:@"role_jump"];
+    CCAnimate *ani = [CCAnimate actionWithAnimation:ac];
+    
+    CCAnimationCache *aniCache =  [CCAnimationCache sharedAnimationCache];
+    CCAnimation *a1= [aniCache animationByName:@"role_run"];
+    CCAnimate *a2 = [CCAnimate actionWithAnimation:a1];
+    CCAction * aa = [CCRepeatForever actionWithAction:a2];
+    
+    [role runAction:[CCSequence actionOne:ani two:[CCCallBlock actionWithBlock:^{
+        [role runAction:aa];
+    }]]];
+}
+
+-(void)catcherJump:(ccTime)dt
+{
+    
+    CCAnimationCache *aniCache =  [CCAnimationCache sharedAnimationCache];
+    for (CCSprite *catcher in arr_catcher )
+    {
+        [catcher stopAllActions];
+        CCAnimation *ac = [[CCAnimationCache sharedAnimationCache] animationByName:@"catcher_jump"];
+        if (catcher.userData==(void*)1) {
+            ac =[aniCache animationByName:@"catcher_jump_back"];
+        }
+        CCAnimate *ani = [CCAnimate actionWithAnimation:ac];
+        
+        CCAnimation *a1 = [aniCache animationByName:@"catcher_run"];
+        if (catcher.userData==(void*)1) {
+           a1 = [aniCache animationByName:@"catcher_run_back"];
+        }
+        
+        CCAnimate *a2 = [CCAnimate actionWithAnimation:a1];
+        CCAction * aa = [CCRepeatForever actionWithAction:a2];
+        
+        [catcher runAction:[CCSequence actionOne:ani two:[CCCallBlock actionWithBlock:^{
+            [catcher runAction:aa];
+        }]]];
+    }
+}
+
 - (void)update:(ccTime)delta
 {
     parallaxArr *par;
     pNode.position = ccpAdd(pNode.position, ccpMult(ccp(_purSpeed, 0), delta));
+    
+    
+    
+    
     for (int i = 0 ; i < 9; i++) {
         par = parArr[i];
        
@@ -333,28 +575,16 @@
             
             //float  deltaX = curX + back.contentSize.width/2;
             if (curX< -back.contentSize.width/2-5) {
-                
-                
-                
                 if (par.isRandom == NO) {
-                    
-                    //CCLOG(@"curX = change%f",par.itemInterval);
                     [pNode incrementOffset:ccp(back.contentSize.width* [par.arr count] ,0) forChild:back];
                 }
                 else
                 {
-                    //CCSprite *lastItem = [par.arr lastObject];
-                    //CCLOG(@"curX = change%f",par.itemInterval);
                     [pNode incrementOffset:ccp( [par.arr count]*par.itemIntervalMax ,0) forChild:back];
-
                 }
-                
             }
-            
         }
-        
     }
-
 }
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc

@@ -10,7 +10,7 @@
 
 #import "AppDelegate.h"
 #import "IntroLayer.h"
-
+#import "ZipUtils.h"
 @implementation MyNavigationController
 
 // The available orientations should be defined in the Info.plist file.
@@ -62,6 +62,10 @@
 	// Create the main window
 	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
+    caw_setkey_part(0, 0x57b27e5e);
+    caw_setkey_part(1, 0xc37c67d0);
+    caw_setkey_part(2, 0x34447e4d);
+    caw_setkey_part(3, 0x56f60632);
 	
 	// CCGLView creation
 	// viewWithFrame: size of the OpenGL view. For full screen use [_window bounds]
@@ -136,6 +140,8 @@
 	// make main window visible
 	[window_ makeKeyAndVisible];
 	
+       
+    
 	return YES;
 }
 

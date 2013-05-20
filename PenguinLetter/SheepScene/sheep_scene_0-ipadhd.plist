@@ -7,7 +7,7 @@
             <key>Z1SceneItem_0</key>
             <dict>
                 <key>frame</key>
-                <string>{{555,115},{273,115}}</string>
+                <string>{{557,117},{273,115}}</string>
                 <key>offset</key>
                 <string>{-18,-9}</string>
                 <key>rotated</key>
@@ -20,7 +20,7 @@
             <key>Z1SceneItem_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{555,339},{221,93}}</string>
+                <string>{{557,343},{221,93}}</string>
                 <key>offset</key>
                 <string>{42,-1}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>Z1SceneItem_2</key>
             <dict>
                 <key>frame</key>
-                <string>{{555,0},{275,115}}</string>
+                <string>{{557,1},{275,115}}</string>
                 <key>offset</key>
                 <string>{17,8}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>Z1SceneItem_3</key>
             <dict>
                 <key>frame</key>
-                <string>{{555,230},{221,109}}</string>
+                <string>{{557,233},{221,109}}</string>
                 <key>offset</key>
                 <string>{-11,12}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>Z2SceneItem_0</key>
             <dict>
                 <key>frame</key>
-                <string>{{491,432},{419,238}}</string>
+                <string>{{493,437},{419,238}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +72,7 @@
             <key>Z2SceneItem_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,676},{363,212}}</string>
+                <string>{{1,679},{363,212}}</string>
                 <key>offset</key>
                 <string>{-20,-3}</string>
                 <key>rotated</key>
@@ -85,7 +85,7 @@
             <key>Z3SceneItem_0</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{555,394}}</string>
+                <string>{{1,1},{555,394}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +98,7 @@
             <key>Z3SceneItem_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,394},{491,282}}</string>
+                <string>{{1,396},{491,282}}</string>
                 <key>offset</key>
                 <string>{2,31}</string>
                 <key>rotated</key>
@@ -116,9 +116,9 @@
             <key>realTextureFileName</key>
             <string>sheep_scene_0-ipadhd.pvr.ccz</string>
             <key>size</key>
-            <string>{910,910}</string>
+            <string>{913,913}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:474a2b301ea0fb676a09d4b21ee0306a$</string>
+            <string>$TexturePacker:SmartUpdate:8ae0b343433fe7fbe06706696bda815d$</string>
             <key>textureFileName</key>
             <string>sheep_scene_0-ipadhd.pvr.ccz</string>
         </dict>

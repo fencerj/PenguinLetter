@@ -39,6 +39,8 @@
     float _deltaDis;    //间距
     parallaxArr *parArr[9];
     CCParallaxNode *pNode;
+    NSMutableArray *arr_catcher;
+    CCSprite *role;
 }
 +(CCScene *) scene;
 @end
