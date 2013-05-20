@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface Role : CCNode {
+@interface Role : CCSprite {
     float _val;
+    float _deleyTimes;
 }
 //-(id)initWithRole:(CCAnimation *)
 @end
