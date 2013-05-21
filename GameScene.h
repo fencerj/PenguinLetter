@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-
+#import "Role.h"
 @interface parallaxArr : NSObject
 {
     CCArray *arr;

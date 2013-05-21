@@ -85,6 +85,7 @@
 	if( (self=[super init]) ) {
         
         [self initBg];
+        [self initAnimation];
         [self initRole];
 	}
 	return self;
@@ -309,15 +310,11 @@
     [self scheduleUpdate];
 
 }
--(void)initRole
+-(void)initAnimation
 {
-    arr_catcher = [NSMutableArray arrayWithCapacity:20];
+    
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"s_role_ani.plist"];
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"s_catcher_ani.plist"];
-   
-    //NSMutableArray *aniFrames = [NSMutableArray array];
-    
-#pragma catcher init
     NSMutableArray *animFrames = [NSMutableArray array];
     for(int i = 2; i <= 5; i++) {
         
@@ -368,34 +365,34 @@
     // Add an animation to the Cache
     [[CCAnimationCache sharedAnimationCache] addAnimation:animation name:@"catcher_jump_back"];
     [animFrames removeAllObjects];
-    
+}
+-(void)initRole
+{
+    arr_catcher = [NSMutableArray arrayWithCapacity:20];
+   
+    //NSMutableArray *aniFrames = [NSMutableArray array];
     CCAnimationCache *aniCache = [CCAnimationCache sharedAnimationCache];
+    NSMutableArray *animFrames = [NSMutableArray array];
+    CCAnimation *animation;
+#pragma catcher init
+
+    
+    
+    
     for (int i = 0 ; i < 11; i++) {
-        CCSprite *catcher ;
+        Catcher *catcher ;
         if (i<4){
-            animation = [aniCache animationByName:@"catcher_run_back"];
-            catcher = [CCSprite spriteWithSpriteFrameName:@"s_catcher_run_back_1"];
+            //animation = [aniCache animationByName:@"catcher_run_back"];
+            catcher = [[Catcher alloc ] initWithFrameName:@"s_catcher_run_back_1" Delay:[self createRandomsizeValueFloat:0.05 toFloat:0.3]];
             catcher.userData = 1;
         }
         else
         {
-            animation = [aniCache animationByName:@"catcher_run"];
-            catcher = [CCSprite spriteWithSpriteFrameName:@"s_catcher_run_1"];
+             catcher = [[Catcher alloc ] initWithFrameName:@"s_catcher_run_1" Delay:[self createRandomsizeValueFloat:0.05 toFloat:0.3]];
             catcher.userData = 0;
         }
-           
-        //CCAnimation *animation = [CCAnimation animationWithSpriteFrames:aniFrames delay:0.2f];
-        CCAnimate *ani = [CCAnimate actionWithAnimation:animation];
-        CCAction * a = [CCRepeatForever actionWithAction:ani];
-        
-        [ani setTag:100];
-        [self runAction:[CCSequence actions:[CCDelayTime actionWithDuration:[self createRandomsizeValueFloat:0.05 toFloat:0.3]],[CCCallBlock actionWithBlock:^{
-            [catcher runAction:a];
-        }], nil]];
-        //[self addChild:catcher z:3];
-        //[animation set]
-        [self addChild:catcher z:8 ];
-        //catcher.position = ccp([self createRandomsizeValueFloat:48 toFloat:430],[self createRandomsizeValueFloat:132 toFloat:241]);
+        [catcher initAnimation];
+        [self addChild:catcher z:8];
         [arr_catcher addObject:catcher];
         switch (i) {
             case 0:
@@ -431,8 +428,26 @@
             case 10:
                 catcher.position = ccp(250,162);
                 break;
+        }
+    }
+    arr_catcher = (NSMutableArray*)[arr_catcher sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        
+        if (((Catcher*)obj1).position.x < ((Catcher*)obj2).position.x) {
+            
+            return (NSComparisonResult)NSOrderedDescending;
             
         }
+        
+        if (((Catcher*)obj1).position.x > ((Catcher*)obj2).position.x) {
+            
+            return (NSComparisonResult)NSOrderedAscending;
+            
+        }
+        
+        return (NSComparisonResult)NSOrderedSame;
+    }];
+    for (Catcher *sp in arr_catcher) {
+        NSLog(@"aaa%f",sp.position.x);
     }
     
     
@@ -508,7 +523,7 @@
     CCAction * a = [CCRepeatForever actionWithAction:ani];
     [role runAction:a];
     
-    [self schedule:@selector(roleJump:) interval:3];
+    //[self schedule:@selector(roleJump:) interval:3];
     [self schedule:@selector(catcherJump:) interval:2];
     
     
@@ -532,27 +547,10 @@
 -(void)catcherJump:(ccTime)dt
 {
     
-    CCAnimationCache *aniCache =  [CCAnimationCache sharedAnimationCache];
-    for (CCSprite *catcher in arr_catcher )
+    
+    for (Catcher *catcher in arr_catcher )
     {
-        [catcher stopAllActions];
-        CCAnimation *ac = [[CCAnimationCache sharedAnimationCache] animationByName:@"catcher_jump"];
-        if (catcher.userData==(void*)1) {
-            ac =[aniCache animationByName:@"catcher_jump_back"];
-        }
-        CCAnimate *ani = [CCAnimate actionWithAnimation:ac];
-        
-        CCAnimation *a1 = [aniCache animationByName:@"catcher_run"];
-        if (catcher.userData==(void*)1) {
-           a1 = [aniCache animationByName:@"catcher_run_back"];
-        }
-        
-        CCAnimate *a2 = [CCAnimate actionWithAnimation:a1];
-        CCAction * aa = [CCRepeatForever actionWithAction:a2];
-        
-        [catcher runAction:[CCSequence actionOne:ani two:[CCCallBlock actionWithBlock:^{
-            [catcher runAction:aa];
-        }]]];
+        [catcher Jump];
     }
 }
 
@@ -560,10 +558,7 @@
 {
     parallaxArr *par;
     pNode.position = ccpAdd(pNode.position, ccpMult(ccp(_purSpeed, 0), delta));
-    
-    
-    
-    
+ 
     for (int i = 0 ; i < 9; i++) {
         par = parArr[i];
        

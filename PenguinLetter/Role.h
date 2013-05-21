@@ -11,7 +11,33 @@
 
 @interface Role : CCSprite {
     float _val;
-    float _deleyTimes;
+    float _delayTime;
+    float _deltaDis;
+    int _aniCount[4];
+    CCAnimationCache *aniCache;
+    CCAnimate *_acRun;
+    CCAnimate *_acJump;
+    CCAnimate *_acFall;
+    CCAnimate *_acScare;
+    BOOL _canAction;
+    BOOL _isJumping;
 }
-//-(id)initWithRole:(CCAnimation *)
+-(void)initAnimation;
+-(id)initWithFrameName:(NSString*)frameName Delay:(float)time; //AniCount:(int[4])count;
+-(void)Jump;
+-(void)Run;
+-(void)remove;
+//-(id)initWithRole:(CCAnimate *)
+@end
+
+@interface Catcher : Role
+{
+    CCAnimate *acDrop;
+    CCAnimate *acSpeedUp;
+    //CCAnimate *
+}
+
+-(void)speedUp;
+-(void)speedDown;
+-(void)drop;
 @end
