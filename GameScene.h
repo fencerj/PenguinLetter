@@ -40,7 +40,7 @@
     parallaxArr *parArr[9];
     CCParallaxNode *pNode;
     NSMutableArray *arr_catcher;
-    CCSprite *role;
+    Role *role;
 }
 +(CCScene *) scene;
 @end

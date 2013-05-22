@@ -263,11 +263,11 @@
     itemCount = 2;
     zOrder = 8;
     itemType = @"SceneItem_";
-    countInSt = 4;
+    countInSt = 2;
     parArr[zOrder-1].zOrder = zOrder;
     parArr[zOrder-1].isRandom = YES;
-    parArr[zOrder-1].itemIntervalMin = 400;
-    parArr[zOrder-1].itemIntervalMax = 600;
+    parArr[zOrder-1].itemIntervalMin = 800;
+    parArr[zOrder-1].itemIntervalMax = 800;
     parArr[zOrder-1].showZoneYMin = 117;
     parArr[zOrder-1].showZoneYMax = 117;
     
@@ -302,9 +302,7 @@
         [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:
          ccp((i+1)*itemTmp.contentSize.width/2 +i*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax],[self createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
         if (i == countInSt-1) {
-            
             parArr[zOrder-1].mostX = itemTmp.position;
-            
         }
     }
     [self scheduleUpdate];
@@ -315,7 +313,10 @@
     
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"s_role_ani.plist"];
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"s_catcher_ani.plist"];
+    
+
     NSMutableArray *animFrames = [NSMutableArray array];
+    CCAnimationCache *aniCache = [CCAnimationCache sharedAnimationCache];
     for(int i = 2; i <= 5; i++) {
         
         CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_catcher_run_%d",i]];
@@ -365,20 +366,58 @@
     // Add an animation to the Cache
     [[CCAnimationCache sharedAnimationCache] addAnimation:animation name:@"catcher_jump_back"];
     [animFrames removeAllObjects];
+    
+    
+    
+    for(int i = 2; i <= 4; i++) {
+        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_role_run_%d",i]];
+        [animFrames addObject:frame];
+    }
+    animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1f];
+    // Add an animation to the Cache
+    [aniCache addAnimation:animation name:@"role_run"];
+    animation.restoreOriginalFrame = YES;
+    [animFrames removeAllObjects];
+    
+    
+    for(int i = 2; i <= 8; i++) {
+        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_role_jump_%d",i]];
+        [animFrames addObject:frame];
+    }
+    animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.11f];
+    animation.restoreOriginalFrame = YES;
+    [animFrames removeAllObjects];
+    // Add an animation to the Cache
+    [aniCache addAnimation:animation name:@"role_jump"];
+    
+    for(int i = 2; i <= 8; i++) {
+        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_role_fall_%d",i]];
+        [animFrames addObject:frame];
+    }
+    animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.11f];
+    animation.restoreOriginalFrame = YES;
+    [animFrames removeAllObjects];
+    // Add an animation to the Cache
+    [aniCache addAnimation:animation name:@"role_fall"];
+    
+    
+    for(int i = 2; i <= 4; i++) {
+        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_role_scare_%d",i]];
+        [animFrames addObject:frame];
+    }
+    animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.11f];
+    animation.restoreOriginalFrame = YES;
+    [animFrames removeAllObjects];
+    // Add an animation to the Cache
+    [aniCache addAnimation:animation name:@"role_scare"];
+    
 }
 -(void)initRole
 {
     arr_catcher = [NSMutableArray arrayWithCapacity:20];
-   
-    //NSMutableArray *aniFrames = [NSMutableArray array];
-    CCAnimationCache *aniCache = [CCAnimationCache sharedAnimationCache];
-    NSMutableArray *animFrames = [NSMutableArray array];
-    CCAnimation *animation;
+
 #pragma catcher init
 
-    
-    
-    
     for (int i = 0 ; i < 11; i++) {
         Catcher *catcher ;
         if (i<4){
@@ -430,6 +469,7 @@
                 break;
         }
     }
+    
     arr_catcher = (NSMutableArray*)[arr_catcher sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         
         if (((Catcher*)obj1).position.x < ((Catcher*)obj2).position.x) {
@@ -473,113 +513,65 @@
 #pragma role init
     
     
+   
     
-    for(int i = 2; i <= 4; i++) {
-        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_role_run_%d",i]];
-        [animFrames addObject:frame];
-    }
-    animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1f];
-    // Add an animation to the Cache
-    [aniCache addAnimation:animation name:@"role_run"];
-    animation.restoreOriginalFrame = YES;
-    [animFrames removeAllObjects];
-    
-    
-    for(int i = 2; i <= 8; i++) {
-        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_role_jump_%d",i]];
-        [animFrames addObject:frame];
-    }
-    animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.11f];
-    animation.restoreOriginalFrame = YES;
-    [animFrames removeAllObjects];
-    // Add an animation to the Cache
-    [aniCache addAnimation:animation name:@"role_jump"];
-    
-    for(int i = 2; i <= 8; i++) {
-        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_role_fall_%d",i]];
-        [animFrames addObject:frame];
-    }
-    animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.11f];
-    animation.restoreOriginalFrame = YES;
-    [animFrames removeAllObjects];
-    // Add an animation to the Cache
-    [aniCache addAnimation:animation name:@"role_fall"];
-    
-    
-    for(int i = 2; i <= 4; i++) {
-        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_role_scare_%d",i]];
-        [animFrames addObject:frame];
-    }
-    animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.11f];
-    animation.restoreOriginalFrame = YES;
-    [animFrames removeAllObjects];
-    // Add an animation to the Cache
-    [aniCache addAnimation:animation name:@"role_scare"];
-    role = [CCSprite spriteWithSpriteFrameName:@"s_role_run_1"];
+    role = [[Role alloc] initWithFrameName:@"s_role_run_1"];
     [self addChild:role z:3];
     role.position = ccp(877,279);
-    CCAnimation *anion = [aniCache animationByName:@"role_run"];
-    CCAnimate *ani = [CCAnimate actionWithAnimation:anion];
-    CCAction * a = [CCRepeatForever actionWithAction:ani];
-    [role runAction:a];
-    
-    //[self schedule:@selector(roleJump:) interval:3];
+    [role initAnimation];
+    [self schedule:@selector(roleJump:) interval:3];
     [self schedule:@selector(catcherJump:) interval:2];
     
     
 }
 -(void)roleJump:(ccTime)dt
 {
-    [role stopAllActions];
-    CCAnimation *ac = [[CCAnimationCache sharedAnimationCache] animationByName:@"role_jump"];
-    CCAnimate *ani = [CCAnimate actionWithAnimation:ac];
-    
-    CCAnimationCache *aniCache =  [CCAnimationCache sharedAnimationCache];
-    CCAnimation *a1= [aniCache animationByName:@"role_run"];
-    CCAnimate *a2 = [CCAnimate actionWithAnimation:a1];
-    CCAction * aa = [CCRepeatForever actionWithAction:a2];
-    
-    [role runAction:[CCSequence actionOne:ani two:[CCCallBlock actionWithBlock:^{
-        [role runAction:aa];
-    }]]];
+    [role Scare];
+    [role faceGood];
 }
-
 -(void)catcherJump:(ccTime)dt
 {
-    
-    
     for (Catcher *catcher in arr_catcher )
     {
-        [catcher Jump];
+        [catcher Jump:[arr_catcher indexOfObject:catcher]*0.05];
     }
 }
-
 - (void)update:(ccTime)delta
 {
     parallaxArr *par;
     pNode.position = ccpAdd(pNode.position, ccpMult(ccp(_purSpeed, 0), delta));
  
+    CCSprite *jumpObj;
     for (int i = 0 ; i < 9; i++) {
         par = parArr[i];
        
         CCSprite *tmpSp;
         CCARRAY_FOREACH(par.arr, tmpSp)
         {
-            CCSprite *back = (CCSprite*)tmpSp;
-            float  curX = [pNode convertToWorldSpace:back.position].x ;
+            if (i == 8) {
+                jumpObj = tmpSp;
+            }
+            float  curX = [pNode convertToWorldSpace:tmpSp.position].x ;
             
             //float  deltaX = curX + back.contentSize.width/2;
-            if (curX< -back.contentSize.width/2-5) {
+            if (curX< -tmpSp.contentSize.width/2-5) {
                 if (par.isRandom == NO) {
-                    [pNode incrementOffset:ccp(back.contentSize.width* [par.arr count] ,0) forChild:back];
+                    [pNode incrementOffset:ccp(tmpSp.contentSize.width* [par.arr count] ,0) forChild:tmpSp];
                 }
                 else
                 {
-                    [pNode incrementOffset:ccp( [par.arr count]*par.itemIntervalMax ,0) forChild:back];
+                    [pNode incrementOffset:ccp( [par.arr count]*par.itemIntervalMax ,0) forChild:tmpSp];
+                    tmpSp.userData = (void*)@"";
                 }
             }
         }
     }
+    
+    
+}
+-(void)dropOneCatcher
+{
+    
 }
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc

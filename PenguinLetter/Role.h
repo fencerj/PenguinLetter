@@ -15,29 +15,35 @@
     float _deltaDis;
     int _aniCount[4];
     CCAnimationCache *aniCache;
-    CCAnimate *_acRun;
-    CCAnimate *_acJump;
-    CCAnimate *_acFall;
-    CCAnimate *_acScare;
+    id _acRun;
+    id _acJump;
+    id _acFall;
+    id _acScare;
     BOOL _canAction;
     BOOL _isJumping;
+    CCSprite *face;
 }
 -(void)initAnimation;
--(id)initWithFrameName:(NSString*)frameName Delay:(float)time; //AniCount:(int[4])count;
+-(id)initWithFrameName:(NSString*)frameName;//AniCount:(int[4])count;
 -(void)Jump;
 -(void)Run;
+-(void)Scare;
+-(void)Fall;
 -(void)remove;
 //-(id)initWithRole:(CCAnimate *)
+-(void)faceGood;
+-(void)faceBad;
 @end
 
 @interface Catcher : Role
 {
-    CCAnimate *acDrop;
-    CCAnimate *acSpeedUp;
+    id acDrop[2];
+    id acSpeedUp[2];
     //CCAnimate *
 }
-
+-(id)initWithFrameName:(NSString*)frameName Delay:(float)time;
 -(void)speedUp;
 -(void)speedDown;
 -(void)drop;
+-(void)Jump:(float)delay;
 @end
