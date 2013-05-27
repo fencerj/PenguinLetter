@@ -15,6 +15,79 @@
 #define Z5ItemTag = 500
 #define Z6ItemTag = 600
 #define Z7ItemTag = 600
+#define FrontGroundRadio 1.8
+//#define Z1RADIO 0.02
+//#define Z1KINDS 4
+//#define Z1NUMS  3
+//#define Z1TYPE  0
+//#define Z2RADIO 0.08
+//#define Z2KINDS 2
+//#define Z2NUMS  3
+//#define Z2TYPE  0
+//
+//
+//velVar = 0.02;
+//itemCount = 4;
+//zOrder = 1;
+//itemType = @"SceneItem_";
+//randomNums = 0;
+//countInSt = 6;
+//
+//velVar = 0.08;
+//itemCount = 2;
+//zOrder = 2;
+//itemType = @"SceneItem_";
+//randomNums = 0;
+//countInSt = 7;
+//velVar = 0.15;
+//itemCount = 2;
+//zOrder = 3;
+//itemType = @"SceneItem_";
+//countInSt = 6;
+//velVar = 0.25;
+//itemCount = 3;
+//zOrder = 4;
+//itemType = @"SceneBg_";
+//countInSt = 3;
+//velVar = 0.4;
+//itemCount = 3;
+//zOrder = 5;
+//itemType = @"SceneBg_";
+//countInSt = 4;
+//velVar = 0.6;
+//itemCount = 2;
+//zOrder = 6;
+//itemType = @"SceneItem_";
+//countInSt = 3;
+//velVar = 1;
+//itemCount = 2;
+//zOrder = 7;
+//itemType = @"SceneBg_";
+//velVar = 1;
+//itemCount = 2;
+//zOrder = 8;
+//itemType = @"SceneItem_";
+//countInSt = 2;
+//velVar = 2;
+//itemCount = 1;
+//zOrder = 9;
+//itemType = @"SceneItem_";
+//countInSt = 1;
+
+@interface SpriteE:CCSprite
+{
+    float _realInterval;
+    BOOL  _isJumped;
+    int _jumpCount;
+}
+@property float realInterval;
+@property BOOL isJumped;
+@property int jumpCount;
+@end
+@implementation SpriteE
+@end
+
+
 
 @implementation parallaxArr
 
@@ -50,7 +123,7 @@
 	// return the scene
 	return scene;
 }
-- (NSInteger)createRandomsizeValueInt:(NSInteger)fromInt toInt:(NSInteger)toInt
++ (NSInteger)createRandomsizeValueInt:(NSInteger)fromInt toInt:(NSInteger)toInt
 {
     if (toInt < fromInt)
     {
@@ -64,7 +137,7 @@
     NSInteger randVal = arc4random() % (toInt - fromInt + 1) + fromInt;
     return randVal;
 }
-- (double)createRandomsizeValueFloat:(double)fromFloat toFloat:(double)toFloat
++ (double)createRandomsizeValueFloat:(double)fromFloat toFloat:(double)toFloat
 {
     if (toFloat < fromFloat)
     {
@@ -107,20 +180,19 @@
     pNode = [CCParallaxNode node];
     [self addChild:pNode z:0];
     
-    for (int i = 0; i < 9; i++) {
+    for (int i = 0; i < 8; i++) {
         parArr[i] = [[parallaxArr alloc] init];
     }
     
-    CCSprite *itemTmp;
+    SpriteE *itemTmp;
     float velVar;
     int itemCount;
     int zOrder;
     int countInSt;
     NSString *itemType;
     int randomNums ;
-    int initPosX;
         
-    //z1 setting
+    /*---------------------------------------------z1 setting-------------------------------*/
     velVar = 0.02;
     itemCount = 4;
     zOrder = 1;
@@ -136,18 +208,23 @@
     
     
     for (int i = 0; i < countInSt; i++) {
-        randomNums = [self createRandomsizeValueInt:0 toInt:itemCount-1];
+        randomNums = [GameScene createRandomsizeValueInt:0 toInt:itemCount-1];
         
-        itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
+        itemTmp = [SpriteE spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
         [parArr[zOrder-1].arr addObject:itemTmp];
+        
+        float realInterval = [GameScene createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax];
+        itemTmp.realInterval = realInterval;
+        parArr[zOrder-1].totalInterval += realInterval;
+        
         [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:
-         ccp((i+1)*itemTmp.contentSize.width/2 +i*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax],[self createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
+         ccp(itemTmp.contentSize.width/2 +parArr[zOrder-1].totalInterval,[GameScene createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
         if (i == countInSt-1) {
             parArr[zOrder-1].mostX = itemTmp.position;
         }
     }
     
-    
+    /*---------------------------------------------z2 setting-------------------------------*/
     velVar = 0.08;
     itemCount = 2;
     zOrder = 2;
@@ -162,17 +239,20 @@
     parArr[zOrder-1].showZoneYMax = 645;
     
     for (int i = 0; i < countInSt; i++) {
-        randomNums = [self createRandomsizeValueInt:0 toInt:itemCount-1];
-        itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
+        randomNums = [GameScene createRandomsizeValueInt:0 toInt:itemCount-1];
+        itemTmp = [SpriteE spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
         [parArr[zOrder-1].arr addObject:itemTmp];
+        float realInterval = [GameScene createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax];
+        itemTmp.realInterval = realInterval;
+        parArr[zOrder-1].totalInterval += realInterval;
         [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:
-         ccp((i+1)*itemTmp.contentSize.width/2 +i*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax],[self createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
+         ccp(itemTmp.contentSize.width/2 +parArr[zOrder-1].totalInterval,[GameScene createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
         if (i == countInSt-1) {
             parArr[zOrder-1].mostX = itemTmp.position;
         }
     }
     
-    
+    /*---------------------------------------------z3 setting-------------------------------*/
     velVar = 0.15;
     itemCount = 2;
     zOrder = 3;
@@ -186,18 +266,21 @@
     parArr[zOrder-1].showZoneYMax = 638;
     
     for (int i = 0; i < countInSt; i++) {
-        randomNums = [self createRandomsizeValueInt:0 toInt:itemCount-1];
-        itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
+        randomNums = [GameScene createRandomsizeValueInt:0 toInt:itemCount-1];
+        itemTmp = [SpriteE spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
         [parArr[zOrder-1].arr addObject:itemTmp];
+        
+        float realInterval = [GameScene createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax];
+        itemTmp.realInterval = realInterval;
+        parArr[zOrder-1].totalInterval += realInterval;
+        
         [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:
-         ccp((i+1)*itemTmp.contentSize.width/2 +i*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax],[self createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
+         ccp(itemTmp.contentSize.width/2 +parArr[zOrder-1].totalInterval,[GameScene createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
         if (i == countInSt-1) {
-            
             parArr[zOrder-1].mostX = itemTmp.position;
-            
         }
     }
-    
+    /*---------------------------------------------z4 setting-------------------------------*/
     velVar = 0.25;
     itemCount = 3;
     zOrder = 4;
@@ -212,7 +295,7 @@
         //parArr[zOrder-1].itemInterval = 1024*itemCount;
     }
     
-    
+    /*---------------------------------------------z5 setting-------------------------------*/
     velVar = 0.4;
     itemCount = 3;
     zOrder = 5;
@@ -223,7 +306,7 @@
         [parArr[zOrder-1].arr addObject:itemTmp];
         [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:ccp(512+(i)*1024, 384)];
     }
-    
+    /*---------------------------------------------z6 setting-------------------------------*/
     velVar = 0.6;
     itemCount = 2;
     zOrder = 6;
@@ -237,18 +320,23 @@
     parArr[zOrder-1].showZoneYMax = 384;
     
     for (int i = 0; i < countInSt; i++) {
-        randomNums = [self createRandomsizeValueInt:0 toInt:itemCount-1];
-        itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
+        randomNums = [GameScene createRandomsizeValueInt:0 toInt:itemCount-1];
+        itemTmp = [SpriteE spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
         [parArr[zOrder-1].arr addObject:itemTmp];
+        float realInterval = [GameScene createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax];
+        itemTmp.realInterval = realInterval;
+        parArr[zOrder-1].totalInterval += realInterval;
+        
         [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:
-         ccp((i+1)*itemTmp.contentSize.width/2 +i*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax],[self createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
+         ccp(itemTmp.contentSize.width/2 +parArr[zOrder-1].totalInterval,[GameScene createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
+
         if (i == countInSt-1) {
             
             parArr[zOrder-1].mostX = itemTmp.position;
             
         }
     }
-    
+    /*---------------------------------------------z7 setting-------------------------------*/
     velVar = 1;
     itemCount = 2;
     zOrder = 7;
@@ -258,32 +346,39 @@
         [parArr[zOrder-1].arr addObject:itemTmp];
         [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:ccp(512+(i)*1024, 384)];
     }
+    /*---------------------------------------------z8 setting-------------------------------*/
+    
+    
     
     velVar = 1;
     itemCount = 2;
     zOrder = 8;
     itemType = @"SceneItem_";
-    countInSt = 2;
+    countInSt = 6;
     parArr[zOrder-1].zOrder = zOrder;
     parArr[zOrder-1].isRandom = YES;
-    parArr[zOrder-1].itemIntervalMin = 800;
-    parArr[zOrder-1].itemIntervalMax = 800;
+    parArr[zOrder-1].itemIntervalMin = 1500;
+    parArr[zOrder-1].itemIntervalMax = 3000;
     parArr[zOrder-1].showZoneYMin = 117;
     parArr[zOrder-1].showZoneYMax = 117;
     
     for (int i = 0; i < countInSt; i++) {
-        randomNums = [self createRandomsizeValueInt:0 toInt:itemCount-1];
-        itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
+        randomNums = [GameScene createRandomsizeValueInt:0 toInt:itemCount-1];
+        itemTmp = [SpriteE spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
         [parArr[zOrder-1].arr addObject:itemTmp];
+        float realInterval = [GameScene createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax];
+        itemTmp.realInterval = realInterval;
+        parArr[zOrder-1].totalInterval += realInterval;
+        
         [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:
-         ccp((i+1)*itemTmp.contentSize.width/2 +i*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax],[self createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
+         ccp(itemTmp.contentSize.width/2 +parArr[zOrder-1].totalInterval,[GameScene createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
         if (i == countInSt-1) {
             parArr[zOrder-1].mostX = itemTmp.position;
         }
     }
     
-    
-    velVar = 2;
+    /*---------------------------------------------z9 setting-------------------------------*/
+   /* velVar = 2;
     itemCount = 1;
     zOrder = 9;
     itemType = @"SceneItem_";
@@ -296,15 +391,29 @@
     parArr[zOrder-1].showZoneYMax = 110;
     
     for (int i = 0; i < countInSt; i++) {
-        randomNums = [self createRandomsizeValueInt:0 toInt:itemCount-1];
-        itemTmp = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
+        randomNums = [GameScene createRandomsizeValueInt:0 toInt:itemCount-1];
+        itemTmp = [SpriteE spriteWithSpriteFrameName:[NSString stringWithFormat:@"Z%d%@%d",zOrder,itemType,randomNums]];
         [parArr[zOrder-1].arr addObject:itemTmp];
+        float realInterval = [GameScene createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax];
+        itemTmp.realInterval = realInterval;
+        
+        parArr[zOrder-1].totalInterval += realInterval;
+        
         [pNode  addChild:itemTmp z:zOrder parallaxRatio:ccp(velVar, 0) positionOffset:
-         ccp((i+1)*itemTmp.contentSize.width/2 +i*[self createRandomsizeValueFloat: parArr[zOrder-1].itemIntervalMin toFloat:parArr[zOrder-1].itemIntervalMax],[self createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
+         ccp(itemTmp.contentSize.width/2 +parArr[zOrder-1].totalInterval,[GameScene createRandomsizeValueFloat:parArr[zOrder-1].showZoneYMin toFloat:parArr[zOrder-1].showZoneYMax]) ];
         if (i == countInSt-1) {
             parArr[zOrder-1].mostX = itemTmp.position;
         }
-    }
+    }*/
+    
+    
+    CCSprite *frontGround = [CCSprite spriteWithSpriteFrameName:@"Z9SceneItem_0"];
+    frontGround.position = ccp(420,110);
+    [self addChild:frontGround z:2 tag:1001];
+    
+    
+    
+    
     [self scheduleUpdate];
 
 }
@@ -366,7 +475,7 @@
     // Add an animation to the Cache
     [[CCAnimationCache sharedAnimationCache] addAnimation:animation name:@"catcher_jump_back"];
     [animFrames removeAllObjects];
-    
+       
     
     
     for(int i = 2; i <= 4; i++) {
@@ -422,16 +531,17 @@
         Catcher *catcher ;
         if (i<4){
             //animation = [aniCache animationByName:@"catcher_run_back"];
-            catcher = [[Catcher alloc ] initWithFrameName:@"s_catcher_run_back_1" Delay:[self createRandomsizeValueFloat:0.05 toFloat:0.3]];
-            catcher.userData = 1;
+            catcher = [[Catcher alloc ] initWithFrameName:@"s_catcher_run_back_1" Delay:[GameScene createRandomsizeValueFloat:0.05 toFloat:0.3]];
+            catcher.isBack = YES;
         }
         else
         {
-             catcher = [[Catcher alloc ] initWithFrameName:@"s_catcher_run_1" Delay:[self createRandomsizeValueFloat:0.05 toFloat:0.3]];
-            catcher.userData = 0;
+             catcher = [[Catcher alloc ] initWithFrameName:@"s_catcher_run_1" Delay:[GameScene createRandomsizeValueFloat:0.05 toFloat:0.3]];
+            //catcher.isBack = NO;
         }
         [catcher initAnimation];
-        [self addChild:catcher z:8];
+        [self addChild:catcher z:1];
+        catcher.delegate = self;
         [arr_catcher addObject:catcher];
         switch (i) {
             case 0:
@@ -469,6 +579,9 @@
                 break;
         }
     }
+    for (Catcher *cat in arr_catcher) {
+        cat.position = ccpAdd(cat.position, ccp(0, -20));
+    }
     
     arr_catcher = (NSMutableArray*)[arr_catcher sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         
@@ -486,9 +599,7 @@
         
         return (NSComparisonResult)NSOrderedSame;
     }];
-    for (Catcher *sp in arr_catcher) {
-        NSLog(@"aaa%f",sp.position.x);
-    }
+    
     
     
     CCMenuItemFont *item1 = [CCMenuItemFont itemWithString:@"+" block:^(id sender){_purSpeed -=100;}];
@@ -516,12 +627,26 @@
    
     
     role = [[Role alloc] initWithFrameName:@"s_role_run_1"];
-    [self addChild:role z:3];
+    [self addChild:role z:1];
     role.position = ccp(877,279);
     [role initAnimation];
     [self schedule:@selector(roleJump:) interval:3];
-    [self schedule:@selector(catcherJump:) interval:2];
+    [self schedule:@selector(speedUpCatcher) interval:2];
+    //[self schedule:@selector(catcherJump:) interval:2];
+    role.delegate = self;
     
+}
+
+-(void)RoleAnimationDidFinished
+{
+    
+}
+-(void)CatcherAnimationDidFinished:(id)sender WithType:(int)tpye
+{
+    Catcher *tmpCatch = (Catcher*)sender;
+    //_purSpeed = -500;
+    [tmpCatch Run];
+    [tmpCatch runAction:[CCMoveBy actionWithDuration:1 position:ccp(-100, 0)]];
     
 }
 -(void)roleJump:(ccTime)dt
@@ -533,44 +658,86 @@
 {
     for (Catcher *catcher in arr_catcher )
     {
-        [catcher Jump:[arr_catcher indexOfObject:catcher]*0.05];
+        //[catcher Jump:[arr_catcher indexOfObject:catcher]*0.05];
     }
 }
 - (void)update:(ccTime)delta
 {
+    
+    /*---------------background moved---------------*/
+    CCSprite *frontGround = (CCSprite*)[self getChildByTag:1001];
+    frontGround.position = ccpAdd(frontGround.position, ccpMult(ccp(_purSpeed*FrontGroundRadio, 0), delta));
+    if (frontGround.position.x < -frontGround.contentSize.width/2-5) {
+        frontGround.position =ccp([GameScene createRandomsizeValueFloat:3300 toFloat:4500],frontGround.position.y);
+    }
+    
     parallaxArr *par;
     pNode.position = ccpAdd(pNode.position, ccpMult(ccp(_purSpeed, 0), delta));
- 
-    CCSprite *jumpObj;
-    for (int i = 0 ; i < 9; i++) {
+    for (int i = 0 ; i < 8; i++) {
         par = parArr[i];
-       
-        CCSprite *tmpSp;
+        
+        SpriteE *tmpSp;
         CCARRAY_FOREACH(par.arr, tmpSp)
         {
-            if (i == 8) {
-                jumpObj = tmpSp;
-            }
             float  curX = [pNode convertToWorldSpace:tmpSp.position].x ;
             
             //float  deltaX = curX + back.contentSize.width/2;
             if (curX< -tmpSp.contentSize.width/2-5) {
-                if (par.isRandom == NO) {
+                if (par.isRandom == NO) {//IS background
+                    
                     [pNode incrementOffset:ccp(tmpSp.contentSize.width* [par.arr count] ,0) forChild:tmpSp];
                 }
-                else
+                else                    //is bg items
                 {
-                    [pNode incrementOffset:ccp( [par.arr count]*par.itemIntervalMax ,0) forChild:tmpSp];
-                    tmpSp.userData = (void*)@"";
+                    float realInterval = [GameScene createRandomsizeValueFloat: par.itemIntervalMin toFloat:par.itemIntervalMax];
+                    par.totalInterval += realInterval;
+                    par.totalInterval -= tmpSp.realInterval;
+                    tmpSp.realInterval = realInterval;
+                    tmpSp.isJumped = NO;
+                    
+                    [pNode incrementOffset:ccp(par.totalInterval,0) forChild:tmpSp];
+                    //NSLog(@"real=%f,total=%f",realInterval,par.totalInterval);
                 }
             }
         }
     }
+   /* jumpFunction
+    CCArray *jumpObjArr = parArr[7].arr;
+    for (SpriteE *tmp in jumpObjArr) {
+        CGPoint jmpObjPos = [pNode convertToWorldSpace:tmp.position];
+        //CCLOG(@"jump%f",jmpObjPos.x);
+        for (Catcher *catcher in arr_catcher) {
+            if (catcher.position.x>jmpObjPos.x+200 && tmp.jumpCount <= [arr_catcher count]) {
+                [catcher Jump:0];
+                
+            }
+        }
+    }*/
     
     
 }
+
+-(void)speedUpCatcher
+{
+    [self schedule:_cmd interval:8];
+    int speedUpType = [GameScene createRandomsizeValueInt:0 toInt:1];
+    for (Catcher *catcher in arr_catcher )
+    {
+        //[catcher Jump:[arr_catcher indexOfObject:catcher]*0.05];
+        [catcher speedUp:0];
+        [catcher runAction:[CCMoveBy actionWithDuration:1 position:ccp(100, 0)]];
+    }
+}
+
 -(void)dropOneCatcher
 {
+    _purSpeed = 0;
+    
+    
+    
+    Catcher *tmpCatch = (Catcher*)[arr_catcher objectAtIndex:[GameScene createRandomsizeValueInt:0 toInt:3]];
+    [tmpCatch drop];
+
     
 }
 // on "dealloc" you need to release all your retained objects
@@ -583,5 +750,11 @@
 	// don't forget to call "super dealloc"
 	//[super dealloc];
 }
-
+-(void)dropACatcher
+{
+    _purSpeed = 0;
+    int index = [GameScene createRandomsizeValueInt:0 toInt:[arr_catcher count]];
+    Catcher *catch = (Catcher*)[arr_catcher objectAtIndex:index];
+    [catch drop];
+}
 @end

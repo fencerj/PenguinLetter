@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+@protocol RoleDelegate
+
+-(void)RoleAnimationDidFinished;
+-(void)CatcherAnimationDidFinished:(id)sender WithType:(int)tpye;
+@end
 
 @interface Role : CCSprite {
     float _val;
@@ -22,7 +27,9 @@
     BOOL _canAction;
     BOOL _isJumping;
     CCSprite *face;
+    NSObject <RoleDelegate> *_delegate;
 }
+@property (readwrite, nonatomic) NSObject *delegate;
 -(void)initAnimation;
 -(id)initWithFrameName:(NSString*)frameName;//AniCount:(int[4])count;
 -(void)Jump;
@@ -35,15 +42,23 @@
 -(void)faceBad;
 @end
 
+
+
 @interface Catcher : Role
 {
     id acDrop[2];
     id acSpeedUp[2];
+    
     //CCAnimate *
 }
 -(id)initWithFrameName:(NSString*)frameName Delay:(float)time;
--(void)speedUp;
+-(void)speedUp:(int)a;
 -(void)speedDown;
 -(void)drop;
 -(void)Jump:(float)delay;
+@end
+
+@interface Catcher()
+@property (readwrite,assign) BOOL isBack;
+
 @end

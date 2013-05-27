@@ -13,7 +13,6 @@
 @interface QuestionDB : CCNode {
     NSString *qsName;
     NSInteger qsType;
-    
 }
 
 

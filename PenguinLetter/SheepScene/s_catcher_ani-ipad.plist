@@ -4,426 +4,75 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>s_catcher_jump_1</key>
+            <key>s_catcher_drop0_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{761,662},{105,88}}</string>
+                <string>{{2,331},{130,144}}</string>
                 <key>offset</key>
-                <string>{0,-42}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{2,91},{105,88}}</string>
+                <string>{{2,0},{130,144}}</string>
                 <key>sourceSize</key>
-                <string>{109,186}</string>
+                <string>{134,144}</string>
             </dict>
-            <key>s_catcher_jump_2</key>
+            <key>s_catcher_drop0_2</key>
             <dict>
                 <key>frame</key>
-                <string>{{482,226},{107,104}}</string>
+                <string>{{540,2},{134,144}}</string>
                 <key>offset</key>
-                <string>{1,-4}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{2,45},{107,104}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_jump_3</key>
-            <dict>
-                <key>frame</key>
-                <string>{{456,118},{105,106}}</string>
-                <key>offset</key>
-                <string>{0,23}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{2,17},{105,106}}</string>
+                <string>{{0,0},{134,144}}</string>
                 <key>sourceSize</key>
-                <string>{109,186}</string>
+                <string>{134,144}</string>
             </dict>
-            <key>s_catcher_jump_4</key>
+            <key>s_catcher_drop0_3</key>
             <dict>
                 <key>frame</key>
-                <string>{{482,563},{105,106}}</string>
+                <string>{{404,2},{134,144}}</string>
                 <key>offset</key>
-                <string>{0,40}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{2,0},{105,106}}</string>
+                <string>{{0,0},{134,144}}</string>
                 <key>sourceSize</key>
-                <string>{109,186}</string>
+                <string>{134,144}</string>
             </dict>
-            <key>s_catcher_jump_5</key>
+            <key>s_catcher_drop0_4</key>
             <dict>
                 <key>frame</key>
-                <string>{{757,752},{109,84}}</string>
+                <string>{{268,2},{134,144}}</string>
                 <key>offset</key>
-                <string>{0,49}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,2},{109,84}}</string>
+                <string>{{0,0},{134,144}}</string>
                 <key>sourceSize</key>
-                <string>{109,186}</string>
+                <string>{134,144}</string>
             </dict>
-            <key>s_catcher_jump_6</key>
+            <key>s_catcher_drop0_5</key>
             <dict>
                 <key>frame</key>
-                <string>{{673,534},{109,86}}</string>
+                <string>{{223,722},{98,116}}</string>
                 <key>offset</key>
-                <string>{0,33}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,17},{109,86}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_jump_7</key>
-            <dict>
-                <key>frame</key>
-                <string>{{772,461},{109,86}}</string>
-                <key>offset</key>
-                <string>{0,-7}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,57},{109,86}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_jump_8</key>
-            <dict>
-                <key>frame</key>
-                <string>{{684,423},{109,86}}</string>
-                <key>offset</key>
-                <string>{0,-34}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,84},{109,86}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_jump_back_1</key>
-            <dict>
-                <key>frame</key>
-                <string>{{483,671},{105,88}}</string>
-                <key>offset</key>
-                <string>{0,-42}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{2,91},{105,88}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_jump_back_2</key>
-            <dict>
-                <key>frame</key>
-                <string>{{458,2},{107,104}}</string>
-                <key>offset</key>
-                <string>{1,-4}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{2,45},{107,104}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_jump_back_3</key>
-            <dict>
-                <key>frame</key>
-                <string>{{467,455},{105,106}}</string>
-                <key>offset</key>
-                <string>{0,23}</string>
+                <string>{3,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{2,17},{105,106}}</string>
+                <string>{{21,14},{98,116}}</string>
                 <key>sourceSize</key>
-                <string>{109,186}</string>
+                <string>{134,144}</string>
             </dict>
-            <key>s_catcher_jump_back_4</key>
+            <key>s_catcher_drop1_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{375,261},{105,106}}</string>
-                <key>offset</key>
-                <string>{0,40}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{2,0},{105,106}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_jump_back_5</key>
-            <dict>
-                <key>frame</key>
-                <string>{{549,779},{109,84}}</string>
-                <key>offset</key>
-                <string>{0,49}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,2},{109,84}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_jump_back_6</key>
-            <dict>
-                <key>frame</key>
-                <string>{{772,350},{109,86}}</string>
-                <key>offset</key>
-                <string>{0,33}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,17},{109,86}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_jump_back_7</key>
-            <dict>
-                <key>frame</key>
-                <string>{{684,312},{109,86}}</string>
-                <key>offset</key>
-                <string>{0,-7}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,57},{109,86}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_jump_back_8</key>
-            <dict>
-                <key>frame</key>
-                <string>{{774,239},{109,86}}</string>
-                <key>offset</key>
-                <string>{0,-34}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,84},{109,86}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_run_1</key>
-            <dict>
-                <key>frame</key>
-                <string>{{671,645},{105,88}}</string>
-                <key>offset</key>
-                <string>{0,-42}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{2,91},{105,88}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_run_2</key>
-            <dict>
-                <key>frame</key>
-                <string>{{588,203},{107,92}}</string>
-                <key>offset</key>
-                <string>{0,-28}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{1,75},{107,92}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_run_3</key>
-            <dict>
-                <key>frame</key>
-                <string>{{671,752},{109,84}}</string>
-                <key>offset</key>
-                <string>{0,-18}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,69},{109,84}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_run_4</key>
-            <dict>
-                <key>frame</key>
-                <string>{{689,2},{109,86}}</string>
-                <key>offset</key>
-                <string>{0,-34}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,84},{109,86}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_run_5</key>
-            <dict>
-                <key>frame</key>
-                <string>{{589,670},{107,80}}</string>
-                <key>offset</key>
-                <string>{0,-44}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{1,97},{107,80}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_run_back_1</key>
-            <dict>
-                <key>frame</key>
-                <string>{{761,572},{105,88}}</string>
-                <key>offset</key>
-                <string>{0,-49}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{2,98},{105,88}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_run_back_2</key>
-            <dict>
-                <key>frame</key>
-                <string>{{682,203},{107,90}}</string>
-                <key>offset</key>
-                <string>{0,-48}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{1,96},{107,90}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_run_back_3</key>
-            <dict>
-                <key>frame</key>
-                <string>{{375,369},{109,84}}</string>
-                <key>offset</key>
-                <string>{0,-40}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,91},{109,84}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_run_back_4</key>
-            <dict>
-                <key>frame</key>
-                <string>{{688,94},{109,86}}</string>
-                <key>offset</key>
-                <string>{0,-47}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,97},{109,86}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>s_catcher_run_back_5</key>
-            <dict>
-                <key>frame</key>
-                <string>{{589,561},{107,80}}</string>
-                <key>offset</key>
-                <string>{0,-52}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{1,105},{107,80}}</string>
-                <key>sourceSize</key>
-                <string>{109,186}</string>
-            </dict>
-            <key>吃草加速1-2-3/s_catcher_speedup_1_1</key>
-            <dict>
-                <key>frame</key>
-                <string>{{133,771},{129,94}}</string>
-                <key>offset</key>
-                <string>{2,-9}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{6,18},{129,94}}</string>
-                <key>sourceSize</key>
-                <string>{137,112}</string>
-            </dict>
-            <key>吃草加速1-2-3/s_catcher_speedup_1_2</key>
-            <dict>
-                <key>frame</key>
-                <string>{{267,320},{133,106}}</string>
-                <key>offset</key>
-                <string>{1,-1}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{3,4},{133,106}}</string>
-                <key>sourceSize</key>
-                <string>{137,112}</string>
-            </dict>
-            <key>吃草加速1-2-3/s_catcher_speedup_1_3</key>
-            <dict>
-                <key>frame</key>
-                <string>{{250,466},{137,110}}</string>
-                <key>offset</key>
-                <string>{0,1}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{137,110}}</string>
-                <key>sourceSize</key>
-                <string>{137,112}</string>
-            </dict>
-            <key>吃草加速1-2-3/s_catcher_speedup_back_1_1</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,771},{129,94}}</string>
-                <key>offset</key>
-                <string>{2,-9}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{6,18},{129,94}}</string>
-                <key>sourceSize</key>
-                <string>{137,112}</string>
-            </dict>
-            <key>吃草加速1-2-3/s_catcher_speedup_back_1_2</key>
-            <dict>
-                <key>frame</key>
-                <string>{{288,605},{133,106}}</string>
-                <key>offset</key>
-                <string>{1,-1}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{3,4},{133,106}}</string>
-                <key>sourceSize</key>
-                <string>{137,112}</string>
-            </dict>
-            <key>吃草加速1-2-3/s_catcher_speedup_back_1_3</key>
-            <dict>
-                <key>frame</key>
-                <string>{{138,466},{137,110}}</string>
-                <key>offset</key>
-                <string>{0,1}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{137,110}}</string>
-                <key>sourceSize</key>
-                <string>{137,112}</string>
-            </dict>
-            <key>羊吃药1-2-3-4-位移/s_catcher_drop_2_1</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,627},{131,142}}</string>
+                <string>{{676,2},{131,142}}</string>
                 <key>offset</key>
                 <string>{0,-19}</string>
                 <key>rotated</key>
@@ -433,10 +82,10 @@
                 <key>sourceSize</key>
                 <string>{131,180}</string>
             </dict>
-            <key>羊吃药1-2-3-4-位移/s_catcher_drop_2_2</key>
+            <key>s_catcher_drop1_2</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,331},{131,148}}</string>
+                <string>{{135,2},{131,148}}</string>
                 <key>offset</key>
                 <string>{0,-11}</string>
                 <key>rotated</key>
@@ -446,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{131,180}</string>
             </dict>
-            <key>羊吃药1-2-3-4-位移/s_catcher_drop_2_3</key>
+            <key>s_catcher_drop1_3</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,2},{131,170}}</string>
@@ -459,33 +108,33 @@
                 <key>sourceSize</key>
                 <string>{131,180}</string>
             </dict>
-            <key>羊吃药1-2-3-4-位移/s_catcher_drop_2_4</key>
+            <key>s_catcher_drop1_4</key>
             <dict>
                 <key>frame</key>
-                <string>{{264,745},{131,129}}</string>
+                <string>{{2,630},{131,129}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{131,129}}</string>
                 <key>sourceSize</key>
                 <string>{131,129}</string>
             </dict>
-            <key>羊遇药水1-2-（3-3-4）循环/s_catcher_drop_3_1</key>
+            <key>s_catcher_drop2_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{135,627},{151,116}}</string>
+                <string>{{2,477},{151,116}}</string>
                 <key>offset</key>
                 <string>{2,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{4,11},{151,116}}</string>
                 <key>sourceSize</key>
                 <string>{155,132}</string>
             </dict>
-            <key>羊遇药水1-2-（3-3-4）循环/s_catcher_drop_3_2</key>
+            <key>s_catcher_drop2_2</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,174},{155,130}}</string>
@@ -498,179 +147,75 @@
                 <key>sourceSize</key>
                 <string>{155,132}</string>
             </dict>
-            <key>羊遇药水1-2-（3-3-4）循环/s_catcher_drop_3_3</key>
+            <key>s_catcher_drop2_3</key>
             <dict>
                 <key>frame</key>
-                <string>{{564,2},{123,90}}</string>
+                <string>{{219,597},{123,90}}</string>
                 <key>offset</key>
                 <string>{16,-16}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{32,37},{123,90}}</string>
                 <key>sourceSize</key>
                 <string>{155,132}</string>
             </dict>
-            <key>羊遇药水1-2-（3-3-4）循环/s_catcher_drop_3_4</key>
+            <key>s_catcher_drop2_4</key>
             <dict>
                 <key>frame</key>
-                <string>{{563,111},{123,90}}</string>
+                <string>{{206,472},{123,90}}</string>
                 <key>offset</key>
                 <string>{16,-16}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{32,37},{123,90}}</string>
                 <key>sourceSize</key>
                 <string>{155,132}</string>
             </dict>
-            <key>群字1-2-位移1-2-（3-4）循环/s_catcher_speedup_2_1</key>
+            <key>s_catcher_drop3_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{800,2},{81,72}}</string>
-                <key>offset</key>
-                <string>{-1,-2}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{28,12},{81,72}}</string>
-                <key>sourceSize</key>
-                <string>{139,92}</string>
-            </dict>
-            <key>群字1-2-位移1-2-（3-4）循环/s_catcher_speedup_2_2</key>
-            <dict>
-                <key>frame</key>
-                <string>{{483,778},{71,64}}</string>
-                <key>offset</key>
-                <string>{0,-2}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{34,16},{71,64}}</string>
-                <key>sourceSize</key>
-                <string>{139,92}</string>
-            </dict>
-            <key>群字1-2-位移1-2-（3-4）循环/s_catcher_speedup_2_3</key>
-            <dict>
-                <key>frame</key>
-                <string>{{271,2},{139,84}}</string>
-                <key>offset</key>
-                <string>{0,-2}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,6},{139,84}}</string>
-                <key>sourceSize</key>
-                <string>{139,92}</string>
-            </dict>
-            <key>群字1-2-位移1-2-（3-4）循环/s_catcher_speedup_2_4</key>
-            <dict>
-                <key>frame</key>
-                <string>{{270,148},{139,84}}</string>
-                <key>offset</key>
-                <string>{0,-2}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,6},{139,84}}</string>
-                <key>sourceSize</key>
-                <string>{139,92}</string>
-            </dict>
-            <key>群字1-2-位移1-2-（3-4）循环/s_catcher_speedup_back_2_1</key>
-            <dict>
-                <key>frame</key>
-                <string>{{799,90},{81,72}}</string>
-                <key>offset</key>
-                <string>{-1,-2}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{28,12},{81,72}}</string>
-                <key>sourceSize</key>
-                <string>{139,92}</string>
-            </dict>
-            <key>群字1-2-位移1-2-（3-4）循环/s_catcher_speedup_back_2_2</key>
-            <dict>
-                <key>frame</key>
-                <string>{{799,173},{71,64}}</string>
-                <key>offset</key>
-                <string>{0,-2}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{34,16},{71,64}}</string>
-                <key>sourceSize</key>
-                <string>{139,92}</string>
-            </dict>
-            <key>群字1-2-位移1-2-（3-4）循环/s_catcher_speedup_back_2_3</key>
-            <dict>
-                <key>frame</key>
-                <string>{{397,712},{139,84}}</string>
-                <key>offset</key>
-                <string>{0,-2}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,6},{139,84}}</string>
-                <key>sourceSize</key>
-                <string>{139,92}</string>
-            </dict>
-            <key>群字1-2-位移1-2-（3-4）循环/s_catcher_speedup_back_2_4</key>
-            <dict>
-                <key>frame</key>
-                <string>{{396,571},{139,84}}</string>
-                <key>offset</key>
-                <string>{0,-2}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,6},{139,84}}</string>
-                <key>sourceSize</key>
-                <string>{139,92}</string>
-            </dict>
-            <key>遇火1-2-1-2-3-（4-5）循环/s_catcher_drop_4_1</key>
-            <dict>
-                <key>frame</key>
-                <string>{{357,2},{114,99}}</string>
+                <string>{{409,244},{114,99}}</string>
                 <key>offset</key>
                 <string>{0,-4}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,8},{114,99}}</string>
                 <key>sourceSize</key>
                 <string>{114,107}</string>
             </dict>
-            <key>遇火1-2-1-2-3-（4-5）循环/s_catcher_drop_4_2</key>
+            <key>s_catcher_drop3_2</key>
             <dict>
                 <key>frame</key>
-                <string>{{486,335},{114,97}}</string>
+                <string>{{540,234},{114,97}}</string>
                 <key>offset</key>
                 <string>{0,-4}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,9},{114,97}}</string>
                 <key>sourceSize</key>
                 <string>{114,107}</string>
             </dict>
-            <key>遇火1-2-1-2-3-（4-5）循环/s_catcher_drop_4_3</key>
+            <key>s_catcher_drop3_3</key>
             <dict>
                 <key>frame</key>
-                <string>{{362,455},{114,103}}</string>
+                <string>{{656,234},{114,103}}</string>
                 <key>offset</key>
                 <string>{0,2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{114,103}}</string>
                 <key>sourceSize</key>
                 <string>{114,107}</string>
             </dict>
-            <key>遇火1-2-1-2-3-（4-5）循环/s_catcher_drop_4_4</key>
+            <key>s_catcher_drop3_4</key>
             <dict>
                 <key>frame</key>
-                <string>{{585,335},{108,97}}</string>
+                <string>{{399,539},{108,97}}</string>
                 <key>offset</key>
                 <string>{-3,-1}</string>
                 <key>rotated</key>
@@ -680,10 +225,10 @@
                 <key>sourceSize</key>
                 <string>{114,107}</string>
             </dict>
-            <key>遇火1-2-1-2-3-（4-5）循环/s_catcher_drop_4_5</key>
+            <key>s_catcher_drop3_5</key>
             <dict>
                 <key>frame</key>
-                <string>{{574,451},{108,97}}</string>
+                <string>{{772,232},{108,97}}</string>
                 <key>offset</key>
                 <string>{-3,-1}</string>
                 <key>rotated</key>
@@ -693,70 +238,525 @@
                 <key>sourceSize</key>
                 <string>{114,107}</string>
             </dict>
-            <key>闪电12121345/s_catcher_drop_1_1</key>
+            <key>s_catcher_jump_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{135,320},{130,144}}</string>
+                <string>{{696,746},{105,88}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{0,-42}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{2,0},{130,144}}</string>
+                <string>{{2,91},{105,88}}</string>
                 <key>sourceSize</key>
-                <string>{134,144}</string>
+                <string>{109,186}</string>
             </dict>
-            <key>闪电12121345/s_catcher_drop_1_2</key>
+            <key>s_catcher_jump_2</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,481},{134,144}}</string>
+                <string>{{498,529},{107,104}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{1,-4}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{134,144}}</string>
+                <string>{{2,45},{107,104}}</string>
                 <key>sourceSize</key>
-                <string>{134,144}</string>
+                <string>{109,186}</string>
             </dict>
-            <key>闪电12121345/s_catcher_drop_1_3</key>
+            <key>s_catcher_jump_3</key>
             <dict>
                 <key>frame</key>
-                <string>{{135,2},{134,144}}</string>
+                <string>{{604,529},{105,106}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{0,23}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{134,144}}</string>
+                <string>{{2,17},{105,106}}</string>
                 <key>sourceSize</key>
-                <string>{134,144}</string>
+                <string>{109,186}</string>
             </dict>
-            <key>闪电12121345/s_catcher_drop_1_4</key>
+            <key>s_catcher_jump_4</key>
             <dict>
                 <key>frame</key>
-                <string>{{134,174},{134,144}}</string>
+                <string>{{602,339},{105,106}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{0,40}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{134,144}}</string>
+                <string>{{2,0},{105,106}}</string>
                 <key>sourceSize</key>
-                <string>{134,144}</string>
+                <string>{109,186}</string>
             </dict>
-            <key>闪电12121345/s_catcher_drop_1_5</key>
+            <key>s_catcher_jump_5</key>
             <dict>
                 <key>frame</key>
-                <string>{{356,143},{98,116}}</string>
+                <string>{{711,631},{109,84}}</string>
                 <key>offset</key>
-                <string>{3,0}</string>
+                <string>{0,49}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,2},{109,84}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_jump_6</key>
+            <dict>
+                <key>frame</key>
+                <string>{{709,342},{109,86}}</string>
+                <key>offset</key>
+                <string>{0,33}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{21,14},{98,116}}</string>
+                <string>{{0,17},{109,86}}</string>
                 <key>sourceSize</key>
-                <string>{134,144}</string>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_jump_7</key>
+            <dict>
+                <key>frame</key>
+                <string>{{411,760},{109,86}}</string>
+                <key>offset</key>
+                <string>{0,-7}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,57},{109,86}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_jump_8</key>
+            <dict>
+                <key>frame</key>
+                <string>{{411,649},{109,86}}</string>
+                <key>offset</key>
+                <string>{0,-34}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,84},{109,86}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_jump_back_1</key>
+            <dict>
+                <key>frame</key>
+                <string>{{711,430},{105,88}}</string>
+                <key>offset</key>
+                <string>{0,-42}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{2,91},{105,88}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_jump_back_2</key>
+            <dict>
+                <key>frame</key>
+                <string>{{384,433},{107,104}}</string>
+                <key>offset</key>
+                <string>{1,-4}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{2,45},{107,104}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_jump_back_3</key>
+            <dict>
+                <key>frame</key>
+                <string>{{499,746},{105,106}}</string>
+                <key>offset</key>
+                <string>{0,23}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{2,17},{105,106}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_jump_back_4</key>
+            <dict>
+                <key>frame</key>
+                <string>{{499,638},{105,106}}</string>
+                <key>offset</key>
+                <string>{0,40}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{2,0},{105,106}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_jump_back_5</key>
+            <dict>
+                <key>frame</key>
+                <string>{{711,520},{109,84}}</string>
+                <key>offset</key>
+                <string>{0,49}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,2},{109,84}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_jump_back_6</key>
+            <dict>
+                <key>frame</key>
+                <string>{{323,720},{109,86}}</string>
+                <key>offset</key>
+                <string>{0,33}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,17},{109,86}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_jump_back_7</key>
+            <dict>
+                <key>frame</key>
+                <string>{{311,543},{109,86}}</string>
+                <key>offset</key>
+                <string>{0,-7}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,57},{109,86}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_jump_back_8</key>
+            <dict>
+                <key>frame</key>
+                <string>{{384,345},{109,86}}</string>
+                <key>offset</key>
+                <string>{0,-34}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,84},{109,86}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_run_1</key>
+            <dict>
+                <key>frame</key>
+                <string>{{606,746},{105,88}}</string>
+                <key>offset</key>
+                <string>{0,-42}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{2,91},{105,88}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_run_2</key>
+            <dict>
+                <key>frame</key>
+                <string>{{493,435},{107,92}}</string>
+                <key>offset</key>
+                <string>{0,-28}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{1,75},{107,92}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_run_3</key>
+            <dict>
+                <key>frame</key>
+                <string>{{298,432},{109,84}}</string>
+                <key>offset</key>
+                <string>{0,-18}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,69},{109,84}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_run_4</key>
+            <dict>
+                <key>frame</key>
+                <string>{{273,344},{109,86}}</string>
+                <key>offset</key>
+                <string>{0,-34}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,84},{109,86}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_run_5</key>
+            <dict>
+                <key>frame</key>
+                <string>{{786,752},{107,80}}</string>
+                <key>offset</key>
+                <string>{0,-44}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{1,97},{107,80}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_run_back_1</key>
+            <dict>
+                <key>frame</key>
+                <string>{{495,345},{105,88}}</string>
+                <key>offset</key>
+                <string>{0,-49}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{2,98},{105,88}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_run_back_2</key>
+            <dict>
+                <key>frame</key>
+                <string>{{606,637},{107,90}}</string>
+                <key>offset</key>
+                <string>{0,-48}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{1,96},{107,90}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_run_back_3</key>
+            <dict>
+                <key>frame</key>
+                <string>{{137,759},{109,84}}</string>
+                <key>offset</key>
+                <string>{0,-40}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,91},{109,84}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_run_back_4</key>
+            <dict>
+                <key>frame</key>
+                <string>{{298,256},{109,86}}</string>
+                <key>offset</key>
+                <string>{0,-47}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,97},{109,86}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_run_back_5</key>
+            <dict>
+                <key>frame</key>
+                <string>{{602,447},{107,80}}</string>
+                <key>offset</key>
+                <string>{0,-52}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{1,105},{107,80}}</string>
+                <key>sourceSize</key>
+                <string>{109,186}</string>
+            </dict>
+            <key>s_catcher_speedUp0_1</key>
+            <dict>
+                <key>frame</key>
+                <string>{{409,148},{129,94}}</string>
+                <key>offset</key>
+                <string>{2,-9}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{6,18},{129,94}}</string>
+                <key>sourceSize</key>
+                <string>{137,112}</string>
+            </dict>
+            <key>s_catcher_speedUp0_2</key>
+            <dict>
+                <key>frame</key>
+                <string>{{274,148},{133,106}}</string>
+                <key>offset</key>
+                <string>{1,-1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{3,4},{133,106}}</string>
+                <key>sourceSize</key>
+                <string>{137,112}</string>
+            </dict>
+            <key>s_catcher_speedUp0_3</key>
+            <dict>
+                <key>frame</key>
+                <string>{{134,264},{137,110}}</string>
+                <key>offset</key>
+                <string>{0,1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{137,110}}</string>
+                <key>sourceSize</key>
+                <string>{137,112}</string>
+            </dict>
+            <key>s_catcher_speedUp0_back_1</key>
+            <dict>
+                <key>frame</key>
+                <string>{{134,376},{129,94}}</string>
+                <key>offset</key>
+                <string>{2,-9}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{6,18},{129,94}}</string>
+                <key>sourceSize</key>
+                <string>{137,112}</string>
+            </dict>
+            <key>s_catcher_speedUp0_back_2</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,763},{133,106}}</string>
+                <key>offset</key>
+                <string>{1,-1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{3,4},{133,106}}</string>
+                <key>sourceSize</key>
+                <string>{137,112}</string>
+            </dict>
+            <key>s_catcher_speedUp0_back_3</key>
+            <dict>
+                <key>frame</key>
+                <string>{{135,152},{137,110}}</string>
+                <key>offset</key>
+                <string>{0,1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{137,110}}</string>
+                <key>sourceSize</key>
+                <string>{137,112}</string>
+            </dict>
+            <key>s_catcher_speedUp1_1</key>
+            <dict>
+                <key>frame</key>
+                <string>{{797,603},{81,72}}</string>
+                <key>offset</key>
+                <string>{-1,-2}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{28,12},{81,72}}</string>
+                <key>sourceSize</key>
+                <string>{139,92}</string>
+            </dict>
+            <key>s_catcher_speedUp1_2</key>
+            <dict>
+                <key>frame</key>
+                <string>{{797,686},{71,64}}</string>
+                <key>offset</key>
+                <string>{0,-2}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{34,16},{71,64}}</string>
+                <key>sourceSize</key>
+                <string>{139,92}</string>
+            </dict>
+            <key>s_catcher_speedUp1_3</key>
+            <dict>
+                <key>frame</key>
+                <string>{{133,618},{139,84}}</string>
+                <key>offset</key>
+                <string>{0,-2}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,6},{139,84}}</string>
+                <key>sourceSize</key>
+                <string>{139,92}</string>
+            </dict>
+            <key>s_catcher_speedUp1_4</key>
+            <dict>
+                <key>frame</key>
+                <string>{{120,477},{139,84}}</string>
+                <key>offset</key>
+                <string>{0,-2}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,6},{139,84}}</string>
+                <key>sourceSize</key>
+                <string>{139,92}</string>
+            </dict>
+            <key>s_catcher_speedUp1_back_1</key>
+            <dict>
+                <key>frame</key>
+                <string>{{797,520},{81,72}}</string>
+                <key>offset</key>
+                <string>{-1,-2}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{28,12},{81,72}}</string>
+                <key>sourceSize</key>
+                <string>{139,92}</string>
+            </dict>
+            <key>s_catcher_speedUp1_back_2</key>
+            <dict>
+                <key>frame</key>
+                <string>{{311,654},{71,64}}</string>
+                <key>offset</key>
+                <string>{0,-2}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{34,16},{71,64}}</string>
+                <key>sourceSize</key>
+                <string>{139,92}</string>
+            </dict>
+            <key>s_catcher_speedUp1_back_3</key>
+            <dict>
+                <key>frame</key>
+                <string>{{681,146},{139,84}}</string>
+                <key>offset</key>
+                <string>{0,-2}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,6},{139,84}}</string>
+                <key>sourceSize</key>
+                <string>{139,92}</string>
+            </dict>
+            <key>s_catcher_speedUp1_back_4</key>
+            <dict>
+                <key>frame</key>
+                <string>{{540,148},{139,84}}</string>
+                <key>offset</key>
+                <string>{0,-2}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,6},{139,84}}</string>
+                <key>sourceSize</key>
+                <string>{139,92}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -766,9 +766,9 @@
             <key>realTextureFileName</key>
             <string>s_catcher_ani-ipad.pvr.ccz</string>
             <key>size</key>
-            <string>{876,876}</string>
+            <string>{871,871}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:6ea205c85e2cbaa9a20990d4d7a620cc$</string>
+            <string>$TexturePacker:SmartUpdate:c3d5531098809378be46260315da9702$</string>
             <key>textureFileName</key>
             <string>s_catcher_ani-ipad.pvr.ccz</string>
         </dict>

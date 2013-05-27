@@ -9,9 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "Role.h"
+
+
+typedef struct StrArr
+{
+    
+}StrArr;
+
 @interface parallaxArr : NSObject
 {
-    CCArray *arr;
+    CCArray *arr;//sprite array in one zOrder
     int zOrder;
     BOOL isRandom;
     float itemIntervalMin;
@@ -20,6 +27,8 @@
     float showZoneYMin;
     float showZoneYMax;
     CGPoint mostX;
+    float _totalInterval;
+    
 }
 @property (assign,nonatomic) int zOrder;
 @property (assign,nonatomic) BOOL isRandom;
@@ -28,19 +37,24 @@
 @property (assign,nonatomic) float itemIntervalMax;
 @property (assign,nonatomic) float showZoneYMin;
 @property (assign,nonatomic) float showZoneYMax;
+@property (assign,nonatomic) float totalInterval;
 @property (retain,nonatomic) CCArray *arr;
 @end
 
 
 
-@interface GameScene : CCLayer {
+@interface GameScene : CCLayer<RoleDelegate> {
     float _purSpeed;    //追赶者速度
     float _sceneSpeed;  //场景移动速度
     float _deltaDis;    //间距
-    parallaxArr *parArr[9];
+    float _movedLong;
+    parallaxArr *parArr[8];//levels array --total 9 levels
     CCParallaxNode *pNode;
     NSMutableArray *arr_catcher;
     Role *role;
+    NSMutableArray *arr_jumpItem;
 }
++ (NSInteger)createRandomsizeValueInt:(NSInteger)fromInt toInt:(NSInteger)toInt;
++ (double)createRandomsizeValueFloat:(double)fromFloat toFloat:(double)toFloat;
 +(CCScene *) scene;
 @end
