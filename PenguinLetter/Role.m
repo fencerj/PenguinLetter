@@ -10,6 +10,100 @@
 
 #import "GameScene.h"
 
+#pragma mark -
+#pragma mark ShaderBlur
+
+
+
+@implementation SpriteBlur
+-(id) initWithTexture:(CCTexture2D*)texture rect:(CGRect)rect
+{
+	if( (self=[super initWithTexture:texture rect:rect]) ) {
+        
+		CGSize s = [self.texture contentSizeInPixels];
+        
+		blur_ = ccp(1/s.width, 1/s.height);
+		sub_[0] = sub_[1] = sub_[2] = sub_[3] = 0;
+        
+		GLchar * fragSource = (GLchar*) [[NSString stringWithContentsOfFile:[[CCFileUtils sharedFileUtils] fullPathForFilenameIgnoringResolutions:@"Shaders/Blur.frag"] encoding:NSUTF8StringEncoding error:nil] UTF8String];      
+        
+		self.shaderProgram = [[CCGLProgram alloc] initWithVertexShaderByteArray:ccPositionTextureColor_vert fragmentShaderByteArray:fragSource];
+        
+        
+		CHECK_GL_ERROR_DEBUG();
+        
+		[self.shaderProgram addAttribute:kCCAttributeNamePosition index:kCCVertexAttrib_Position];
+		[self.shaderProgram addAttribute:kCCAttributeNameColor index:kCCVertexAttrib_Color];
+		[self.shaderProgram addAttribute:kCCAttributeNameTexCoord index:kCCVertexAttrib_TexCoords];
+        
+		CHECK_GL_ERROR_DEBUG();
+        
+		[self.shaderProgram link];
+        
+		CHECK_GL_ERROR_DEBUG();
+        
+		[self.shaderProgram updateUniforms];
+        
+		CHECK_GL_ERROR_DEBUG();
+        
+		subLocation = glGetUniformLocation( self.shaderProgram.program, "substract");
+		blurLocation = glGetUniformLocation( self.shaderProgram.program, "blurSize");
+        
+		CHECK_GL_ERROR_DEBUG();
+        [self setBlurSize:0];
+	}
+    
+	return self;
+}
+
+-(void) draw
+{
+	ccGLEnableVertexAttribs(kCCVertexAttribFlag_PosColorTex );
+	ccBlendFunc blend = self.blendFunc;
+	ccGLBlendFunc( blend.src, blend.dst );
+    
+	[self.shaderProgram use];
+	[self.shaderProgram setUniformsForBuiltins];
+	[self.shaderProgram setUniformLocation:blurLocation withF1:blur_.x f2:blur_.y];
+	[self.shaderProgram setUniformLocation:subLocation with4fv:sub_ count:1];
+    
+	ccGLBindTexture2D(  [self.texture name] );
+    
+	//
+	// Attributes
+	//
+#define kQuadSize sizeof(_quad.bl)
+	long offset = (long)&_quad;
+    
+	// vertex
+	NSInteger diff = offsetof( ccV3F_C4B_T2F, vertices);
+	glVertexAttribPointer(kCCVertexAttrib_Position, 3, GL_FLOAT, GL_FALSE, kQuadSize, (void*) (offset + diff));
+    
+	// texCoods
+	diff = offsetof( ccV3F_C4B_T2F, texCoords);
+	glVertexAttribPointer(kCCVertexAttrib_TexCoords, 2, GL_FLOAT, GL_FALSE, kQuadSize, (void*)(offset + diff));
+    
+	// color
+	diff = offsetof( ccV3F_C4B_T2F, colors);
+	glVertexAttribPointer(kCCVertexAttrib_Color, 4, GL_UNSIGNED_BYTE, GL_TRUE, kQuadSize, (void*)(offset + diff));
+    
+    
+	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+	
+	CC_INCREMENT_GL_DRAWS(1);
+}
+
+-(void) setBlurSize:(CGFloat)f
+{
+	CGSize s = [self.texture contentSizeInPixels];
+    
+	blur_ = ccp(1/s.width, 1/s.height);
+	blur_ = ccpMult(blur_,f);
+}
+
+@end
+
+
 @implementation Role
 -(id)initWithFrameName:(NSString*)frameName  // AniCount:(int[4])count
 {
@@ -134,7 +228,7 @@
         }
         animation1 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
         id a1 = [CCAnimate actionWithAnimation:animation1];
-        id as1 = [CCRepeat actionWithAction:a1 times:11];
+        id as1 = [CCRepeat actionWithAction:a1 times:20];
         [animFrames removeAllObjects];
         
         CCAnimation *animation2;
@@ -146,7 +240,7 @@
         }
          animation2 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
         id a2 = [CCAnimate actionWithAnimation:animation2];
-        id as2 = [CCRepeat actionWithAction:a2 times:11];
+        id as2 = [CCRepeat actionWithAction:a2 times:20];
         [animFrames removeAllObjects];
         
         if (!_isBack)
@@ -179,7 +273,7 @@
         animation2 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
         [animFrames removeAllObjects];
         id a2 =  [CCAnimate actionWithAnimation:animation2];
-        id as1 = [CCSequence actions:a1,[CCRepeat actionWithAction:a2 times:10], nil];
+        id as1 = [CCSequence actions:a1,[CCRepeat actionWithAction:a2 times:15], nil];
         
         
          CCAnimation* animation3;
@@ -199,8 +293,10 @@
         animation4 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
         [animFrames removeAllObjects];
         
+        
+        //id am = [CCMoveBy actionWithDuration:0 position:ccp(0, 80)];
         id a4 =  [CCAnimate actionWithAnimation:animation4];
-        id as2 = [CCSequence actions:a3,[CCRepeat actionWithAction:a4 times:10], nil];
+        id as2 = [CCSequence actions:a3,[CCRepeat actionWithAction:a4 times:15], nil];
         
         
         if (!_isBack)
@@ -248,6 +344,7 @@
         [_delegate CatcherAnimationDidFinished:self WithType:a];
     }],nil];
     [self runAction:as];
+    //[self setBlurSize:3];
     
 }
 -(void)Run

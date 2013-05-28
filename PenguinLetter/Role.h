@@ -14,7 +14,20 @@
 -(void)CatcherAnimationDidFinished:(id)sender WithType:(int)tpye;
 @end
 
-@interface Role : CCSprite {
+
+@interface SpriteBlur : CCSprite
+{
+	CGPoint blur_;
+	GLfloat	sub_[4];
+    
+	GLuint	blurLocation;
+	GLuint	subLocation;
+}
+
+-(void) setBlurSize:(CGFloat)f;
+@end
+
+@interface Role : SpriteBlur {
     float _val;
     float _delayTime;
     float _deltaDis;

@@ -30,6 +30,7 @@
 		2C1D55191740EC09006A31A6 /* sheep_scene_3-ipad.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2C1D55151740EC09006A31A6 /* sheep_scene_3-ipad.pvr.ccz */; };
 		2C1D551A1740EC09006A31A6 /* sheep_scene_3-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C1D55161740EC09006A31A6 /* sheep_scene_3-ipadhd.plist */; };
 		2C1D551B1740EC09006A31A6 /* sheep_scene_3-ipadhd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2C1D55171740EC09006A31A6 /* sheep_scene_3-ipadhd.pvr.ccz */; };
+		2C5634E417547325002B27E2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5634E317547325002B27E2 /* libz.dylib */; };
 		2C64B3031749BB7100EE9A91 /* s_catcher_ani-ipad.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C64B2FB1749BB7100EE9A91 /* s_catcher_ani-ipad.plist */; };
 		2C64B3041749BB7100EE9A91 /* s_catcher_ani-ipad.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2C64B2FC1749BB7100EE9A91 /* s_catcher_ani-ipad.pvr.ccz */; };
 		2C64B3051749BB7100EE9A91 /* s_catcher_ani-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C64B2FD1749BB7100EE9A91 /* s_catcher_ani-ipadhd.plist */; };
@@ -209,6 +210,7 @@
 		2C1D55151740EC09006A31A6 /* sheep_scene_3-ipad.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sheep_scene_3-ipad.pvr.ccz"; sourceTree = "<group>"; };
 		2C1D55161740EC09006A31A6 /* sheep_scene_3-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "sheep_scene_3-ipadhd.plist"; sourceTree = "<group>"; };
 		2C1D55171740EC09006A31A6 /* sheep_scene_3-ipadhd.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sheep_scene_3-ipadhd.pvr.ccz"; sourceTree = "<group>"; };
+		2C5634E317547325002B27E2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		2C64B2FB1749BB7100EE9A91 /* s_catcher_ani-ipad.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "s_catcher_ani-ipad.plist"; sourceTree = "<group>"; };
 		2C64B2FC1749BB7100EE9A91 /* s_catcher_ani-ipad.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "s_catcher_ani-ipad.pvr.ccz"; sourceTree = "<group>"; };
 		2C64B2FD1749BB7100EE9A91 /* s_catcher_ani-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "s_catcher_ani-ipadhd.plist"; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C5634E417547325002B27E2 /* libz.dylib in Frameworks */,
 				2CC67B06173B4E9600A12452 /* QuartzCore.framework in Frameworks */,
 				2CC67B08173B4E9600A12452 /* OpenGLES.framework in Frameworks */,
 				2CC67B0A173B4E9600A12452 /* OpenAL.framework in Frameworks */,
@@ -595,6 +598,7 @@
 		2CC67B04173B4E9600A12452 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C5634E317547325002B27E2 /* libz.dylib */,
 				2CC67B05173B4E9600A12452 /* QuartzCore.framework */,
 				2CC67B07173B4E9600A12452 /* OpenGLES.framework */,
 				2CC67B09173B4E9600A12452 /* OpenAL.framework */,

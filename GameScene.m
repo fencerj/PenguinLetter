@@ -16,6 +16,7 @@
 #define Z6ItemTag = 600
 #define Z7ItemTag = 600
 #define FrontGroundRadio 1.8
+#define FirstSpeed -1000
 //#define Z1RADIO 0.02
 //#define Z1KINDS 4
 //#define Z1NUMS  3
@@ -171,7 +172,7 @@
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sheep_scene_3.plist"];
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sheep_scene_4.plist"];
     
-    _purSpeed = -500;
+    _purSpeed = FirstSpeed;
     CCSprite *bg = [CCSprite spriteWithFile:@"sheep_scene_bg.pvr.ccz"];//z0
     bg.anchorPoint = CGPointZero;
     [self addChild:bg z:0];
@@ -644,11 +645,26 @@
 -(void)CatcherAnimationDidFinished:(id)sender WithType:(int)tpye
 {
     Catcher *tmpCatch = (Catcher*)sender;
+    [tmpCatch setBlurSize:0];
     //_purSpeed = -500;
     [tmpCatch Run];
-    [tmpCatch runAction:[CCMoveBy actionWithDuration:1 position:ccp(-100, 0)]];
-    
+    [tmpCatch runAction:[CCMoveBy actionWithDuration:2.5 position:ccp(-100, 0)]];
+    [self schedule:@selector(speedNormal) interval:0];
 }
+
+-(void)speedNormal
+{
+    if (_purSpeed  > FirstSpeed) {
+        _purSpeed = FirstSpeed;
+        [self unschedule:_cmd];
+    }
+    else
+    {
+       _purSpeed += 20;
+    }
+}
+
+
 -(void)roleJump:(ccTime)dt
 {
     [role Scare];
@@ -724,9 +740,12 @@
     for (Catcher *catcher in arr_catcher )
     {
         //[catcher Jump:[arr_catcher indexOfObject:catcher]*0.05];
-        [catcher speedUp:0];
+        [catcher speedUp:speedUpType];
+        
         [catcher runAction:[CCMoveBy actionWithDuration:1 position:ccp(100, 0)]];
+        [catcher setBlurSize:1.0];
     }
+    _purSpeed = -6000;
 }
 
 -(void)dropOneCatcher
