@@ -51,6 +51,7 @@ typedef struct StrArr
     parallaxArr *parArr[8];//levels array --total 9 levels
     CCParallaxNode *pNode;
     NSMutableArray *arr_catcher;
+    NSMutableArray *arr_droped;
     Role *role;
     NSMutableArray *arr_jumpItem;
 }

@@ -521,6 +521,97 @@
     // Add an animation to the Cache
     [aniCache addAnimation:animation name:@"role_scare"];
     
+    //drop0
+    {
+        CCAnimation* animation1;
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop0_1"]];
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop0_2"]];
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop0_1"]];
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop0_2"]];
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop0_1"]];
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop0_3"]];
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop0_4"]];
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop0_5"]];
+        animation1.restoreOriginalFrame = NO;
+        animation1 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
+        [animFrames removeAllObjects];
+        
+        //id a1 = [CCAnimate actionWithAnimation:animation1];
+        [[CCAnimationCache sharedAnimationCache] addAnimation:animation1 name:@"s_catcher_drop0"];
+    }
+    
+    //drop1
+    {
+        CCAnimation* animation1;
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop1_1"]];
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop1_2"]];
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop1_3"]];
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop1_4"]];
+        animation1.restoreOriginalFrame = NO;
+        animation1 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
+        [animFrames removeAllObjects];
+        
+        //id a1 = [CCAnimate actionWithAnimation:animation1];
+        [[CCAnimationCache sharedAnimationCache] addAnimation:animation1 name:@"s_catcher_drop1"];
+    }
+    
+    //drop2_1
+    {
+        CCAnimation* animation1;
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop2_1"]];
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop2_2"]];
+        animation1.restoreOriginalFrame = NO;
+        animation1 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
+        [animFrames removeAllObjects];
+        
+        //id a1 = [CCAnimate actionWithAnimation:animation1];
+        [[CCAnimationCache sharedAnimationCache] addAnimation:animation1 name:@"s_catcher_drop2_1"];
+    }
+     //drop2_2
+    {
+        CCAnimation* animation1;
+        [animFrames addObject:[[CCAnimationFrame alloc] initWithSpriteFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop2_3"] delayUnits:1 userInfo:nil]];
+        [animFrames addObject:[[CCAnimationFrame alloc] initWithSpriteFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop2_3"] delayUnits:1 userInfo:nil]];
+        [animFrames addObject:[[CCAnimationFrame alloc] initWithSpriteFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop2_4"] delayUnits:1 userInfo:nil]];
+        animation1.restoreOriginalFrame = NO;
+        animation1 = [CCAnimation animationWithAnimationFrames:animFrames delayPerUnit:0.1 loops:3];
+        [animFrames removeAllObjects];
+        
+        //id a1 = [CCAnimate actionWithAnimation:animation1];
+        [[CCAnimationCache sharedAnimationCache] addAnimation:animation1 name:@"s_catcher_drop2_2"];
+    }
+    
+    //drop3_1
+    {
+        CCAnimation* animation1;
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop3_1"]];
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop3_2"]];
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop3_1"]];
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop3_2"]];
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop3_3"]];
+        animation1.restoreOriginalFrame = NO;
+        animation1 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
+        [animFrames removeAllObjects];
+        
+        //id a1 = [CCAnimate actionWithAnimation:animation1];
+        [[CCAnimationCache sharedAnimationCache] addAnimation:animation1 name:@"s_catcher_drop3_1"];
+    }
+    
+    //drop3_2
+    {
+        CCAnimation* animation1;
+        [animFrames addObject:[[CCAnimationFrame alloc] initWithSpriteFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop3_4"] delayUnits:1 userInfo:nil]];
+        [animFrames addObject:[[CCAnimationFrame alloc] initWithSpriteFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_drop3_5"] delayUnits:1 userInfo:nil]];
+        animation1.restoreOriginalFrame = NO;
+        animation1 =[CCAnimation animationWithAnimationFrames:animFrames delayPerUnit:0.1 loops:3];
+        [animFrames removeAllObjects];
+        
+        //id a1 = [CCAnimate actionWithAnimation:animation1];
+        [[CCAnimationCache sharedAnimationCache] addAnimation:animation1 name:@"s_catcher_drop3_2"];
+    }
+    
+    
+    
 }
 -(void)initRole
 {
@@ -584,7 +675,7 @@
         cat.position = ccpAdd(cat.position, ccp(0, -20));
     }
     
-    arr_catcher = (NSMutableArray*)[arr_catcher sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+    /*arr_catcher = (NSMutableArray*)[arr_catcher sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         
         if (((Catcher*)obj1).position.x < ((Catcher*)obj2).position.x) {
             
@@ -599,18 +690,28 @@
         }
         
         return (NSComparisonResult)NSOrderedSame;
-    }];
+    }];*/
     
     
     
     CCMenuItemFont *item1 = [CCMenuItemFont itemWithString:@"+" block:^(id sender){_purSpeed -=100;}];
     CCMenuItemFont *item2 = [CCMenuItemFont itemWithString:@"-" block:^(id sender){_purSpeed +=100;}];
+    
+    CCMenuItemFont *item3 = [CCMenuItemFont itemWithString:@"Drop" block:^(id sender){
+        [self dropOneCatcher];
+    }];
+    CCMenuItemFont *item4 = [CCMenuItemFont itemWithString:@"SpeedUp" block:^(id sender){
+        [self speedUpCatcher];
+    }];
     item1.fontSize = 60;
     item2.fontSize = 60;
+    item3.fontSize = 60;
+    item4.fontSize = 60;
     item1.position = ccp(50,720);
     item2.position = ccp(100,720);
-    
-    CCMenu *menu = [CCMenu menuWithItems:item1,item2, nil];
+    item3.position = ccp(200,720);
+    item4.position = ccp(300,720);
+    CCMenu *menu = [CCMenu menuWithItems:item1,item2, item3,item4,nil];
     [self addChild:menu z:4];
     menu.position=CGPointZero;
     
@@ -631,8 +732,8 @@
     [self addChild:role z:1];
     role.position = ccp(877,279);
     [role initAnimation];
-    [self schedule:@selector(roleJump:) interval:3];
-    [self schedule:@selector(speedUpCatcher) interval:2];
+    //[self schedule:@selector(roleJump:) interval:3];
+    //[self schedule:@selector(speedUpCatcher) interval:2];
     //[self schedule:@selector(catcherJump:) interval:2];
     role.delegate = self;
     
@@ -651,7 +752,15 @@
     [tmpCatch runAction:[CCMoveBy actionWithDuration:2.5 position:ccp(-100, 0)]];
     [self schedule:@selector(speedNormal) interval:0];
 }
-
+-(void)CatcherDropDidFinished:(id)sender WithType:(int)tpye
+{
+    Catcher *tmpCatch = (Catcher*)sender;
+    _purSpeed = FirstSpeed;
+    tmpCatch.val = _purSpeed;
+    for (Catcher *tmp in arr_catcher) {
+        [tmp resumeSchedulerAndActions];
+    }
+}
 -(void)speedNormal
 {
     if (_purSpeed  > FirstSpeed) {
@@ -679,6 +788,19 @@
 }
 - (void)update:(ccTime)delta
 {
+    
+    for (Catcher* tmp in arr_catcher) {
+        if (tmp.isDrop) {
+            tmp.position = ccpAdd(tmp.position, ccpMult(ccp(tmp.val, 0), delta));
+            if (tmp.position.x < - tmp.contentSize.width/2-50) {
+                [arr_catcher removeObject:tmp];
+                [self removeChild:tmp cleanup:YES];
+                break;
+                //[arr_droped removeObject:tmp];
+            }
+        }
+    }
+    
     
     /*---------------background moved---------------*/
     CCSprite *frontGround = (CCSprite*)[self getChildByTag:1001];
@@ -717,6 +839,7 @@
             }
         }
     }
+    
    /* jumpFunction
     CCArray *jumpObjArr = parArr[7].arr;
     for (SpriteE *tmp in jumpObjArr) {
@@ -735,7 +858,7 @@
 
 -(void)speedUpCatcher
 {
-    [self schedule:_cmd interval:8];
+    //[self schedule:_cmd interval:8];
     int speedUpType = [GameScene createRandomsizeValueInt:0 toInt:1];
     for (Catcher *catcher in arr_catcher )
     {
@@ -751,11 +874,19 @@
 -(void)dropOneCatcher
 {
     _purSpeed = 0;
+    for (Catcher *tmp in arr_catcher) {
+        [tmp pauseSchedulerAndActions];
+    }
+    int tmpIndex = [GameScene createRandomsizeValueInt:0 toInt:[arr_catcher count]-1];
+    Catcher *tmpCatch = (Catcher*)[arr_catcher objectAtIndex:tmpIndex];
+    if (!tmpCatch.isDrop) {
+        
+        [tmpCatch drop];
+    }
     
     
-    
-    Catcher *tmpCatch = (Catcher*)[arr_catcher objectAtIndex:[GameScene createRandomsizeValueInt:0 toInt:3]];
-    [tmpCatch drop];
+    //[arr_catcher removeObject:tmpCatch];
+
 
     
 }
@@ -769,11 +900,5 @@
 	// don't forget to call "super dealloc"
 	//[super dealloc];
 }
--(void)dropACatcher
-{
-    _purSpeed = 0;
-    int index = [GameScene createRandomsizeValueInt:0 toInt:[arr_catcher count]];
-    Catcher *catch = (Catcher*)[arr_catcher objectAtIndex:index];
-    [catch drop];
-}
+
 @end

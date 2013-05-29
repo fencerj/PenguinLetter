@@ -12,6 +12,7 @@
 
 -(void)RoleAnimationDidFinished;
 -(void)CatcherAnimationDidFinished:(id)sender WithType:(int)tpye;
+-(void)CatcherDropDidFinished:(id)sender WithType:(int)tpye;
 @end
 
 
@@ -43,6 +44,7 @@
     NSObject <RoleDelegate> *_delegate;
 }
 @property (readwrite, nonatomic) NSObject *delegate;
+@property (nonatomic,assign) float val;
 -(void)initAnimation;
 -(id)initWithFrameName:(NSString*)frameName;//AniCount:(int[4])count;
 -(void)Jump;
@@ -59,11 +61,12 @@
 
 @interface Catcher : Role
 {
-    id acDrop[2];
+    CCAnimate *acDrop[4];
     id acSpeedUp[2];
-    
+    BOOL _isDroped;
     //CCAnimate *
 }
+@property (nonatomic,assign) BOOL isDrop;
 -(id)initWithFrameName:(NSString*)frameName Delay:(float)time;
 -(void)speedUp:(int)a;
 -(void)speedDown;

@@ -113,6 +113,7 @@
     //    _aniCount[3] = count[3];
     aniCache = [CCAnimationCache sharedAnimationCache];
     _canAction = YES;
+    _val = 0;
     return [self initWithSpriteFrameName:frameName];
     
 }
@@ -180,9 +181,6 @@
 {
 }
 @end
-
-
-
 
 
 @implementation Catcher
@@ -308,6 +306,33 @@
         }
         
     }
+    //acDrop[0] = [CCAnimate action];
+    {
+        CCAnimation *dropA = [aniCache animationByName:@"s_catcher_drop0"];
+        acDrop[0] = [CCAnimate actionWithAnimation:dropA];
+    }
+    {
+        CCAnimation *dropA = [aniCache animationByName:@"s_catcher_drop1"];
+        acDrop[1] = [CCAnimate actionWithAnimation:dropA];
+    }
+    {
+        CCAnimation *dropA = [aniCache animationByName:@"s_catcher_drop2_1"];
+        CCAnimation *dropB = [aniCache animationByName:@"s_catcher_drop2_2"];
+        
+        id a1 = [CCAnimate actionWithAnimation:dropA];
+        id a2 = [CCAnimate actionWithAnimation:dropB];
+        acDrop[2] = [CCSequence actions:a1,a2, nil];
+    }
+    {
+        CCAnimation *dropA = [aniCache animationByName:@"s_catcher_drop3_1"];
+        CCAnimation *dropB = [aniCache animationByName:@"s_catcher_drop3_2"];
+        
+        id a1 = [CCAnimate actionWithAnimation:dropA];
+        id a2 = [CCAnimate actionWithAnimation:dropB];
+        acDrop[3] = [CCSequence actions:a1,a2, nil];
+    }
+    
+    //[aniCache addAnimationsWithFile:@"s_catcher_drop"];
     
     
     [self schedule:@selector(Run) interval:_delayTime];
@@ -361,11 +386,17 @@
 }
 -(void)drop
 {
-    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"s_catcher_ani.plist"];
-    
-    
+    _isDrop = YES;
+    [self stopAllActions];
+    int a = [GameScene createRandomsizeValueInt:0 toInt:3];
+    [self runAction:[CCSequence actions:acDrop[a],[CCCallBlock actionWithBlock:^{
+        [_delegate CatcherDropDidFinished:self WithType:a];
+    }],nil]];
 }
 -(void)remove
 {
+    if (_isDrop) {
+        [self removeFromParent];
+    }
 }
 @end
