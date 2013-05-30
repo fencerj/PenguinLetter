@@ -54,6 +54,7 @@ typedef struct StrArr
     NSMutableArray *arr_droped;
     Role *role;
     NSMutableArray *arr_jumpItem;
+    CCSprite *Buff;
 }
 + (NSInteger)createRandomsizeValueInt:(NSInteger)fromInt toInt:(NSInteger)toInt;
 + (double)createRandomsizeValueFloat:(double)fromFloat toFloat:(double)toFloat;

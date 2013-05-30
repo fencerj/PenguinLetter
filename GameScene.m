@@ -166,6 +166,9 @@
 }
 -(void)initBg
 {
+    
+    
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"s_catcher_ani.plist"];
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sheep_scene_0.plist"];
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sheep_scene_1.plist"];
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sheep_scene_2.plist"];
@@ -176,6 +179,8 @@
     CCSprite *bg = [CCSprite spriteWithFile:@"sheep_scene_bg.pvr.ccz"];//z0
     bg.anchorPoint = CGPointZero;
     [self addChild:bg z:0];
+    
+    
     
     
     pNode = [CCParallaxNode node];
@@ -616,7 +621,15 @@
 -(void)initRole
 {
     arr_catcher = [NSMutableArray arrayWithCapacity:20];
-
+    
+    
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"s_role_ani.plist"];
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"s_catcher_ani.plist"];
+    
+    Buff = [CCSprite spriteWithSpriteFrameName:@"s_catcher_speedUp_buffer"];
+    Buff.opacity = 0;
+    Buff.position = ccp(Buff.contentSize.width/2,457);
+    [self addChild:Buff z:1];
 #pragma catcher init
 
     for (int i = 0 ; i < 11; i++) {
@@ -738,7 +751,6 @@
     role.delegate = self;
     
 }
-
 -(void)RoleAnimationDidFinished
 {
     
@@ -749,7 +761,8 @@
     [tmpCatch setBlurSize:0];
     //_purSpeed = -500;
     [tmpCatch Run];
-    [tmpCatch runAction:[CCMoveBy actionWithDuration:2.5 position:ccp(-100, 0)]];
+    [tmpCatch runAction:[CCMoveBy actionWithDuration:2.0 position:ccp(-100, 0)]];
+    [Buff runAction:[CCFadeOut actionWithDuration:0.5]];
     [self schedule:@selector(speedNormal) interval:0];
 }
 -(void)CatcherDropDidFinished:(id)sender WithType:(int)tpye
@@ -769,11 +782,9 @@
     }
     else
     {
-       _purSpeed += 20;
+       _purSpeed += 40;
     }
 }
-
-
 -(void)roleJump:(ccTime)dt
 {
     [role Scare];
@@ -866,8 +877,10 @@
         [catcher speedUp:speedUpType];
         
         [catcher runAction:[CCMoveBy actionWithDuration:1 position:ccp(100, 0)]];
+        
         [catcher setBlurSize:1.0];
     }
+    [Buff runAction:[CCFadeIn actionWithDuration:0.2]];
     _purSpeed = -6000;
 }
 

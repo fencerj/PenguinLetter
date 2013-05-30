@@ -13,7 +13,14 @@
 @interface QuestionDB : CCNode {
     NSString *qsName;
     NSInteger qsType;
+    NSMutableArray *qsItemArr;
+    NSMutableArray *ansItemArr;
+    int ansCount;
+    int qsCount;
+    
+    //NSString *itemsName;
 }
-
-
+-(void)showQuestion;
+-(void)showAnswer;
+-(BOOL)judgeAnswer:(int)youChose;
 @end

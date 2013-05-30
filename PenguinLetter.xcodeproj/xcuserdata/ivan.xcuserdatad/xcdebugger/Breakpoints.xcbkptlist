@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GameScene.m"
-         timestampString = "391505765.890939"
+         timestampString = "391575030.519148"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "545"
-         endingLineNumber = "545"
+         startingLineNumber = "550"
+         endingLineNumber = "550"
          landmarkName = "-initAnimation"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GameScene.m"
-         timestampString = "391505819.524173"
+         timestampString = "391575030.519148"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "577"
-         endingLineNumber = "577"
+         startingLineNumber = "582"
+         endingLineNumber = "582"
          landmarkName = "-initAnimation"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GameScene.m"
-         timestampString = "391506071.066494"
+         timestampString = "391575030.519148"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "607"
-         endingLineNumber = "607"
+         startingLineNumber = "612"
+         endingLineNumber = "612"
          landmarkName = "-initAnimation"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GameScene.m"
-         timestampString = "391510154.432836"
+         timestampString = "391575318.149109"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "759"
-         endingLineNumber = "759"
+         startingLineNumber = "772"
+         endingLineNumber = "772"
          landmarkName = "-CatcherDropDidFinished:WithType:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -73,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GameScene.m"
-         timestampString = "391510154.432836"
+         timestampString = "391575318.149109"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "797"
-         endingLineNumber = "797"
+         startingLineNumber = "808"
+         endingLineNumber = "808"
          landmarkName = "-update:"
          landmarkType = "5">
       </FileBreakpoint>
