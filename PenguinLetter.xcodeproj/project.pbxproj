@@ -40,6 +40,8 @@
 		2C64B3091749BB7100EE9A91 /* s_role_ani-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C64B3011749BB7100EE9A91 /* s_role_ani-ipadhd.plist */; };
 		2C64B30A1749BB7100EE9A91 /* s_role_ani-ipadhd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2C64B3021749BB7100EE9A91 /* s_role_ani-ipadhd.pvr.ccz */; };
 		2C64B30D1749C97400EE9A91 /* Role.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C64B30C1749C97300EE9A91 /* Role.m */; };
+		2CA2927E175C685F009A03E2 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2927D175C685F009A03E2 /* Common.m */; };
+		2CA29280175C8EB9009A03E2 /* plqs.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA2927F175C8EB9009A03E2 /* plqs.png */; };
 		2CA3687A174612FC007B9C95 /* mask80.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA36879174612FC007B9C95 /* mask80.png */; };
 		2CA3687C1746150B007B9C95 /* sheep.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3687B1746150B007B9C95 /* sheep.png */; };
 		2CA3687F17461768007B9C95 /* MaskedSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3687E17461768007B9C95 /* MaskedSprite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -182,7 +184,7 @@
 		2CC67CA9173B4E9800A12452 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC67CA8173B4E9800A12452 /* AppDelegate.m */; };
 		2CC67CAC173B4E9900A12452 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC67CAB173B4E9900A12452 /* HelloWorldLayer.m */; };
 		2CC67CAF173B4E9900A12452 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC67CAE173B4E9900A12452 /* IntroLayer.m */; };
-		2CE259891744CDB000796DBF /* QuestionDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE259881744CDB000796DBF /* QuestionDB.m */; };
+		2CE259891744CDB000796DBF /* QuestionDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE259881744CDB000796DBF /* QuestionDB.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -221,6 +223,9 @@
 		2C64B3021749BB7100EE9A91 /* s_role_ani-ipadhd.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "s_role_ani-ipadhd.pvr.ccz"; sourceTree = "<group>"; };
 		2C64B30B1749C97300EE9A91 /* Role.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Role.h; sourceTree = "<group>"; };
 		2C64B30C1749C97300EE9A91 /* Role.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Role.m; sourceTree = "<group>"; };
+		2CA2927C175C685E009A03E2 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		2CA2927D175C685F009A03E2 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		2CA2927F175C8EB9009A03E2 /* plqs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plqs.png; sourceTree = "<group>"; };
 		2CA36879174612FC007B9C95 /* mask80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask80.png; sourceTree = "<group>"; };
 		2CA3687B1746150B007B9C95 /* sheep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sheep.png; sourceTree = "<group>"; };
 		2CA3687D17461768007B9C95 /* MaskedSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskedSprite.h; sourceTree = "<group>"; };
@@ -538,6 +543,7 @@
 		2C7D7787173CE3900031834B /* SheepScene */ = {
 			isa = PBXGroup;
 			children = (
+				2CA2927F175C8EB9009A03E2 /* plqs.png */,
 				2C64B2FB1749BB7100EE9A91 /* s_catcher_ani-ipad.plist */,
 				2C64B2FC1749BB7100EE9A91 /* s_catcher_ani-ipad.pvr.ccz */,
 				2C64B2FD1749BB7100EE9A91 /* s_catcher_ani-ipadhd.plist */,
@@ -616,6 +622,8 @@
 		2CC67B19173B4E9600A12452 /* PenguinLetter */ = {
 			isa = PBXGroup;
 			children = (
+				2CA2927C175C685E009A03E2 /* Common.h */,
+				2CA2927D175C685F009A03E2 /* Common.m */,
 				2CA3687D17461768007B9C95 /* MaskedSprite.h */,
 				2CA3687E17461768007B9C95 /* MaskedSprite.m */,
 				2CE259871744CDB000796DBF /* QuestionDB.h */,
@@ -1118,6 +1126,7 @@
 				2C64B3081749BB7100EE9A91 /* s_role_ani-ipad.pvr.ccz in Resources */,
 				2C64B3091749BB7100EE9A91 /* s_role_ani-ipadhd.plist in Resources */,
 				2C64B30A1749BB7100EE9A91 /* s_role_ani-ipadhd.pvr.ccz in Resources */,
+				2CA29280175C8EB9009A03E2 /* plqs.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1244,6 +1253,7 @@
 				2CA3687F17461768007B9C95 /* MaskedSprite.m in Sources */,
 				2CA36883174618E8007B9C95 /* Mask.frag in Sources */,
 				2C64B30D1749C97400EE9A91 /* Role.m in Sources */,
+				2CA2927E175C685F009A03E2 /* Common.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
