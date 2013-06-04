@@ -828,7 +828,7 @@
     int diff = [GameScene createRandomsizeValueInt:1 toInt:3];
     int index = [GameScene createRandomsizeValueInt:0 toInt:9];
     
-    _qsLayer = [[QuestionPL alloc] initWithDiff:1 Type:1 Index:index];
+    _qsLayer = [[QuestionPL alloc] initWithDiff:diff Type:1 Index:index];
     [self addChild:_qsLayer z:3];
     _qsLayer.position = ccp(0,0);
     _qsLayer.delegate = self;

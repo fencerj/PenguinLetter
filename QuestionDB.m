@@ -377,14 +377,14 @@ NSString *ansPLData[3][10][3] =
                 for (int j = 0 ; j < _qsCount; j++) {
                     CCSprite *item = [CCSprite spriteWithSpriteFrameName:qsPLData[diff-1][index-1][j%2]];
                     [_qsItemArr addObject:item];
-                    item.position = ccp(307,140);
+                    item.position = ccp(315,140);
                     [_qsFrame addChild:item];
                 }
                 
                 qsIndex = [GameScene createRandomsizeValueInt:0 toInt:_qsCount-1];
                 qsName = qsPLData[diff-1][index-1][qsIndex%3];
                 realQs = [CCSprite spriteWithSpriteFrameName:@"plqs"];
-                realQs.position = ccp(307,140);
+                realQs.position = ccp(315,140);
                 [_qsFrame removeChild:[_qsItemArr objectAtIndex:qsIndex]];
                 [_qsItemArr replaceObjectAtIndex:qsIndex withObject:realQs];
                 [_qsFrame addChild:realQs];
@@ -400,7 +400,7 @@ NSString *ansPLData[3][10][3] =
                     }
                     [_ansItemArr addObject:item];
                     [_ansFrame addChild:item];
-                    item.position = ccp(200,150);
+                    item.position = ccp(200-100,230);
                 }
                 
                 [_ansItemArr retain];
@@ -460,8 +460,8 @@ NSString *ansPLData[3][10][3] =
                 
                 [_ansItemArr retain];
                 [_qsItemArr retain];
-                [self alignItemsHorizontallyWithPadding:0 Target:_ansItemArr];
-                [self alignItemsHorizontallyWithPadding:-20 Target:_qsItemArr];
+                [self alignItemsHorizontallyWithPadding:20 Target:_ansItemArr];
+                [self alignItemsHorizontallyWithPadding:0 Target:_qsItemArr];
                  
             }
                 break;
@@ -515,7 +515,7 @@ NSString *ansPLData[3][10][3] =
                 [_ansItemArr retain];
                 [_qsItemArr retain];
                 [self alignItemsHorizontallyWithPadding:0 Target:_ansItemArr];
-                [self alignItemsHorizontallyWithPadding:-20 Target:_qsItemArr];
+                [self alignItemsHorizontallyWithPadding:0 Target:_qsItemArr];
             }
                 break;
         }

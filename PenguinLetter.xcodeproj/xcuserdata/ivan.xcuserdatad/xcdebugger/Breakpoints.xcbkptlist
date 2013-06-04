@@ -177,19 +177,6 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "QuestionDB.m"
-         timestampString = "392027867.942307"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "377"
-         endingLineNumber = "377"
-         landmarkName = "-initWithDiff:Type:Index:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "QuestionDB.m"
          timestampString = "392028327.621419"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
