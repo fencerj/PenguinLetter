@@ -9,19 +9,21 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
+@protocol QsDelegate 
+-(void)answerIsCorrect:(id)sender;
+-(void)answerIsFault:(id)sender;
+@end
 //NSString *questions[3][10];
 
-typedef struct QData
+@interface AnsItem : CCSprite
 {
-    int index;
-    int diff;
-    int type;
-    NSMutableArray *qsItemsArr;
-    NSMutableArray *asItemArr;
-    
-}QData;
+    NSString *_itemNames;
+    BOOL _isCorrect;
+}
+@property (strong,nonatomic) NSString *itemNames;
+@property (assign,nonatomic) BOOL isCorrect;
+@end
 
-QData qd[3][10];
 
 @interface QuestionDB : CCLayer {
     //NSString *_qsName;
@@ -31,10 +33,15 @@ QData qd[3][10];
     int _diff;
     int _ansCount;
     int _qsCount;
+    NSString *qsName;
     CCSprite *_qsFrame;
     CCSprite *_ansFrame;    //NSString *itemsName;
     BOOL isAnswered;
+    NSObject <QsDelegate> *_delegate;
 }
+//@property (nonatomic,strong) NSMutableArray *qsItemArr;
+//@property (nonatomic,strong) NSMutableArray *ansItemArr;
+@property (readwrite, nonatomic) NSObject *delegate;
 -(id)initWithDiff:(int)diff Type:(int)type Index:(int)index;
 -(void)showQuestion;
 

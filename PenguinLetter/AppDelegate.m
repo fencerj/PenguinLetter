@@ -139,7 +139,7 @@
 	
 	// make main window visible
 	[window_ makeKeyAndVisible];
-	
+	[window_ setMultipleTouchEnabled:NO];
        
     
 	return YES;

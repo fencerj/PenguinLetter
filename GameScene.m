@@ -161,6 +161,7 @@
         [self initBg];
         [self initAnimation];
         [self initRole];
+        [self initQuestion];
 	}
 	return self;
 }
@@ -751,52 +752,8 @@
     role.delegate = self;
     
 }
--(void)RoleAnimationDidFinished
-{
-    
-}
--(void)CatcherAnimationDidFinished:(id)sender WithType:(int)tpye
-{
-    Catcher *tmpCatch = (Catcher*)sender;
-    [tmpCatch setBlurSize:0];
-    //_purSpeed = -500;
-    [tmpCatch Run];
-    [tmpCatch runAction:[CCMoveBy actionWithDuration:2.0 position:ccp(-100, 0)]];
-    [Buff runAction:[CCFadeOut actionWithDuration:0.5]];
-    [self schedule:@selector(speedNormal) interval:0];
-}
--(void)CatcherDropDidFinished:(id)sender WithType:(int)tpye
-{
-    Catcher *tmpCatch = (Catcher*)sender;
-    _purSpeed = FirstSpeed;
-    tmpCatch.val = _purSpeed;
-    for (Catcher *tmp in arr_catcher) {
-        [tmp resumeSchedulerAndActions];
-    }
-}
--(void)speedNormal
-{
-    if (_purSpeed  > FirstSpeed) {
-        _purSpeed = FirstSpeed;
-        [self unschedule:_cmd];
-    }
-    else
-    {
-       _purSpeed += 40;
-    }
-}
--(void)roleJump:(ccTime)dt
-{
-    [role Scare];
-    [role faceGood];
-}
--(void)catcherJump:(ccTime)dt
-{
-    for (Catcher *catcher in arr_catcher )
-    {
-        //[catcher Jump:[arr_catcher indexOfObject:catcher]*0.05];
-    }
-}
+
+//about role,background Items move refresh
 - (void)update:(ccTime)delta
 {
     
@@ -851,20 +808,64 @@
         }
     }
     
-   /* jumpFunction
-    CCArray *jumpObjArr = parArr[7].arr;
-    for (SpriteE *tmp in jumpObjArr) {
-        CGPoint jmpObjPos = [pNode convertToWorldSpace:tmp.position];
-        //CCLOG(@"jump%f",jmpObjPos.x);
-        for (Catcher *catcher in arr_catcher) {
-            if (catcher.position.x>jmpObjPos.x+200 && tmp.jumpCount <= [arr_catcher count]) {
-                [catcher Jump:0];
-                
-            }
-        }
-    }*/
+    /* jumpFunction
+     CCArray *jumpObjArr = parArr[7].arr;
+     for (SpriteE *tmp in jumpObjArr) {
+     CGPoint jmpObjPos = [pNode convertToWorldSpace:tmp.position];
+     //CCLOG(@"jump%f",jmpObjPos.x);
+     for (Catcher *catcher in arr_catcher) {
+     if (catcher.position.x>jmpObjPos.x+200 && tmp.jumpCount <= [arr_catcher count]) {
+     [catcher Jump:0];
+     
+     }
+     }
+     }*/
     
     
+}
+-(void)initQuestion
+{
+    int diff = [GameScene createRandomsizeValueInt:1 toInt:3];
+    int index = [GameScene createRandomsizeValueInt:0 toInt:9];
+    
+    _qsLayer = [[QuestionPL alloc] initWithDiff:1 Type:1 Index:index];
+    [self addChild:_qsLayer z:3];
+    _qsLayer.position = ccp(0,0);
+    _qsLayer.delegate = self;
+}
+-(void)RoleAnimationDidFinished
+{
+    
+}
+-(void)CatcherAnimationDidFinished:(id)sender WithType:(int)tpye
+{
+    Catcher *tmpCatch = (Catcher*)sender;
+    [tmpCatch setBlurSize:0];
+    //_purSpeed = -500;
+    [tmpCatch Run];
+    [tmpCatch runAction:[CCMoveBy actionWithDuration:2.0 position:ccp(-100, 0)]];
+    [Buff runAction:[CCFadeOut actionWithDuration:0.5]];
+    [self schedule:@selector(speedNormal) interval:0];
+}
+-(void)CatcherDropDidFinished:(id)sender WithType:(int)tpye
+{
+    Catcher *tmpCatch = (Catcher*)sender;
+    _purSpeed = FirstSpeed;
+    tmpCatch.val = _purSpeed;
+    for (Catcher *tmp in arr_catcher) {
+        [tmp resumeSchedulerAndActions];
+    }
+}
+-(void)speedNormal
+{
+    if (_purSpeed  > FirstSpeed) {
+        _purSpeed = FirstSpeed;
+        [self unschedule:_cmd];
+    }
+    else
+    {
+       _purSpeed += 40;
+    }
 }
 
 -(void)speedUpCatcher
@@ -883,7 +884,6 @@
     [Buff runAction:[CCFadeIn actionWithDuration:0.2]];
     _purSpeed = -6000;
 }
-
 -(void)dropOneCatcher
 {
     _purSpeed = 0;
@@ -902,6 +902,16 @@
 
 
     
+}
+
+#pragma question Delegate
+-(void)answerIsCorrect:(id)sender
+{
+    [self dropOneCatcher];
+}
+-(void)answerIsFault:(id)sender
+{
+    [self speedUpCatcher];
 }
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc

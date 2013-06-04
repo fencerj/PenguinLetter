@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "Role.h"
-
+#import "QuestionDB.h"
 
 typedef struct StrArr
 {
@@ -43,7 +43,7 @@ typedef struct StrArr
 
 
 
-@interface GameScene : CCLayer<RoleDelegate> {
+@interface GameScene : CCLayer<RoleDelegate,QsDelegate> {
     float _purSpeed;    //追赶者速度
     float _sceneSpeed;  //场景移动速度
     float _deltaDis;    //间距
@@ -55,6 +55,7 @@ typedef struct StrArr
     Role *role;
     NSMutableArray *arr_jumpItem;
     CCSprite *Buff;
+    QuestionPL *_qsLayer;
 }
 + (NSInteger)createRandomsizeValueInt:(NSInteger)fromInt toInt:(NSInteger)toInt;
 + (double)createRandomsizeValueFloat:(double)fromFloat toFloat:(double)toFloat;
