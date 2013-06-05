@@ -388,14 +388,15 @@
 {
     _isDrop = YES;
     [self stopAllActions];
-    int a = 2;//[GameScene createRandomsizeValueInt:0 toInt:3];
+    int a = [GameScene createRandomsizeValueInt:0 toInt:3];
     [self runAction:[CCSequence actions:acDrop[a],[CCCallBlock actionWithBlock:^{
+        if (a == 1) {
+            [self runAction:[CCMoveBy actionWithDuration:3 position:ccp(0,1000)]];
+        }
         [_delegate CatcherDropDidFinished:self WithType:a];
     }],nil]];
     
-    if (a == 2) {
-        [self runAction:[CCMoveBy actionWithDuration:3 position:ccp(0,1000)]];
-    }
+   
 }
 -(void)remove
 {
