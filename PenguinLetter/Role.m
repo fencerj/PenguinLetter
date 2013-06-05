@@ -226,7 +226,7 @@
         }
         animation1 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
         id a1 = [CCAnimate actionWithAnimation:animation1];
-        id as1 = [CCRepeat actionWithAction:a1 times:15];
+        id as1 = [CCRepeat actionWithAction:a1 times:12];
         [animFrames removeAllObjects];
         
         CCAnimation *animation2;
@@ -238,7 +238,7 @@
         }
          animation2 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
         id a2 = [CCAnimate actionWithAnimation:animation2];
-        id as2 = [CCRepeat actionWithAction:a2 times:15];
+        id as2 = [CCRepeat actionWithAction:a2 times:12];
         [animFrames removeAllObjects];
         
         if (!_isBack)
