@@ -226,7 +226,7 @@
         }
         animation1 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
         id a1 = [CCAnimate actionWithAnimation:animation1];
-        id as1 = [CCRepeat actionWithAction:a1 times:20];
+        id as1 = [CCRepeat actionWithAction:a1 times:15];
         [animFrames removeAllObjects];
         
         CCAnimation *animation2;
@@ -238,7 +238,7 @@
         }
          animation2 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
         id a2 = [CCAnimate actionWithAnimation:animation2];
-        id as2 = [CCRepeat actionWithAction:a2 times:20];
+        id as2 = [CCRepeat actionWithAction:a2 times:15];
         [animFrames removeAllObjects];
         
         if (!_isBack)
@@ -388,10 +388,14 @@
 {
     _isDrop = YES;
     [self stopAllActions];
-    int a = [GameScene createRandomsizeValueInt:0 toInt:3];
+    int a = 2;//[GameScene createRandomsizeValueInt:0 toInt:3];
     [self runAction:[CCSequence actions:acDrop[a],[CCCallBlock actionWithBlock:^{
         [_delegate CatcherDropDidFinished:self WithType:a];
     }],nil]];
+    
+    if (a == 2) {
+        [self runAction:[CCMoveBy actionWithDuration:3 position:ccp(0,1000)]];
+    }
 }
 -(void)remove
 {

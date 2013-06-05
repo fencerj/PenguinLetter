@@ -17,6 +17,8 @@
 #define Z7ItemTag = 600
 #define FrontGroundRadio 1.8
 #define FirstSpeed -1000
+
+
 //#define Z1RADIO 0.02
 //#define Z1KINDS 4
 //#define Z1NUMS  3
@@ -74,6 +76,8 @@
 //zOrder = 9;
 //itemType = @"SceneItem_";
 //countInSt = 1;
+
+
 
 @interface SpriteE:CCSprite
 {
@@ -158,9 +162,12 @@
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
         
+        diff = 0;
+        qsCount = 1;
         [self initBg];
         [self initAnimation];
         [self initRole];
+        [self initControl];
         [self initQuestion];
 	}
 	return self;
@@ -752,7 +759,17 @@
     role.delegate = self;
     
 }
-
+-(void)initControl
+{
+    _GameLife = 4;
+    for (int i = 0 ; i < 4; i++) {
+        life[i] = [CCSprite spriteWithFile:@"Icon.png"];
+        life[i].scale = 1;
+        [self addChild:life[i] z:4];
+        life[i].position = ccp(780+i*life[i].contentSize.width*1.2,768-life[i].contentSize.height/2.2);
+    }
+        
+}
 //about role,background Items move refresh
 - (void)update:(ccTime)delta
 {
@@ -825,10 +842,54 @@
 }
 -(void)initQuestion
 {
-    int diff = [GameScene createRandomsizeValueInt:1 toInt:3];
-    int index = [GameScene createRandomsizeValueInt:0 toInt:9];
+
+    for (int i =0; i <3; i++) {
+        for (int j = 0 ; j < 10; j++ ) {
+            availablePL[i][j] = YES;
+        }
+    }
     
-    _qsLayer = [[QuestionPL alloc] initWithDiff:diff Type:1 Index:index];
+    for (int i =0; i <2; i++) {
+        for (int j = 0 ; j < 8; j++ ) {
+            availablePL[i][j] = YES;
+        }
+    }
+    
+    for (int i =0; i <3; i++) {
+        for (int j = 0 ; j < 19; j++ ) {
+            availablePL[i][j] = YES;
+        }
+    }
+    
+    int type = [GameScene createRandomsizeValueInt:0 toInt:2];
+    type = 0;
+    int index;   
+
+    switch (type) {
+        case 0:
+        {
+            //diff = [GameScene createRandomsizeValueInt:0 toInt:1];
+            index = [GameScene createRandomsizeValueInt:0 toInt:9];
+             _qsLayer = [[QuestionPL alloc] initWithDiff:diff Type:type Index:index];
+        }
+            break;
+        case 1:
+        {
+            //diff = [GameScene createRandomsizeValueInt:0 toInt:2];
+            index = [GameScene createRandomsizeValueInt:0 toInt:9];
+            _qsLayer = [[QuestionPL alloc] initWithDiff:diff Type:type Index:index];
+        }
+             
+            break;
+        case 2:
+        {
+            //diff = [GameScene createRandomsizeValueInt:0 toInt:2];
+            index = [GameScene createRandomsizeValueInt:0 toInt:9];
+            _qsLayer = [[QuestionPL alloc] initWithDiff:diff Type:type Index:index];
+        }
+            break;
+    }
+       
     [self addChild:_qsLayer z:3];
     _qsLayer.position = ccp(0,0);
     _qsLayer.delegate = self;
@@ -837,8 +898,9 @@
 {
     
 }
--(void)CatcherAnimationDidFinished:(id)sender WithType:(int)tpye
+-(void)CatcherAnimationDidFinished:(id)sender WithType:(int)tpye//多只羊
 {
+    
     Catcher *tmpCatch = (Catcher*)sender;
     [tmpCatch setBlurSize:0];
     //_purSpeed = -500;
@@ -846,6 +908,7 @@
     [tmpCatch runAction:[CCMoveBy actionWithDuration:2.0 position:ccp(-100, 0)]];
     [Buff runAction:[CCFadeOut actionWithDuration:0.5]];
     [self schedule:@selector(speedNormal) interval:0];
+    
 }
 -(void)CatcherDropDidFinished:(id)sender WithType:(int)tpye
 {
@@ -855,6 +918,7 @@
     for (Catcher *tmp in arr_catcher) {
         [tmp resumeSchedulerAndActions];
     }
+    [self nextQuestion];
 }
 -(void)speedNormal
 {
@@ -896,8 +960,6 @@
         
         [tmpCatch drop];
     }
-    
-    
     //[arr_catcher removeObject:tmpCatch];
 
 
@@ -905,13 +967,58 @@
 }
 
 #pragma question Delegate
--(void)answerIsCorrect:(id)sender
+
+-(void)answerJudgeFinished:(id)sender isCorrect:(BOOL)isCorrect
 {
-    [self dropOneCatcher];
+    if (isCorrect) {
+        [self dropOneCatcher];
+    }
+    [self removeChild:_qsLayer cleanup:YES];
+    
 }
--(void)answerIsFault:(id)sender
+-(void)answerJudgeBegin:(id)sender isCorrect:(BOOL)isCorrect
 {
-    [self speedUpCatcher];
+    ++qsCount;
+//    if ( qsCount>8 ) {
+//        diff = 2;
+//    }
+//    else if(qsCount>5)
+//    {
+//        diff = 1;
+//    }
+//    else
+//    {
+//        diff = 0;
+//    }
+    
+    
+    
+    
+    if (!isCorrect)    //错误掉血
+    {
+        --_GameLife;
+        [life[_GameLife] runAction:[CCSequence actions:[CCScaleTo actionWithDuration:0.2 scale:0],[CCCallBlock actionWithBlock:^{
+            [self removeChild:life[_GameLife] cleanup:YES];
+        }], nil]];
+        
+        if (_GameLife>=0) {//还有命~继续
+            [self speedUpCatcher];//动物狂追
+            [self schedule:@selector(nextQuestion) interval:3.5];
+        }
+        else//没命~gameover
+            [self gameOver];
+    }
+
+}
+-(void)nextQuestion
+{
+    CCLOG(@"nextQs");
+    [self unschedule:_cmd];
+    [self initQuestion];
+}
+-(void)gameOver
+{
+    CCLOG(@"GameOver");
 }
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc

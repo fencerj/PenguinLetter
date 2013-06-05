@@ -9,9 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
+
+@interface QuestionDB : CCNode
+{
+    BOOL isUsed;
+    NSMutableArray *qsItemStrs;
+}
+@property (strong,nonatomic) NSMutableArray *qsItemStrs;
+@property (assign,nonatomic) BOOL isUsed;
+@end
+
+
 @protocol QsDelegate 
 -(void)answerIsCorrect:(id)sender;
 -(void)answerIsFault:(id)sender;
+-(void)answerJudgeFinished:(id)sender isCorrect:(BOOL)isCorrect;
+-(void)answerJudgeBegin:(id)sender isCorrect:(BOOL)isCorrect;
 @end
 //NSString *questions[3][10];
 
@@ -25,11 +38,12 @@
 @end
 
 
-@interface QuestionDB : CCLayer {
+@interface QuestionLayer : CCLayer {
     //NSString *_qsName;
     int _qsType;
     NSMutableArray *_qsItemArr;
     NSMutableArray *_ansItemArr;
+    NSMutableArray *_availbleQs;
     int _diff;
     int _ansCount;
     int _qsCount;
@@ -38,16 +52,17 @@
     CCSprite *_ansFrame;    //NSString *itemsName;
     BOOL isAnswered;
     NSObject <QsDelegate> *_delegate;
+    BOOL _isCorrect;
 }
 //@property (nonatomic,strong) NSMutableArray *qsItemArr;
 //@property (nonatomic,strong) NSMutableArray *ansItemArr;
 @property (readwrite, nonatomic) NSObject *delegate;
 -(id)initWithDiff:(int)diff Type:(int)type Index:(int)index;
 -(void)showQuestion;
-
+-(void)nextQuestion;
 @end
 
-@interface QuestionPL : QuestionDB
+@interface QuestionPL : QuestionLayer
 {
     int qsIndex;
     int ansIndex;
@@ -55,13 +70,18 @@
     CCSprite *realAnswer;
     NSString *ansStr;
 }
--(id)initWithDiff:(int)diff Type:(int)type Index:(int)index ;
+@end
+
+@interface QuestionFF : QuestionLayer
+{
+    int qsIndex;
+    int ansIndex;
+    CCSprite *realQs;
+    CCSprite *realAnswer;
+    NSString *ansStr;
+}
 @end
 
 
 
 
-@interface QuestionLayer : CCLayer
-
-
-@end

@@ -41,7 +41,9 @@ typedef struct StrArr
 @property (retain,nonatomic) CCArray *arr;
 @end
 
+@interface PauseLayer : CCLayer
 
+@end
 
 @interface GameScene : CCLayer<RoleDelegate,QsDelegate> {
     float _purSpeed;    //追赶者速度
@@ -55,7 +57,15 @@ typedef struct StrArr
     Role *role;
     NSMutableArray *arr_jumpItem;
     CCSprite *Buff;
-    QuestionPL *_qsLayer;
+    QuestionLayer *_qsLayer;
+    CCSprite *life[4];
+    int _GameLife;
+    int diff;
+    int qsCount;
+    float gameTimes;
+    BOOL availablePL[3][10];
+    BOOL availableFF[2][8];
+    BOOL availableOther[3][19];
 }
 + (NSInteger)createRandomsizeValueInt:(NSInteger)fromInt toInt:(NSInteger)toInt;
 + (double)createRandomsizeValueFloat:(double)fromFloat toFloat:(double)toFloat;
