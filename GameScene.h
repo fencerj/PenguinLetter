@@ -66,6 +66,7 @@ typedef struct StrArr
     BOOL availablePL[3][10];
     BOOL availableFF[2][8];
     BOOL availableOther[3][19];
+    int rightCount;
 }
 + (NSInteger)createRandomsizeValueInt:(NSInteger)fromInt toInt:(NSInteger)toInt;
 + (double)createRandomsizeValueFloat:(double)fromFloat toFloat:(double)toFloat;

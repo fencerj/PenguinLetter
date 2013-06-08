@@ -1,0 +1,53 @@
+setup_ani-ipadhd.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+a
+  rotate: false
+  xy: 162, 276
+  size: 69, 83
+  orig: 69, 83
+  offset: 0, 0
+  index: -1
+s
+  rotate: false
+  xy: 310, 2
+  size: 58, 77
+  orig: 58, 77
+  offset: 0, 0
+  index: -1
+i
+  rotate: false
+  xy: 310, 160
+  size: 50, 76
+  orig: 50, 76
+  offset: 0, 0
+  index: -1
+l
+  rotate: false
+  xy: 310, 81
+  size: 54, 77
+  orig: 54, 77
+  offset: 0, 0
+  index: -1
+m
+  rotate: false
+  xy: 2, 276
+  size: 84, 92
+  orig: 84, 92
+  offset: 0, 0
+  index: -1
+n
+  rotate: false
+  xy: 88, 276
+  size: 72, 85
+  orig: 72, 85
+  offset: 0, 0
+  index: -1
+qie
+  rotate: false
+  xy: 2, 2
+  size: 306, 272
+  orig: 306, 272
+  offset: 0, 0
+  index: -1

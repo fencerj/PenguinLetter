@@ -8,6 +8,7 @@
 
 #import "GameScene.h"
 #import "MaskedSprite.h"
+#import "GameOverScene.h"
 #define Z1ItemTag = 100
 #define Z2ItemTag = 200
 #define Z3ItemTag = 300
@@ -763,10 +764,10 @@
 {
     _GameLife = 4;
     for (int i = 0 ; i < 4; i++) {
-        life[i] = [CCSprite spriteWithFile:@"Icon.png"];
+        life[i] = [CCSprite spriteWithSpriteFrameName:@"life"];
         life[i].scale = 1;
         [self addChild:life[i] z:4];
-        life[i].position = ccp(780+i*life[i].contentSize.width*1.2,768-life[i].contentSize.height/2.2);
+        life[i].position = ccp(700+i*life[i].contentSize.width*1.1,768-life[i].contentSize.height/2.2);
     }
         
 }
@@ -843,6 +844,10 @@
 -(void)initQuestion
 {
 
+    if (qsCount>10) {
+        [self gameWin];
+    }
+    
     for (int i =0; i <3; i++) {
         for (int j = 0 ; j < 10; j++ ) {
             availablePL[i][j] = YES;
@@ -931,7 +936,6 @@
        _purSpeed += 40;
     }
 }
-
 -(void)speedUpCatcher
 {
     //[self schedule:_cmd interval:8];
@@ -979,25 +983,26 @@
 -(void)answerJudgeBegin:(id)sender isCorrect:(BOOL)isCorrect
 {
     ++qsCount;
-//    if ( qsCount>8 ) {
-//        diff = 2;
-//    }
-//    else if(qsCount>5)
-//    {
-//        diff = 1;
-//    }
-//    else
-//    {
-//        diff = 0;
-//    }
     
-    
+    if ( qsCount>8 ) {
+        diff = 2;
+    }
+    else if(qsCount>5)
+    {
+        diff = 1;
+    }
+    else
+    {
+        diff = 0;
+    }
     
     
     if (!isCorrect)    //错误掉血
     {
         --_GameLife;
-        [life[_GameLife] runAction:[CCSequence actions:[CCScaleTo actionWithDuration:0.2 scale:0],[CCCallBlock actionWithBlock:^{
+        [life[_GameLife] runAction:[CCSequence actions:[CCCallBlock actionWithBlock:^{
+            [life[_GameLife] setDisplayFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"life_ani"]];
+        }],[CCScaleTo actionWithDuration:0.2 scale:0],[CCCallBlock actionWithBlock:^{
             [self removeChild:life[_GameLife] cleanup:YES];
         }], nil]];
         
@@ -1008,6 +1013,9 @@
         else//没命~gameover
             [self gameOver];
     }
+    else
+        rightCount++;
+    
 
 }
 -(void)nextQuestion
@@ -1016,13 +1024,22 @@
     [self unschedule:_cmd];
     [self initQuestion];
 }
+-(void)gameWin
+{
+    CCLOG(@"GameWin");
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[GameOverScene sceneWin:rightCount]]];
+}
 -(void)gameOver
 {
+    //[[CCDirector sharedDirector] ]
     CCLOG(@"GameOver");
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[GameOverScene sceneGameOver:rightCount]]];
 }
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc
 {
+    //[super dealloc];
+    //[parallaxArr release];
 	// in case you have something to dealloc, do it in this method
 	// in this particular example nothing needs to be released.
 	// cocos2d will automatically release all the children (Label)

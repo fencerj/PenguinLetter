@@ -1,0 +1,74 @@
+MainMenu_ani-ipadhd.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+cao2
+  rotate: false
+  xy: 1250, 80
+  size: 50, 65
+  orig: 50, 65
+  offset: 0, 0
+  index: -1
+logo
+  rotate: false
+  xy: 2, 2
+  size: 1160, 854
+  orig: 1160, 854
+  offset: 0, 0
+  index: -1
+a
+  rotate: false
+  xy: 1164, 183
+  size: 69, 83
+  orig: 69, 83
+  offset: 0, 0
+  index: -1
+s
+  rotate: false
+  xy: 1238, 147
+  size: 58, 77
+  orig: 58, 77
+  offset: 0, 0
+  index: -1
+muba
+  rotate: false
+  xy: 2, 858
+  size: 1110, 442
+  orig: 1110, 442
+  offset: 0, 0
+  index: -1
+i
+  rotate: false
+  xy: 1250, 2
+  size: 50, 76
+  orig: 50, 76
+  offset: 0, 0
+  index: -1
+l
+  rotate: false
+  xy: 1164, 268
+  size: 54, 77
+  orig: 54, 77
+  offset: 0, 0
+  index: -1
+m
+  rotate: false
+  xy: 1164, 2
+  size: 84, 92
+  orig: 84, 92
+  offset: 0, 0
+  index: -1
+cao1
+  rotate: false
+  xy: 1235, 226
+  size: 54, 184
+  orig: 54, 184
+  offset: 0, 0
+  index: -1
+n
+  rotate: false
+  xy: 1164, 96
+  size: 72, 85
+  orig: 72, 85
+  offset: 0, 0
+  index: -1

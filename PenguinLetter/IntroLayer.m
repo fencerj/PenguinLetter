@@ -11,7 +11,7 @@
 #import "IntroLayer.h"
 #import "HelloWorldLayer.h"
 #import "GameScene.h"
-
+#import "MainMenu.h"
 #pragma mark - IntroLayer
 
 // HelloWorldLayer implementation
@@ -61,6 +61,6 @@
 -(void) onEnter
 {
 	[super onEnter];
-	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameScene scene] ]];
+	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[Loading initWithTargetScene:@"MainMenu"] ]];
 }
 @end

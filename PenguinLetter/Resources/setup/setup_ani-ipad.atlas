@@ -1,0 +1,53 @@
+setup_ani-ipad.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+a
+  rotate: false
+  xy: 84, 140
+  size: 35, 42
+  orig: 35, 42
+  offset: 0, 0
+  index: -1
+s
+  rotate: false
+  xy: 157, 2
+  size: 29, 39
+  orig: 29, 39
+  offset: 0, 0
+  index: -1
+i
+  rotate: false
+  xy: 157, 84
+  size: 25, 38
+  orig: 25, 38
+  offset: 0, 0
+  index: -1
+l
+  rotate: false
+  xy: 157, 43
+  size: 27, 39
+  orig: 27, 39
+  offset: 0, 0
+  index: -1
+m
+  rotate: false
+  xy: 2, 140
+  size: 42, 46
+  orig: 42, 46
+  offset: 0, 0
+  index: -1
+n
+  rotate: false
+  xy: 46, 140
+  size: 36, 43
+  orig: 36, 43
+  offset: 0, 0
+  index: -1
+qie
+  rotate: false
+  xy: 2, 2
+  size: 153, 136
+  orig: 153, 136
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,130 @@
+loading_ani-ipad.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L
+  rotate: false
+  xy: 207, 73
+  size: 10, 12
+  orig: 10, 12
+  offset: 0, 0
+  index: -1
+D
+  rotate: false
+  xy: 207, 59
+  size: 11, 12
+  orig: 11, 12
+  offset: 0, 0
+  index: -1
+0002
+  rotate: false
+  xy: 213, 99
+  size: 4, 4
+  orig: 4, 4
+  offset: 0, 0
+  index: -1
+qie4
+  rotate: false
+  xy: 2, 187
+  size: 91, 99
+  orig: 91, 99
+  offset: 0, 0
+  index: -1
+I
+  rotate: false
+  xy: 207, 87
+  size: 4, 12
+  orig: 4, 12
+  offset: 0, 0
+  index: -1
+A
+  rotate: false
+  xy: 192, 74
+  size: 13, 12
+  orig: 13, 12
+  offset: 0, 0
+  index: -1
+0003
+  rotate: false
+  xy: 213, 93
+  size: 4, 4
+  orig: 4, 4
+  offset: 0, 0
+  index: -1
+qie5
+  rotate: false
+  xy: 192, 223
+  size: 112, 82
+  orig: 112, 82
+  offset: 0, 0
+  index: -1
+qie1
+  rotate: false
+  xy: 2, 59
+  size: 95, 126
+  orig: 95, 126
+  offset: 0, 0
+  index: -1
+N
+  rotate: false
+  xy: 192, 103
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+cao
+  rotate: false
+  xy: 2, 2
+  size: 216, 55
+  orig: 216, 55
+  offset: 0, 0
+  index: -1
+qie6
+  rotate: false
+  xy: 99, 185
+  size: 91, 106
+  orig: 91, 106
+  offset: 0, 0
+  index: -1
+qie2
+  rotate: false
+  xy: 192, 128
+  size: 109, 93
+  orig: 109, 93
+  offset: 0, 0
+  index: -1
+O
+  rotate: false
+  xy: 192, 59
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+ooo1
+  rotate: false
+  xy: 213, 87
+  size: 4, 4
+  orig: 4, 4
+  offset: 0, 0
+  index: -1
+G
+  rotate: false
+  xy: 192, 88
+  size: 12, 13
+  orig: 12, 13
+  offset: 0, 0
+  index: -1
+qie7
+  rotate: false
+  xy: 220, 2
+  size: 91, 124
+  orig: 91, 124
+  offset: 0, 0
+  index: -1
+qie3
+  rotate: false
+  xy: 99, 59
+  size: 91, 124
+  orig: 91, 124
+  offset: 0, 0
+  index: -1
