@@ -7,13 +7,13 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "PenguinLetter/libs/cocos2d/CCAnimation.m"
-         timestampString = "391505288.16882"
+         filePath = "QuestionDB.m"
+         timestampString = "393478737.652934"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "131"
-         endingLineNumber = "131"
-         landmarkName = "-initWithAnimationFrames:delayPerUnit:loops:"
+         startingLineNumber = "1391"
+         endingLineNumber = "1391"
+         landmarkName = "-initWithDiff:Type:Index:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -21,12 +21,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GameScene.m"
-         timestampString = "392415282.105059"
+         timestampString = "393752951.102494"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "559"
-         endingLineNumber = "559"
-         landmarkName = "-initAnimation"
+         startingLineNumber = "1139"
+         endingLineNumber = "1139"
+         landmarkName = "-gameStop"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -34,64 +34,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GameScene.m"
-         timestampString = "392415282.105059"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "591"
-         endingLineNumber = "591"
-         landmarkName = "-initAnimation"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "GameScene.m"
-         timestampString = "392415282.105059"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "621"
-         endingLineNumber = "621"
-         landmarkName = "-initAnimation"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "GameScene.m"
-         timestampString = "392419675.257591"
+         timestampString = "393752610.955372"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "921"
          endingLineNumber = "921"
-         landmarkName = "-CatcherDropDidFinished:WithType:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "QuestionDB.m"
-         timestampString = "392117129.896663"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "618"
-         endingLineNumber = "618"
-         landmarkName = "-ccTouchEnded:withEvent:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "QuestionDB.m"
-         timestampString = "392109488.983367"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "525"
-         endingLineNumber = "525"
-         landmarkName = "-correctAnswerAni"
+         landmarkName = "-initQuestion"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -99,38 +47,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GameScene.m"
-         timestampString = "392419675.257591"
+         timestampString = "393752610.955372"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "981"
-         endingLineNumber = "981"
-         landmarkName = "-answerJudgeFinished:isCorrect:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "PenguinLetter/Loading.mm"
-         timestampString = "392389062.763654"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "58"
-         endingLineNumber = "58"
-         landmarkName = "-waitLoad"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "PenguinLetter/Setup.m"
-         timestampString = "392390511.892845"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "49"
-         endingLineNumber = "49"
-         landmarkName = "-init"
+         startingLineNumber = "922"
+         endingLineNumber = "922"
+         landmarkName = "-initQuestion"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

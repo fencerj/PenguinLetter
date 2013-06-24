@@ -51,6 +51,13 @@ houcao
   orig: 309, 376
   offset: 0, 0
   index: -1
+0
+  rotate: false
+  xy: 2357, 259
+  size: 321, 361
+  orig: 321, 361
+  offset: 0, 0
+  index: -1
 xiaoshitou
   rotate: false
   xy: 2694, 2572
@@ -182,13 +189,6 @@ ye2
   xy: 2997, 259
   size: 290, 310
   orig: 290, 310
-  offset: 0, 0
-  index: -1
-0_0000s_0003_4-副本
-  rotate: false
-  xy: 2357, 259
-  size: 321, 361
-  orig: 321, 361
   offset: 0, 0
   index: -1
 qie3

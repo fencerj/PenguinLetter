@@ -29,6 +29,7 @@ typedef struct StrArr
     CGPoint mostX;
     float _totalInterval;
     
+    
 }
 @property (assign,nonatomic) int zOrder;
 @property (assign,nonatomic) BOOL isRandom;
@@ -41,7 +42,7 @@ typedef struct StrArr
 @property (retain,nonatomic) CCArray *arr;
 @end
 
-@interface PauseLayer : CCLayer
+@interface PauseLayer : CCSprite
 
 @end
 
@@ -67,8 +68,16 @@ typedef struct StrArr
     BOOL availableFF[2][8];
     BOOL availableOther[3][19];
     int rightCount;
+    int effectId;
+    float timer;
+    BOOL _isPause;
+    BOOL _isWin;
+    //CCMenuItemSprite *pauseItem;
 }
+@property (assign,nonatomic) BOOL isPause;
 + (NSInteger)createRandomsizeValueInt:(NSInteger)fromInt toInt:(NSInteger)toInt;
 + (double)createRandomsizeValueFloat:(double)fromFloat toFloat:(double)toFloat;
 +(CCScene *) scene;
 @end
+
+

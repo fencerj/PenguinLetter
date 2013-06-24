@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+
+#import "spine-cocos2d-iphone.h"
 @protocol RoleDelegate
 
 -(void)RoleAnimationDidFinished;
@@ -34,17 +36,20 @@
     float _deltaDis;
     int _aniCount[4];
     CCAnimationCache *aniCache;
-    id _acRun;
-    id _acJump;
-    id _acFall;
-    id _acScare;
+    NSString *_acRun;
+    NSString *_acJump;
+    NSString *_acFall;
+    NSString *_acScare;
     BOOL _canAction;
     BOOL _isJumping;
     CCSprite *face;
     NSObject <RoleDelegate> *_delegate;
+    CCSkeletonAnimation *animationNode;
 }
+@property (nonatomic,assign) float delayTime;
 @property (readwrite, nonatomic) NSObject *delegate;
 @property (nonatomic,assign) float val;
+@property (strong,nonatomic) CCSkeletonAnimation *animationNode;
 -(void)initAnimation;
 -(id)initWithFrameName:(NSString*)frameName;//AniCount:(int[4])count;
 -(void)Jump;
@@ -63,18 +68,35 @@
 {
     CCAnimate *acDrop[4];
     id acSpeedUp[2];
-    BOOL _isDroped;
-    //CCAnimate *
+    NSString *_acDropStr[4];
+    NSString *_acSpeedUpStr[2];
+    NSString *_acRunStr;
+    NSString *_acJumpStr;
+    BOOL _isDrop;
+    BOOL _isBack;
 }
 @property (nonatomic,assign) BOOL isDrop;
+@property (readwrite,assign) BOOL isBack;
 -(id)initWithFrameName:(NSString*)frameName Delay:(float)time;
 -(void)speedUp:(int)a;
 -(void)speedDown;
--(void)drop;
+-(void)drop:(int)efid;
 -(void)Jump:(float)delay;
+
+-(void)gameOver;
 @end
 
-@interface Catcher()
-@property (readwrite,assign) BOOL isBack;
 
+
+@interface CatcherSheep : Catcher
+{
+
+    
+}
+@end
+@interface CatcherHorse : Catcher
+{
+    
+    
+}
 @end

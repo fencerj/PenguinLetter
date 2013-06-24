@@ -1,0 +1,60 @@
+loadinggame_ani-ipadhd.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+N
+  rotate: false
+  xy: 2, 2
+  size: 43, 53
+  orig: 43, 53
+  offset: 0, 0
+  index: -1
+O
+  rotate: false
+  xy: 85, 2
+  size: 47, 35
+  orig: 47, 35
+  offset: 0, 0
+  index: -1
+dian
+  rotate: false
+  xy: 121, 39
+  size: 9, 11
+  orig: 9, 11
+  offset: 0, 0
+  index: -1
+A
+  rotate: false
+  xy: 52, 86
+  size: 52, 45
+  orig: 52, 45
+  offset: 0, 0
+  index: -1
+D
+  rotate: false
+  xy: 2, 57
+  size: 48, 49
+  orig: 48, 49
+  offset: 0, 0
+  index: -1
+G
+  rotate: false
+  xy: 47, 2
+  size: 36, 48
+  orig: 36, 48
+  offset: 0, 0
+  index: -1
+i
+  rotate: false
+  xy: 85, 39
+  size: 34, 45
+  orig: 34, 45
+  offset: 0, 0
+  index: -1
+L
+  rotate: false
+  xy: 2, 108
+  size: 48, 21
+  orig: 48, 21
+  offset: 0, 0
+  index: -1

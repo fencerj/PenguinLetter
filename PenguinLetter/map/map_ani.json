@@ -962,20 +962,10 @@
 			}
 		},
 		"slots": {
-			"bmmy": {
-				"attachment": [
-					{ "time": 0, "name": null }
-				]
-			},
-			"bmmz": {
-				"attachment": [
-					{ "time": 0, "name": null }
-				]
-			},
-			"bone12": {
+			"bone11": {
 				"attachment": [
 					{ "time": 0, "name": null },
-					{ "time": 4.3666, "name": "Hzuo" },
+					{ "time": 4.3666, "name": "Hyou" },
 					{ "time": 4.9333, "name": null }
 				]
 			},
@@ -989,22 +979,17 @@
 					{ "time": 4.9333, "name": "Zyoushou" }
 				]
 			},
-			"bone20": {
-				"color": [
-					{ "time": 0, "color": "ffffff5d" },
-					{ "time": 0.5, "color": "ffffffff" }
-				]
-			},
-			"bone14": {
+			"bone5": {
 				"attachment": [
 					{ "time": 0, "name": null },
-					{ "time": 2.2333, "name": "gantanhao" },
-					{ "time": 2.3333, "name": null },
-					{ "time": 2.4333, "name": "gantanhao" },
-					{ "time": 2.5333, "name": null },
-					{ "time": 2.6333, "name": "gantanhao" },
-					{ "time": 2.7333, "name": null },
-					{ "time": 2.8, "name": null }
+					{ "time": 5.1666, "name": "gomhliandan" },
+					{ "time": 5.6, "name": null }
+				]
+			},
+			"bone15": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 4.4, "name": "Zzui" }
 				]
 			},
 			"bone4": {
@@ -1030,64 +1015,27 @@
 					{ "time": 5.6, "name": "Zyj2" }
 				]
 			},
-			"bone5": {
-				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 5.1666, "name": "gomhliandan" },
-					{ "time": 5.6, "name": null }
-				]
-			},
-			"bone19": {
-				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 0.5, "name": "Syunz" },
-					{ "time": 1, "name": "Syunz" },
-					{ "time": 1.0333, "name": null }
-				],
-				"color": [
-					{ "time": 0.5, "color": "ffffffff" },
-					{ "time": 1, "color": "ffffff4d" }
-				]
-			},
 			"bone17": {
 				"attachment": [
 					{ "time": 1.5666, "name": null }
 				]
 			},
-			"bone10": {
-				"attachment": [
-					{ "time": 0, "name": "Ss1" },
-					{ "time": 1.5666, "name": "Zzuoshou" },
-					{ "time": 2.8333, "name": "Zzuoshou" },
-					{ "time": 4.1333, "name": "Zzuoshou" },
-					{ "time": 4.3666, "name": null },
-					{ "time": 4.9333, "name": "Ss1" }
-				]
-			},
-			"bone11": {
+			"bone12": {
 				"attachment": [
 					{ "time": 0, "name": null },
-					{ "time": 4.3666, "name": "Hyou" },
+					{ "time": 4.3666, "name": "Hzuo" },
 					{ "time": 4.9333, "name": null }
 				]
 			},
-			"bone15": {
+			"bmmy": {
 				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 4.4, "name": "Zzui" }
+					{ "time": 0, "name": null }
 				]
 			},
 			"bone16": {
 				"attachment": [
 					{ "time": 0, "name": "Smmz" },
 					{ "time": 1.5666, "name": "Zmmz" }
-				]
-			},
-			"bone13": {
-				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 4.0333, "name": "hudiejie" },
-					{ "time": 4.2, "name": "hudiejie" }
 				]
 			},
 			"bone1": {
@@ -1111,10 +1059,62 @@
 					{ "time": 1, "color": "ffffff25" }
 				]
 			},
+			"bone20": {
+				"color": [
+					{ "time": 0, "color": "ffffff5d" },
+					{ "time": 0.5, "color": "ffffffff" }
+				]
+			},
+			"bone13": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 4.0333, "name": "hudiejie" },
+					{ "time": 4.2, "name": "hudiejie" }
+				]
+			},
+			"bone19": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.5, "name": "Syunz" },
+					{ "time": 1, "name": "Syunz" },
+					{ "time": 1.0333, "name": null }
+				],
+				"color": [
+					{ "time": 0.5, "color": "ffffffff" },
+					{ "time": 1, "color": "ffffff4d" }
+				]
+			},
 			"bone6": {
 				"attachment": [
 					{ "time": 0, "name": "Smmy" },
 					{ "time": 1.5666, "name": "Zmmy" }
+				]
+			},
+			"bone14": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 2.2333, "name": "gantanhao" },
+					{ "time": 2.3333, "name": null },
+					{ "time": 2.4333, "name": "gantanhao" },
+					{ "time": 2.5333, "name": null },
+					{ "time": 2.6333, "name": "gantanhao" },
+					{ "time": 2.7333, "name": null },
+					{ "time": 2.8, "name": null }
+				]
+			},
+			"bone10": {
+				"attachment": [
+					{ "time": 0, "name": "Ss1" },
+					{ "time": 1.5666, "name": "Zzuoshou" },
+					{ "time": 2.8333, "name": "Zzuoshou" },
+					{ "time": 4.1333, "name": "Zzuoshou" },
+					{ "time": 4.3666, "name": null },
+					{ "time": 4.9333, "name": "Ss1" }
+				]
+			},
+			"bmmz": {
+				"attachment": [
+					{ "time": 0, "name": null }
 				]
 			}
 		}
@@ -1531,46 +1531,13 @@
 			}
 		},
 		"slots": {
-			"bmmz": {
+			"bone11": {
 				"attachment": [
 					{ "time": 0, "name": null },
-					{ "time": 1.6, "name": null }
-				]
-			},
-			"bone2": {
-				"attachment": [
-					{ "time": 0, "name": "Sbz" },
-					{ "time": 1.6, "name": "Sbz" }
-				]
-			},
-			"bone10": {
-				"attachment": [
-					{ "time": 0.4, "name": null },
-					{ "time": 0.4333, "name": null },
-					{ "time": 0.4666, "name": "Zzuoshou" },
-					{ "time": 1.0666, "name": "Zzuoshou" },
-					{ "time": 1.2, "name": "Zzuoshou" }
-				]
-			},
-			"bone12": {
-				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 0.4, "name": "Hzuo" },
+					{ "time": 0.4, "name": "Hyou" },
 					{ "time": 0.4666, "name": null },
 					{ "time": 1.1333, "name": null },
 					{ "time": 1.2, "name": null },
-					{ "time": 1.6, "name": null }
-				]
-			},
-			"bone1": {
-				"attachment": [
-					{ "time": 0, "name": "Zst" },
-					{ "time": 1.6, "name": "Zst" }
-				]
-			},
-			"bone14": {
-				"attachment": [
-					{ "time": 0, "name": null },
 					{ "time": 1.6, "name": null }
 				]
 			},
@@ -1580,6 +1547,18 @@
 					{ "time": 0.4666, "name": "Zyoushou" },
 					{ "time": 1.0666, "name": "Zyoushou" },
 					{ "time": 1.2, "name": "Zyoushou" }
+				]
+			},
+			"bone5": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1.6, "name": null }
+				]
+			},
+			"bone15": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1.6, "name": null }
 				]
 			},
 			"bone4": {
@@ -1593,35 +1572,23 @@
 					{ "time": 1.6, "name": "Zyj2" }
 				]
 			},
-			"bmmy": {
-				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 1.6, "name": null }
-				]
-			},
-			"bone19": {
-				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 1.6, "name": null }
-				]
-			},
 			"bone17": {
 				"attachment": [
 					{ "time": 0, "name": null },
 					{ "time": 1.6, "name": null }
 				]
 			},
-			"bone11": {
+			"bone12": {
 				"attachment": [
 					{ "time": 0, "name": null },
-					{ "time": 0.4, "name": "Hyou" },
+					{ "time": 0.4, "name": "Hzuo" },
 					{ "time": 0.4666, "name": null },
 					{ "time": 1.1333, "name": null },
 					{ "time": 1.2, "name": null },
 					{ "time": 1.6, "name": null }
 				]
 			},
-			"bone15": {
+			"bmmy": {
 				"attachment": [
 					{ "time": 0, "name": null },
 					{ "time": 1.6, "name": null }
@@ -1633,13 +1600,46 @@
 					{ "time": 1.6, "name": "Zmmz" }
 				]
 			},
-			"bone5": {
+			"bone18": {
 				"attachment": [
 					{ "time": 0, "name": null },
 					{ "time": 1.6, "name": null }
 				]
 			},
-			"bone18": {
+			"bone14": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1.6, "name": null }
+				]
+			},
+			"bone19": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1.6, "name": null }
+				]
+			},
+			"bone2": {
+				"attachment": [
+					{ "time": 0, "name": "Sbz" },
+					{ "time": 1.6, "name": "Sbz" }
+				]
+			},
+			"bone1": {
+				"attachment": [
+					{ "time": 0, "name": "Zst" },
+					{ "time": 1.6, "name": "Zst" }
+				]
+			},
+			"bone10": {
+				"attachment": [
+					{ "time": 0.4, "name": null },
+					{ "time": 0.4333, "name": null },
+					{ "time": 0.4666, "name": "Zzuoshou" },
+					{ "time": 1.0666, "name": "Zzuoshou" },
+					{ "time": 1.2, "name": "Zzuoshou" }
+				]
+			},
+			"bmmz": {
 				"attachment": [
 					{ "time": 0, "name": null },
 					{ "time": 1.6, "name": null }
@@ -2020,27 +2020,17 @@
 			}
 		},
 		"slots": {
-			"bmmy": {
+			"bone11": {
 				"attachment": [
 					{ "time": 0, "name": null }
 				]
 			},
-			"bmmz": {
+			"bone5": {
 				"attachment": [
 					{ "time": 0, "name": null }
 				]
 			},
-			"bone2": {
-				"attachment": [
-					{ "time": 0, "name": "Sbz" }
-				]
-			},
-			"bone12": {
-				"attachment": [
-					{ "time": 0, "name": null }
-				]
-			},
-			"bone14": {
+			"bone15": {
 				"attachment": [
 					{ "time": 0, "name": null }
 				]
@@ -2052,7 +2042,27 @@
 					{ "time": 0.4, "name": "Zyj2" }
 				]
 			},
-			"bone5": {
+			"bone17": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"bone12": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"bone1": {
+				"attachment": [
+					{ "time": 0, "name": "Zst" }
+				]
+			},
+			"bmmy": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"bone18": {
 				"attachment": [
 					{ "time": 0, "name": null }
 				]
@@ -2062,17 +2072,12 @@
 					{ "time": 0, "name": null }
 				]
 			},
-			"bone17": {
+			"bone2": {
 				"attachment": [
-					{ "time": 0, "name": null }
+					{ "time": 0, "name": "Sbz" }
 				]
 			},
-			"bone11": {
-				"attachment": [
-					{ "time": 0, "name": null }
-				]
-			},
-			"bone15": {
+			"bone14": {
 				"attachment": [
 					{ "time": 0, "name": null }
 				]
@@ -2082,12 +2087,7 @@
 					{ "time": 0, "name": "Zmmz" }
 				]
 			},
-			"bone1": {
-				"attachment": [
-					{ "time": 0, "name": "Zst" }
-				]
-			},
-			"bone18": {
+			"bmmz": {
 				"attachment": [
 					{ "time": 0, "name": null }
 				]
@@ -2684,9 +2684,95 @@
 			}
 		},
 		"slots": {
+			"bone11": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1, "name": null }
+				]
+			},
+			"bone5": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1, "name": null }
+				]
+			},
+			"bone15": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1, "name": null }
+				]
+			},
+			"bone4": {
+				"attachment": [
+					{ "time": 0, "name": "Zyj3" },
+					{ "time": 0.275, "name": "Zyj4" },
+					{ "time": 0.8, "name": "Zyj3" },
+					{ "time": 1, "name": "Zyj3" }
+				]
+			},
+			"bone17": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1, "name": null }
+				]
+			},
 			"bmmy": {
 				"attachment": [
 					{ "time": 0, "name": null }
+				]
+			},
+			"bone1": {
+				"attachment": [
+					{ "time": 0, "name": "Nst" },
+					{ "time": 0.275, "name": "Nst2" },
+					{ "time": 0.775, "name": "Nst" }
+				]
+			},
+			"bone3": {
+				"attachment": [
+					{ "time": 0, "name": "Syy" },
+					{ "time": 1, "name": null }
+				]
+			},
+			"bone18": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1, "name": null }
+				]
+			},
+			"bone12": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1, "name": null }
+				]
+			},
+			"bone20": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.2666, "color": "ffffffab", "curve": "stepped" },
+					{ "time": 0.3, "color": "ffffffab" },
+					{ "time": 0.5, "color": "ffffffff" },
+					{ "time": 0.7666, "color": "ffffff92", "curve": "stepped" },
+					{ "time": 0.8, "color": "ffffff92" },
+					{ "time": 1, "color": "ffffffff" }
+				]
+			},
+			"bone13": {
+				"attachment": [
+					{ "time": 0, "name": "hudiejie" },
+					{ "time": 1, "name": null }
+				]
+			},
+			"bone8": {
+				"attachment": [
+					{ "time": 0, "name": "Sm2" },
+					{ "time": 1, "name": "Sm2" }
+				]
+			},
+			"bone14": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1, "name": null }
 				]
 			},
 			"bone19": {
@@ -2703,53 +2789,10 @@
 					{ "time": 1, "name": "Sbz" }
 				]
 			},
-			"bone12": {
+			"bone6": {
 				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 1, "name": null }
-				]
-			},
-			"bone8": {
-				"attachment": [
-					{ "time": 0, "name": "Sm2" },
-					{ "time": 1, "name": "Sm2" }
-				]
-			},
-			"bone20": {
-				"color": [
-					{ "time": 0, "color": "ffffffff" },
-					{ "time": 0.2666, "color": "ffffffab", "curve": "stepped" },
-					{ "time": 0.3, "color": "ffffffab" },
-					{ "time": 0.5, "color": "ffffffff" },
-					{ "time": 0.7666, "color": "ffffff92", "curve": "stepped" },
-					{ "time": 0.8, "color": "ffffff92" },
-					{ "time": 1, "color": "ffffffff" }
-				]
-			},
-			"bone3": {
-				"attachment": [
-					{ "time": 0, "name": "Syy" },
-					{ "time": 1, "name": null }
-				]
-			},
-			"bone14": {
-				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 1, "name": null }
-				]
-			},
-			"bone4": {
-				"attachment": [
-					{ "time": 0, "name": "Zyj3" },
-					{ "time": 0.275, "name": "Zyj4" },
-					{ "time": 0.8, "name": "Zyj3" },
-					{ "time": 1, "name": "Zyj3" }
-				]
-			},
-			"bone5": {
-				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 1, "name": null }
+					{ "time": 0, "name": "Zmmy" },
+					{ "time": 1, "name": "Zmmy" }
 				]
 			},
 			"bone7": {
@@ -2758,58 +2801,15 @@
 					{ "time": 1, "name": "Sm1" }
 				]
 			},
-			"bone17": {
-				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 1, "name": null }
-				]
-			},
-			"bone11": {
-				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 1, "name": null }
-				]
-			},
-			"bone15": {
-				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 1, "name": null }
-				]
-			},
 			"bone16": {
 				"attachment": [
 					{ "time": 0, "name": "Zmmz" },
 					{ "time": 1, "name": "Zmmz" }
 				]
 			},
-			"bone13": {
-				"attachment": [
-					{ "time": 0, "name": "hudiejie" },
-					{ "time": 1, "name": null }
-				]
-			},
 			"bmmz": {
 				"attachment": [
 					{ "time": 0, "name": null }
-				]
-			},
-			"bone1": {
-				"attachment": [
-					{ "time": 0, "name": "Nst" },
-					{ "time": 0.275, "name": "Nst2" },
-					{ "time": 0.775, "name": "Nst" }
-				]
-			},
-			"bone18": {
-				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 1, "name": null }
-				]
-			},
-			"bone6": {
-				"attachment": [
-					{ "time": 0, "name": "Zmmy" },
-					{ "time": 1, "name": "Zmmy" }
 				]
 			}
 		}
@@ -3395,50 +3395,13 @@
 			}
 		},
 		"slots": {
-			"bone19": {
+			"bone11": {
 				"attachment": [
 					{ "time": 0, "name": null },
 					{ "time": 1, "name": null }
 				]
 			},
-			"bone2": {
-				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 1, "name": null }
-				]
-			},
-			"bone12": {
-				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 1, "name": null }
-				]
-			},
-			"bone8": {
-				"attachment": [
-					{ "time": 0, "name": "Sm2" },
-					{ "time": 1, "name": "Sm2" }
-				]
-			},
-			"bone1": {
-				"attachment": [
-					{ "time": 0, "name": "Nstb" },
-					{ "time": 0.2666, "name": "Nst2b" },
-					{ "time": 0.8, "name": "Nstb" }
-				]
-			},
-			"bone16": {
-				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 1, "name": null }
-				]
-			},
-			"bone3": {
-				"attachment": [
-					{ "time": 0, "name": null },
-					{ "time": 1, "name": null }
-				]
-			},
-			"bone14": {
+			"bone5": {
 				"attachment": [
 					{ "time": 0, "name": null },
 					{ "time": 1, "name": null }
@@ -3450,25 +3413,32 @@
 					{ "time": 1, "name": null }
 				]
 			},
-			"bone7": {
-				"attachment": [
-					{ "time": 0, "name": "Sm1" },
-					{ "time": 1, "name": "Sm1" }
-				]
-			},
 			"bone17": {
 				"attachment": [
 					{ "time": 0, "name": null },
 					{ "time": 1, "name": null }
 				]
 			},
-			"bone11": {
+			"bone12": {
 				"attachment": [
 					{ "time": 0, "name": null },
 					{ "time": 1, "name": null }
 				]
 			},
-			"bone15": {
+			"bone1": {
+				"attachment": [
+					{ "time": 0, "name": "Nstb" },
+					{ "time": 0.2666, "name": "Nst2b" },
+					{ "time": 0.8, "name": "Nstb" }
+				]
+			},
+			"bone3": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1, "name": null }
+				]
+			},
+			"bone18": {
 				"attachment": [
 					{ "time": 0, "name": null },
 					{ "time": 1, "name": null }
@@ -3485,25 +3455,55 @@
 					{ "time": 1, "color": "ffffffff" }
 				]
 			},
+			"bone19": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1, "name": null }
+				]
+			},
 			"bone13": {
 				"attachment": [
 					{ "time": 0, "name": null },
 					{ "time": 1, "name": null }
 				]
 			},
-			"bone5": {
+			"bone8": {
+				"attachment": [
+					{ "time": 0, "name": "Sm2" },
+					{ "time": 1, "name": "Sm2" }
+				]
+			},
+			"bone14": {
 				"attachment": [
 					{ "time": 0, "name": null },
 					{ "time": 1, "name": null }
 				]
 			},
-			"bone18": {
+			"bone2": {
 				"attachment": [
 					{ "time": 0, "name": null },
 					{ "time": 1, "name": null }
 				]
 			},
 			"bone6": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1, "name": null }
+				]
+			},
+			"bone15": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1, "name": null }
+				]
+			},
+			"bone7": {
+				"attachment": [
+					{ "time": 0, "name": "Sm1" },
+					{ "time": 1, "name": "Sm1" }
+				]
+			},
+			"bone16": {
 				"attachment": [
 					{ "time": 0, "name": null },
 					{ "time": 1, "name": null }

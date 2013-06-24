@@ -7,33 +7,33 @@
             <key>Z7SceneBg_0</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,646},{2048,644}}</string>
+                <string>{{0,433},{2048,431}}</string>
                 <key>offset</key>
-                <string>{0,-446}</string>
+                <string>{0,-108}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,892},{2048,644}}</string>
+                <string>{{0,216},{2048,431}}</string>
                 <key>sourceSize</key>
-                <string>{2048,1536}</string>
+                <string>{2048,647}</string>
             </dict>
             <key>Z7SceneBg_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{2048,644}}</string>
+                <string>{{0,0},{2048,431}}</string>
                 <key>offset</key>
-                <string>{0,-446}</string>
+                <string>{0,-108}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,892},{2048,644}}</string>
+                <string>{{0,216},{2048,431}}</string>
                 <key>sourceSize</key>
-                <string>{2048,1536}</string>
+                <string>{2048,647}</string>
             </dict>
             <key>Z8SceneItem_0</key>
             <dict>
                 <key>frame</key>
-                <string>{{775,1292},{508,255}}</string>
+                <string>{{0,1755},{508,255}}</string>
                 <key>offset</key>
                 <string>{-23,-3}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>Z8SceneItem_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{775,1549},{540,135}}</string>
+                <string>{{510,1855},{540,135}}</string>
                 <key>offset</key>
                 <string>{7,-54}</string>
                 <key>rotated</key>
@@ -56,10 +56,62 @@
                 <key>sourceSize</key>
                 <string>{554,261}</string>
             </dict>
+            <key>Z8SceneItem_2</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1716,1034},{308,147}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{308,147}}</string>
+                <key>sourceSize</key>
+                <string>{308,147}</string>
+            </dict>
+            <key>Z8SceneItem_3</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1716,866},{308,166}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{308,166}}</string>
+                <key>sourceSize</key>
+                <string>{308,166}</string>
+            </dict>
+            <key>Z8SceneItem_4</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1052,1855},{308,146}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{308,146}}</string>
+                <key>sourceSize</key>
+                <string>{308,146}</string>
+            </dict>
+            <key>Z8SceneItem_5</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1363,1299},{466,610}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{466,610}}</string>
+                <key>sourceSize</key>
+                <string>{466,610}</string>
+            </dict>
             <key>Z9SceneItem_0</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,1292},{773,504}}</string>
+                <string>{{0,1249},{773,504}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -69,10 +121,49 @@
                 <key>sourceSize</key>
                 <string>{773,504}</string>
             </dict>
+            <key>Z9SceneItem_1</key>
+            <dict>
+                <key>frame</key>
+                <string>{{775,1299},{586,554}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{586,554}}</string>
+                <key>sourceSize</key>
+                <string>{586,554}</string>
+            </dict>
+            <key>Z9SceneItem_2</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,866},{1081,381}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{1081,381}}</string>
+                <key>sourceSize</key>
+                <string>{1081,381}</string>
+            </dict>
+            <key>Z9SceneItem_3</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1083,866},{631,431}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{631,431}}</string>
+                <key>sourceSize</key>
+                <string>{631,431}</string>
+            </dict>
             <key>life</key>
             <dict>
                 <key>frame</key>
-                <string>{{1285,1292},{142,132}}</string>
+                <string>{{1843,1183},{142,132}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +176,7 @@
             <key>life_ani</key>
             <dict>
                 <key>frame</key>
-                <string>{{775,1686},{125,102}}</string>
+                <string>{{1716,1183},{125,102}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -103,9 +194,9 @@
             <key>realTextureFileName</key>
             <string>sheep_scene_4-ipadhd.pvr.ccz</string>
             <key>size</key>
-            <string>{2048,1796}</string>
+            <string>{2048,2010}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:0719d287a2e920ce173c61574be09986$</string>
+            <string>$TexturePacker:SmartUpdate:5643b17a96fdb7dac0bbc74c650e977d$</string>
             <key>textureFileName</key>
             <string>sheep_scene_4-ipadhd.pvr.ccz</string>
         </dict>

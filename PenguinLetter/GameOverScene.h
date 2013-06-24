@@ -15,7 +15,11 @@
     BOOL isWin;
     float time;
     int rightCount;
+    CCLabelTTF *labelCount;
+    CCLabelTTF *labelTime;
+    
+
 }
-+(id)sceneWin:(int)count;
++(id)sceneWin:(int)count time:(float)times;
 +(id)sceneGameOver:(int)count;
 @end

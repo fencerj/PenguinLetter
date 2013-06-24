@@ -82,25 +82,26 @@
     //[[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"menu_tp.plist"];
     CCLOG(@"add item");
     CCMenuItemSprite *item1 = [CCMenuItemSprite itemWithNormalSprite:[CCSprite spriteWithSpriteFrameName:@"play1"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"play2"] block:^(id sender){
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[Map scene]]];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[Loading initWithTargetScene:@"ComicScene"]]];
     
     }];
     
     CCMenuItemSprite *item2 = [CCMenuItemSprite itemWithNormalSprite:[CCSprite spriteWithSpriteFrameName:@"shezhi1"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"shezhi2"]  block:^(id sender){
         [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[Setup scene]]];
     }];
-    item1.position = ccp(726.6,445.4+1);
-    item2.position = ccp(931.4-2,456.2);
+    item1.position = ccp(726.6-3,445.4+2);
+    item2.position = ccp(931.4-2-2,456.2+2);
     
     CCMenu *menu = [CCMenu menuWithItems:item1,item2, nil];
     [self addChild:menu z:3];
     menu.position = CGPointZero;
+    
 }
-
 -(void)dealloc
 {
     [super dealloc];
-    //[[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
+    
+    [[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
 }
 
 @end

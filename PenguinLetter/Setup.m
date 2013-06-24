@@ -56,21 +56,21 @@
         
         
         
-        CCMenuItemSprite *item1 = [CCMenuItemSprite itemWithNormalSprite:[CCSprite spriteWithSpriteFrameName:@"fanhui"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"Bfanhui"] block:^(id sender){
+        CCMenuItemSprite *item1 = [CCMenuItemSprite itemWithNormalSprite:[CCSprite spriteWithSpriteFrameName:@"fanhui1"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"fanhui"] block:^(id sender){
              [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[MainMenu scene]]];
             
         }];
         
         item1.position = ccp(107,87);
         
-        CCMenuItemSprite *item2 = [CCMenuItemSprite itemWithNormalSprite:[CCSprite spriteWithSpriteFrameName:@"yinxiao"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"Byinyue"]  block:^(id sender){
+        CCMenuItemSprite *item2 = [CCMenuItemSprite itemWithNormalSprite:[CCSprite spriteWithSpriteFrameName:@"shengxiao1"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"shengxiao"]  block:^(id sender){
            
         }];
-        item2.position = ccp(786,405);
+        item2.position = ccp(786,405-30);
         
-        CCMenuItemSprite *item3 = [CCMenuItemSprite itemWithNormalSprite:[CCSprite spriteWithSpriteFrameName:@"shengxiao"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"Byinxiao"]  block:^(id sender){
+        CCMenuItemSprite *item3 = [CCMenuItemSprite itemWithNormalSprite:[CCSprite spriteWithSpriteFrameName:@"yinxiao1"]  selectedSprite: [CCSprite spriteWithSpriteFrameName:@"yinxiao"] block:^(id sender){
         }];
-        item3.position = ccp(920,261);
+        item3.position = ccp(920-5,261-2);
         
         
         CCMenuItemSprite *item4 = [CCMenuItemSprite itemWithNormalSprite:[CCSprite spriteWithSpriteFrameName:@"jianti"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"yingwen"]  block:^(id sender){

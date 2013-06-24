@@ -11,9 +11,19 @@
 #import "spine-cocos2d-iphone.h"
 #import "Loading.h"
 #import "MainMenu.h"
+#import "LoadingGame.h"
+
+@interface ComicScene : CCLayer
+{
+    BOOL _canTouch;
+}
++(id)scene;
+@end
+
 @interface Map : CCLayer {
     CCSkeletonAnimation *animationNode;
     CCSprite  *pic;
+
 }
 +(CCScene *) scene;
 @end

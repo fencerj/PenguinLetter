@@ -7,7 +7,7 @@
             <key>s_role_face_f</key>
             <dict>
                 <key>frame</key>
-                <string>{{182,220},{91,76}}</string>
+                <string>{{836,2},{91,76}}</string>
                 <key>offset</key>
                 <string>{7,-6}</string>
                 <key>rotated</key>
@@ -20,7 +20,7 @@
             <key>s_role_face_t</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,627},{107,84}}</string>
+                <string>{{829,143},{107,84}}</string>
                 <key>offset</key>
                 <string>{-1,-2}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>s_role_fall_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{613,655},{125,150}}</string>
+                <string>{{661,609},{125,150}}</string>
                 <key>offset</key>
                 <string>{-32,-43}</string>
                 <key>rotated</key>
@@ -46,11 +46,11 @@
             <key>s_role_fall_2</key>
             <dict>
                 <key>frame</key>
-                <string>{{215,391},{139,184}}</string>
+                <string>{{650,2},{139,184}}</string>
                 <key>offset</key>
                 <string>{-25,-26}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{37,52},{139,184}}</string>
                 <key>sourceSize</key>
@@ -59,11 +59,11 @@
             <key>s_role_fall_3</key>
             <dict>
                 <key>frame</key>
-                <string>{{263,182},{207,236}}</string>
+                <string>{{202,512},{207,236}}</string>
                 <key>offset</key>
                 <string>{-28,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{207,236}}</string>
                 <key>sourceSize</key>
@@ -72,11 +72,11 @@
             <key>s_role_fall_4</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{259,216}}</string>
+                <string>{{182,2},{259,216}}</string>
                 <key>offset</key>
                 <string>{-2,-10}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{0,20},{259,216}}</string>
                 <key>sourceSize</key>
@@ -85,11 +85,11 @@
             <key>s_role_fall_5</key>
             <dict>
                 <key>frame</key>
-                <string>{{572,2},{263,198}}</string>
+                <string>{{2,582},{263,198}}</string>
                 <key>offset</key>
                 <string>{0,-19}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{0,38},{263,198}}</string>
                 <key>sourceSize</key>
@@ -98,11 +98,11 @@
             <key>s_role_fall_6</key>
             <dict>
                 <key>frame</key>
-                <string>{{443,780},{123,146}}</string>
+                <string>{{708,412},{123,146}}</string>
                 <key>offset</key>
                 <string>{24,-45}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{94,90},{123,146}}</string>
                 <key>sourceSize</key>
@@ -111,11 +111,11 @@
             <key>s_role_fall_7</key>
             <dict>
                 <key>frame</key>
-                <string>{{591,782},{123,132}}</string>
+                <string>{{536,614},{123,132}}</string>
                 <key>offset</key>
                 <string>{24,-52}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{94,104},{123,132}}</string>
                 <key>sourceSize</key>
@@ -124,11 +124,11 @@
             <key>s_role_fall_8</key>
             <dict>
                 <key>frame</key>
-                <string>{{765,737},{123,132}}</string>
+                <string>{{411,614},{123,132}}</string>
                 <key>offset</key>
                 <string>{24,-52}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{94,104},{123,132}}</string>
                 <key>sourceSize</key>
@@ -137,11 +137,11 @@
             <key>s_role_jump_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{678,364},{134,205}}</string>
+                <string>{{514,2},{134,205}}</string>
                 <key>offset</key>
                 <string>{1,-82}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{23,164},{134,205}}</string>
                 <key>sourceSize</key>
@@ -150,7 +150,7 @@
             <key>s_role_jump_2</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,220},{178,269}}</string>
+                <string>{{2,311},{178,269}}</string>
                 <key>offset</key>
                 <string>{0,-50}</string>
                 <key>rotated</key>
@@ -163,11 +163,11 @@
             <key>s_role_jump_3</key>
             <dict>
                 <key>frame</key>
-                <string>{{263,2},{178,307}}</string>
+                <string>{{2,2},{178,307}}</string>
                 <key>offset</key>
                 <string>{0,-31}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,62},{178,307}}</string>
                 <key>sourceSize</key>
@@ -176,11 +176,11 @@
             <key>s_role_jump_4</key>
             <dict>
                 <key>frame</key>
-                <string>{{88,611},{112,219}}</string>
+                <string>{{400,2},{112,219}}</string>
                 <key>offset</key>
                 <string>{1,51}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{34,24},{112,219}}</string>
                 <key>sourceSize</key>
@@ -189,7 +189,7 @@
             <key>s_role_jump_5</key>
             <dict>
                 <key>frame</key>
-                <string>{{791,500},{112,235}}</string>
+                <string>{{294,263},{112,235}}</string>
                 <key>offset</key>
                 <string>{1,59}</string>
                 <key>rotated</key>
@@ -202,7 +202,7 @@
             <key>s_role_jump_6</key>
             <dict>
                 <key>frame</key>
-                <string>{{501,378},{110,247}}</string>
+                <string>{{182,263},{110,247}}</string>
                 <key>offset</key>
                 <string>{2,61}</string>
                 <key>rotated</key>
@@ -215,11 +215,11 @@
             <key>s_role_jump_7</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,491},{118,211}}</string>
+                <string>{{408,223},{118,211}}</string>
                 <key>offset</key>
                 <string>{1,28}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{31,51},{118,211}}</string>
                 <key>sourceSize</key>
@@ -228,11 +228,11 @@
             <key>s_role_jump_8</key>
             <dict>
                 <key>frame</key>
-                <string>{{179,725},{112,177}}</string>
+                <string>{{650,143},{112,177}}</string>
                 <key>offset</key>
                 <string>{1,-14}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{34,110},{112,177}}</string>
                 <key>sourceSize</key>
@@ -241,7 +241,7 @@
             <key>s_role_run_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{471,627},{140,151}}</string>
+                <string>{{709,736},{140,151}}</string>
                 <key>offset</key>
                 <string>{1,-109}</string>
                 <key>rotated</key>
@@ -254,7 +254,7 @@
             <key>s_role_run_2</key>
             <dict>
                 <key>frame</key>
-                <string>{{293,734},{148,153}}</string>
+                <string>{{676,257},{148,153}}</string>
                 <key>offset</key>
                 <string>{1,-108}</string>
                 <key>rotated</key>
@@ -267,11 +267,11 @@
             <key>s_role_run_3</key>
             <dict>
                 <key>frame</key>
-                <string>{{309,577},{160,155}}</string>
+                <string>{{552,748},{160,155}}</string>
                 <key>offset</key>
                 <string>{1,-107}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{10,214},{160,155}}</string>
                 <key>sourceSize</key>
@@ -280,11 +280,11 @@
             <key>s_role_run_4</key>
             <dict>
                 <key>frame</key>
-                <string>{{613,500},{176,153}}</string>
+                <string>{{411,436},{176,153}}</string>
                 <key>offset</key>
                 <string>{1,-108}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,216},{176,153}}</string>
                 <key>sourceSize</key>
@@ -293,54 +293,54 @@
             <key>s_role_scare_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{356,391},{140,173}}</string>
+                <string>{{566,434},{140,173}}</string>
                 <key>offset</key>
-                <string>{17,-3}</string>
+                <string>{1,-94}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{34,6},{140,173}}</string>
+                <string>{{20,192},{140,173}}</string>
                 <key>sourceSize</key>
-                <string>{174,179}</string>
+                <string>{178,369}</string>
             </dict>
             <key>s_role_scare_2</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,737},{148,175}}</string>
+                <string>{{528,257},{146,175}}</string>
                 <key>offset</key>
-                <string>{13,-2}</string>
+                <string>{-3,-91}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{26,4},{148,175}}</string>
+                <string>{{13,188},{146,175}}</string>
                 <key>sourceSize</key>
-                <string>{174,179}</string>
+                <string>{178,369}</string>
             </dict>
             <key>s_role_scare_3</key>
             <dict>
                 <key>frame</key>
-                <string>{{678,202},{160,173}}</string>
+                <string>{{377,750},{160,173}}</string>
                 <key>offset</key>
-                <string>{7,-3}</string>
+                <string>{-9,-94}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{14,6},{160,173}}</string>
+                <string>{{0,192},{160,173}}</string>
                 <key>sourceSize</key>
-                <string>{174,179}</string>
+                <string>{178,369}</string>
             </dict>
             <key>s_role_scare_4</key>
             <dict>
                 <key>frame</key>
-                <string>{{501,202},{174,175}}</string>
+                <string>{{202,750},{160,173}}</string>
                 <key>offset</key>
-                <string>{0,-2}</string>
+                <string>{-9,-94}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,4},{174,175}}</string>
+                <string>{{0,192},{160,173}}</string>
                 <key>sourceSize</key>
-                <string>{174,179}</string>
+                <string>{178,369}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -350,9 +350,9 @@
             <key>realTextureFileName</key>
             <string>s_role_ani-ipad.pvr.ccz</string>
             <key>size</key>
-            <string>{907,907}</string>
+            <string>{915,915}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:c8766008751bc17e0625cfab8323a8d5$</string>
+            <string>$TexturePacker:SmartUpdate:1da2e0a730d6343b4c38a8c8ae9b63ab$</string>
             <key>textureFileName</key>
             <string>s_role_ani-ipad.pvr.ccz</string>
         </dict>

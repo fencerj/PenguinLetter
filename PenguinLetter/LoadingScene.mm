@@ -44,7 +44,7 @@
 												initWithContentURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"logo" ofType:@"mov"]]];
 		//初始化视频播放器对象，并传入被播放文件的地址
 		moviePlayer.scalingMode =MPMovieScalingModeAspectFit;  //MPMovieScalingModeAspectFill;
-		moviePlayer.endPlaybackTime = 3.5;
+		//moviePlayer.endPlaybackTime = 8;
 		//moviePlayer.movieControlMode = MPMovieControlModeDefault;
 		moviePlayer.movieControlMode = MPMovieControlModeHidden;
 		moviePlayer.useApplicationAudioSession = NO;
@@ -57,7 +57,7 @@
         //CGSize size = [[CCDirector sharedDirector] winSize];
 
         
-        moviePlayer.view.frame = CGRectMake(0, 512-250-100, 1024, 300);
+        moviePlayer.view.frame = CGRectMake(0, 0, 1024, 768);
         //moviePlayer.view.frame = CGRectMake(74, 512-250, 620, 200);
         //moviePlayer.view.center = ccp(size.width/2,size.height/2);
 		[[[CCDirector sharedDirector] openGLView] addSubview:moviePlayer.view];

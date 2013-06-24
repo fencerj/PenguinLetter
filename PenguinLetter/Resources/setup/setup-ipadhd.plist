@@ -4,166 +4,166 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>Bfanhui</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1770,3636},{327,250}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{327,250}}</string>
-                <key>sourceSize</key>
-                <string>{327,250}</string>
-            </dict>
-            <key>Byinxiao</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1441,3690},{327,250}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{327,250}}</string>
-                <key>sourceSize</key>
-                <string>{327,250}</string>
-            </dict>
-            <key>Byinyue</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1441,3438},{327,250}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{327,250}}</string>
-                <key>sourceSize</key>
-                <string>{327,250}</string>
-            </dict>
             <key>fanhui</key>
             <dict>
                 <key>frame</key>
-                <string>{{1112,3636},{327,250}}</string>
+                <string>{{2933,1921},{186,121}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{327,250}}</string>
+                <string>{{0,0},{186,121}}</string>
                 <key>sourceSize</key>
-                <string>{327,250}</string>
+                <string>{186,121}</string>
+            </dict>
+            <key>fanhui1</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3161,1540},{1,1}}</string>
+                <key>offset</key>
+                <string>{-92.5,60}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{1,1}}</string>
+                <key>sourceSize</key>
+                <string>{186,121}</string>
             </dict>
             <key>fanti</key>
             <dict>
                 <key>frame</key>
-                <string>{{1801,3384},{327,250}}</string>
+                <string>{{2741,1751},{190,193}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{327,250}}</string>
+                <string>{{0,0},{190,193}}</string>
                 <key>sourceSize</key>
-                <string>{327,250}</string>
+                <string>{190,193}</string>
             </dict>
             <key>houjing</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,1522},{2048,852}}</string>
+                <string>{{2,2},{2048,1536}}</string>
                 <key>offset</key>
-                <string>{0,342}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{2048,852}}</string>
+                <string>{{0,0},{2048,1536}}</string>
                 <key>sourceSize</key>
                 <string>{2048,1536}</string>
             </dict>
             <key>jianti</key>
             <dict>
                 <key>frame</key>
-                <string>{{1801,3132},{327,250}}</string>
+                <string>{{2955,1714},{194,205}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{327,250}}</string>
+                <string>{{0,0},{194,205}}</string>
                 <key>sourceSize</key>
-                <string>{327,250}</string>
+                <string>{194,205}</string>
             </dict>
             <key>qianjing</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{2048,1518}}</string>
+                <string>{{2,1540},{2048,1520}}</string>
                 <key>offset</key>
-                <string>{0,-9}</string>
+                <string>{0,-8}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,18},{2048,1518}}</string>
+                <string>{{0,16},{2048,1520}}</string>
                 <key>sourceSize</key>
                 <string>{2048,1536}</string>
             </dict>
             <key>shengxiao</key>
             <dict>
                 <key>frame</key>
-                <string>{{1801,2880},{327,250}}</string>
+                <string>{{2741,1946},{178,215}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{327,250}}</string>
+                <string>{{0,0},{178,215}}</string>
                 <key>sourceSize</key>
-                <string>{327,250}</string>
+                <string>{178,215}</string>
+            </dict>
+            <key>shengxiao1</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3158,1540},{1,1}}</string>
+                <key>offset</key>
+                <string>{-88.5,107}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{1,1}}</string>
+                <key>sourceSize</key>
+                <string>{178,215}</string>
             </dict>
             <key>yingwen</key>
             <dict>
                 <key>frame</key>
-                <string>{{1801,2628},{327,250}}</string>
+                <string>{{2955,1540},{198,172}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{327,250}}</string>
+                <string>{{0,0},{198,172}}</string>
                 <key>sourceSize</key>
-                <string>{327,250}</string>
+                <string>{198,172}</string>
             </dict>
             <key>yinxiao</key>
             <dict>
                 <key>frame</key>
-                <string>{{1801,2376},{327,250}}</string>
+                <string>{{2741,1540},{212,209}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{327,250}}</string>
+                <string>{{0,0},{212,209}}</string>
                 <key>sourceSize</key>
-                <string>{327,250}</string>
+                <string>{212,209}</string>
+            </dict>
+            <key>yinxiao1</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3155,1540},{1,1}}</string>
+                <key>offset</key>
+                <string>{-105.5,104}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{1,1}}</string>
+                <key>sourceSize</key>
+                <string>{212,209}</string>
             </dict>
             <key>zhezhao</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2376},{1108,1534}}</string>
+                <string>{{2052,2},{1110,1536}}</string>
                 <key>offset</key>
-                <string>{-470,0}</string>
+                <string>{-469,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,1},{1108,1534}}</string>
+                <string>{{0,0},{1110,1536}}</string>
                 <key>sourceSize</key>
                 <string>{2048,1536}</string>
             </dict>
             <key>zimu</key>
             <dict>
                 <key>frame</key>
-                <string>{{1112,2376},{687,1060}}</string>
+                <string>{{2052,1540},{687,1060}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -181,9 +181,9 @@
             <key>realTextureFileName</key>
             <string>setup-ipadhd.pvr.ccz</string>
             <key>size</key>
-            <string>{2130,3942}</string>
+            <string>{3164,3062}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:6630d74d9ab2fe94d43428cb39f0c669$</string>
+            <string>$TexturePacker:SmartUpdate:ea733871efc0c240be4fa00e1f6cf969$</string>
             <key>textureFileName</key>
             <string>setup-ipadhd.pvr.ccz</string>
         </dict>

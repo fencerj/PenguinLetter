@@ -1,0 +1,158 @@
+role_ani-ipad.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+0_0001_yun1
+  rotate: false
+  xy: 343, 604
+  size: 46, 19
+  orig: 46, 19
+  offset: 0, 0
+  index: -1
+0_0018_p2
+  rotate: false
+  xy: 146, 365
+  size: 152, 157
+  orig: 152, 157
+  offset: 0, 0
+  index: -1
+0_0021_jing1
+  rotate: false
+  xy: 530, 505
+  size: 53, 52
+  orig: 53, 52
+  offset: 0, 0
+  index: -1
+0_0014_shuai5
+  rotate: false
+  xy: 189, 2
+  size: 274, 93
+  orig: 274, 93
+  offset: 0, 0
+  index: -1
+0_0003_tiao7
+  rotate: false
+  xy: 237, 524
+  size: 104, 112
+  orig: 104, 112
+  offset: 0, 0
+  index: -1
+0_0019_p1
+  rotate: false
+  xy: 500, 161
+  size: 142, 153
+  orig: 142, 153
+  offset: 0, 0
+  index: -1
+0_0011_shuai2
+  rotate: false
+  xy: 2, 365
+  size: 142, 192
+  orig: 142, 192
+  offset: 0, 0
+  index: -1
+0_0007_tiao3
+  rotate: false
+  xy: 2, 2
+  size: 185, 205
+  orig: 185, 205
+  offset: 0, 0
+  index: -1
+0_0020_jing2
+  rotate: false
+  xy: 530, 451
+  size: 54, 52
+  orig: 54, 52
+  offset: 0, 0
+  index: -1
+0_0004_tiao6
+  rotate: false
+  xy: 434, 472
+  size: 94, 109
+  orig: 94, 109
+  offset: 0, 0
+  index: -1
+0_0006_tiao4
+  rotate: false
+  xy: 146, 524
+  size: 89, 127
+  orig: 89, 127
+  offset: 0, 0
+  index: -1
+0_0010_shuai1
+  rotate: false
+  xy: 370, 192
+  size: 128, 157
+  orig: 128, 157
+  offset: 0, 0
+  index: -1
+0_0002_shitou
+  rotate: false
+  xy: 434, 583
+  size: 74, 68
+  orig: 74, 68
+  offset: 0, 0
+  index: -1
+0_0000_yun2
+  rotate: false
+  xy: 586, 451
+  size: 45, 19
+  orig: 45, 19
+  offset: 0, 0
+  index: -1
+0_0012_shuai3
+  rotate: false
+  xy: 300, 351
+  size: 210, 119
+  orig: 210, 119
+  offset: 0, 0
+  index: -1
+0_0005_tiao5
+  rotate: false
+  xy: 343, 472
+  size: 89, 130
+  orig: 89, 130
+  offset: 0, 0
+  index: -1
+0_0015_shuai6
+  rotate: false
+  xy: 2, 559
+  size: 125, 91
+  orig: 125, 91
+  offset: 0, 0
+  index: -1
+0_0009_tiao1
+  rotate: false
+  xy: 512, 316
+  size: 132, 133
+  orig: 132, 133
+  offset: 0, 0
+  index: -1
+0_0013_shuai4
+  rotate: false
+  xy: 189, 97
+  size: 265, 93
+  orig: 265, 93
+  offset: 0, 0
+  index: -1
+0_0016_p4
+  rotate: false
+  xy: 189, 192
+  size: 179, 156
+  orig: 179, 156
+  offset: 0, 0
+  index: -1
+0_0008_tiao2
+  rotate: false
+  xy: 2, 209
+  size: 185, 154
+  orig: 185, 154
+  offset: 0, 0
+  index: -1
+0_0017_p3
+  rotate: false
+  xy: 465, 2
+  size: 164, 157
+  orig: 164, 157
+  offset: 0, 0
+  index: -1

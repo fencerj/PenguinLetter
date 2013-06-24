@@ -40,7 +40,7 @@
 		// position the label on the center of the screen
         //[self waitLoad];
         
-        [self schedule:@selector(waitLoad) interval:4];
+        [self schedule:@selector(waitLoad) interval:3];
         //[self performSelectorOnMainThread:@selector(waitLoad) withObject:nil waitUntilDone:YES];
         
         CCSkeletonAnimation *animationNode = [CCSkeletonAnimation skeletonWithFile:@"loading_ani.json" atlasFile:@"loading_ani.atlas" scale:0.5];

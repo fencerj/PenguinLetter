@@ -4,252 +4,259 @@ filter: Linear,Linear
 repeat: none
 Nst2b
   rotate: false
-  xy: 83, 90
+  xy: 182, 2
   size: 79, 86
   orig: 79, 86
   offset: 0, 0
   index: -1
+boban
+  rotate: false
+  xy: 2, 2
+  size: 97, 105
+  orig: 97, 105
+  offset: 0, 0
+  index: -1
 Zyj1
   rotate: false
-  xy: 183, 227
+  xy: 222, 214
   size: 46, 7
   orig: 46, 7
   offset: 0, 0
   index: -1
 Syy
   rotate: false
-  xy: 228, 163
+  xy: 152, 267
   size: 29, 11
   orig: 29, 11
   offset: 0, 0
   index: -1
 Sm2
   rotate: false
-  xy: 245, 107
+  xy: 263, 36
   size: 14, 8
   orig: 14, 8
   offset: 0, 0
   index: -1
 Nst
   rotate: false
-  xy: 166, 19
+  xy: 166, 90
   size: 79, 86
   orig: 79, 86
   offset: 0, 0
   index: -1
 touying
   rotate: false
-  xy: 166, 2
+  xy: 88, 231
   size: 85, 15
   orig: 85, 15
   offset: 0, 0
   index: -1
 Ss1
   rotate: false
-  xy: 179, 236
+  xy: 243, 193
   size: 17, 18
   orig: 17, 18
   offset: 0, 0
   index: -1
 Zmmz
   rotate: false
-  xy: 141, 193
+  xy: 234, 179
   size: 21, 12
   orig: 21, 12
   offset: 0, 0
   index: -1
 Zyj2
   rotate: false
-  xy: 216, 197
+  xy: 101, 90
   size: 42, 17
   orig: 42, 17
   offset: 0, 0
   index: -1
 Smmy
   rotate: false
-  xy: 219, 236
+  xy: 205, 251
   size: 19, 15
   orig: 19, 15
   offset: 0, 0
   index: -1
 Syuny
   rotate: false
-  xy: 164, 107
+  xy: 88, 197
   size: 79, 32
   orig: 79, 32
   offset: 0, 0
   index: -1
 Syj1
   rotate: false
-  xy: 164, 196
+  xy: 169, 216
   size: 50, 13
   orig: 50, 13
   offset: 0, 0
   index: -1
 Sj
   rotate: false
-  xy: 164, 156
+  xy: 88, 248
   size: 62, 22
   orig: 62, 22
   offset: 0, 0
   index: -1
 Zzuoshou
   rotate: false
-  xy: 163, 216
+  xy: 248, 239
   size: 18, 18
   orig: 18, 18
   offset: 0, 0
   index: -1
 gomhliandan
   rotate: false
-  xy: 164, 141
+  xy: 166, 178
   size: 66, 13
   orig: 66, 13
   offset: 0, 0
   index: -1
 Ss2
   rotate: false
-  xy: 88, 238
+  xy: 222, 193
   size: 19, 19
   orig: 19, 19
   offset: 0, 0
   index: -1
 Zst
   rotate: false
-  xy: 2, 2
+  xy: 2, 109
   size: 81, 86
   orig: 81, 86
   offset: 0, 0
   index: -1
 Sst
   rotate: false
-  xy: 2, 178
+  xy: 2, 197
   size: 84, 81
   orig: 84, 81
   offset: 0, 0
   index: -1
 Zyj3
   rotate: false
-  xy: 88, 201
+  xy: 223, 223
   size: 51, 14
   orig: 51, 14
   offset: 0, 0
   index: -1
 Nstb
   rotate: false
-  xy: 2, 90
+  xy: 101, 2
   size: 79, 86
   orig: 79, 86
   offset: 0, 0
   index: -1
 Smmz
   rotate: false
-  xy: 198, 236
+  xy: 145, 90
   size: 19, 15
   orig: 19, 15
   offset: 0, 0
   index: -1
 Syunz
   rotate: false
-  xy: 88, 178
+  xy: 169, 193
   size: 51, 21
   orig: 51, 21
   offset: 0, 0
   index: -1
 Sbz2
   rotate: false
-  xy: 88, 226
+  xy: 257, 179
   size: 17, 8
   orig: 17, 8
   offset: 0, 0
   index: -1
 Syj2
   rotate: false
-  xy: 109, 238
+  xy: 175, 231
   size: 46, 18
   orig: 46, 18
   offset: 0, 0
   index: -1
 Hyou
   rotate: false
-  xy: 228, 176
+  xy: 247, 143
   size: 22, 19
   orig: 22, 19
   offset: 0, 0
   index: -1
 Zyj4
   rotate: false
-  xy: 164, 180
+  xy: 152, 251
   size: 51, 14
   orig: 51, 14
   offset: 0, 0
   index: -1
 Sbz
   rotate: false
-  xy: 107, 226
+  xy: 255, 259
   size: 17, 8
   orig: 17, 8
   offset: 0, 0
   index: -1
 Zyoushou
   rotate: false
-  xy: 157, 238
+  xy: 226, 239
   size: 20, 18
   orig: 20, 18
   offset: 0, 0
   index: -1
 Zzui
   rotate: false
-  xy: 198, 211
+  xy: 263, 2
   size: 15, 14
   orig: 15, 14
   offset: 0, 0
   index: -1
 Hzuo
   rotate: false
-  xy: 232, 141
+  xy: 247, 121
   size: 22, 20
   orig: 22, 20
   offset: 0, 0
   index: -1
 Syj3
   rotate: false
-  xy: 88, 217
+  xy: 183, 268
   size: 49, 7
   orig: 49, 7
   offset: 0, 0
   index: -1
 Nst2
   rotate: false
-  xy: 85, 2
+  xy: 85, 109
   size: 79, 86
   orig: 79, 86
   offset: 0, 0
   index: -1
 Sm1
   rotate: false
-  xy: 247, 19
+  xy: 263, 18
   size: 12, 16
   orig: 12, 16
   offset: 0, 0
   index: -1
 gantanhao
   rotate: false
-  xy: 141, 207
+  xy: 247, 90
   size: 20, 29
   orig: 20, 29
   offset: 0, 0
   index: -1
 Zmmy
   rotate: false
-  xy: 141, 178
+  xy: 247, 164
   size: 21, 13
   orig: 21, 13
   offset: 0, 0
   index: -1
 hudiejie
   rotate: false
-  xy: 240, 216
+  xy: 234, 259
   size: 19, 14
   orig: 19, 14
   offset: 0, 0

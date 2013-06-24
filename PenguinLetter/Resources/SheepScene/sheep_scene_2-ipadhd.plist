@@ -7,41 +7,41 @@
             <key>Z5SceneBg_0</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,659},{2048,628}}</string>
+                <string>{{0,0},{2048,736}}</string>
                 <key>offset</key>
-                <string>{0,-193}</string>
+                <string>{0,-139}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,647},{2048,628}}</string>
+                <string>{{0,539},{2048,736}}</string>
                 <key>sourceSize</key>
                 <string>{2048,1536}</string>
             </dict>
             <key>Z5SceneBg_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{2048,658}}</string>
+                <string>{{0,1356},{2048,482}}</string>
                 <key>offset</key>
-                <string>{0,-178}</string>
+                <string>{0,-266}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,617},{2048,658}}</string>
+                <string>{{0,793},{2048,482}}</string>
                 <key>sourceSize</key>
                 <string>{2048,1536}</string>
             </dict>
             <key>Z5SceneBg_2</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,1288},{2047,588}}</string>
+                <string>{{0,736},{2048,620}}</string>
                 <key>offset</key>
-                <string>{0,-213}</string>
+                <string>{0,-229}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,687},{2047,588}}</string>
+                <string>{{0,687},{2048,620}}</string>
                 <key>sourceSize</key>
-                <string>{2047,1536}</string>
+                <string>{2048,1536}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -51,9 +51,9 @@
             <key>realTextureFileName</key>
             <string>sheep_scene_2-ipadhd.pvr.ccz</string>
             <key>size</key>
-            <string>{2048,1876}</string>
+            <string>{2048,1838}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:fc0601041eea5292379c4b3422e48e44$</string>
+            <string>$TexturePacker:SmartUpdate:ec262c04b338d9430acad25b542a823e$</string>
             <key>textureFileName</key>
             <string>sheep_scene_2-ipadhd.pvr.ccz</string>
         </dict>

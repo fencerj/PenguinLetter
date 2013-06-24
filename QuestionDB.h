@@ -24,7 +24,7 @@
 -(void)answerIsCorrect:(id)sender;
 -(void)answerIsFault:(id)sender;
 -(void)answerJudgeFinished:(id)sender isCorrect:(BOOL)isCorrect;
--(void)answerJudgeBegin:(id)sender isCorrect:(BOOL)isCorrect;
+-(void)answerJudgeBegin:(id)sender isCorrect:(BOOL)isCorrect EffectId:(int)efid;
 @end
 //NSString *questions[3][10];
 
@@ -58,6 +58,7 @@
 //@property (nonatomic,strong) NSMutableArray *ansItemArr;
 @property (readwrite, nonatomic) NSObject *delegate;
 -(id)initWithDiff:(int)diff Type:(int)type Index:(int)index;
+-(void)correctAnswerAni:(int)effetid Pos:(CGPoint)pos;
 -(void)showQuestion;
 -(void)nextQuestion;
 @end
@@ -73,6 +74,16 @@
 @end
 
 @interface QuestionFF : QuestionLayer
+{
+    int qsIndex;
+    int ansIndex;
+    CCSprite *realQs;
+    CCSprite *realAnswer;
+    NSString *ansStr;
+}
+@end
+
+@interface QuestionOT : QuestionLayer
 {
     int qsIndex;
     int ansIndex;

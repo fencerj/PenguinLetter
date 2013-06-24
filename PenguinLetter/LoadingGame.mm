@@ -23,7 +23,8 @@
 {
     
     if (self = [super init]) {
-        CCSprite *sp = [CCSprite spriteWithFile:@"loading_bg.png"];
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"loadinggame.plist"];
+        CCSprite *sp = [CCSprite spriteWithSpriteFrameName:@"loading_game"];
         sp.anchorPoint = CGPointZero;
         [self addChild:sp];
         _targetSc = targetSc;
@@ -43,12 +44,12 @@
         [self schedule:@selector(waitLoad) interval:4];
         //[self performSelectorOnMainThread:@selector(waitLoad) withObject:nil waitUntilDone:YES];
         
-        CCSkeletonAnimation *animationNode = [CCSkeletonAnimation skeletonWithFile:@"loading_ani.json" atlasFile:@"loading_ani.atlas" scale:0.5];
+        CCSkeletonAnimation *animationNode = [CCSkeletonAnimation skeletonWithFile:@"loadinggame_ani.json" atlasFile:@"loadinggame_ani.atlas" scale:0.5];
         animationNode.timeScale = 1.0f;
         //animationNode.visible = NO;
-        [animationNode setAnimation:@"loading" loop:YES];
+        [animationNode setAnimation:@"yangziyouxiloading" loop:YES];
         // animationNode.anchorPoint = ccp(0,0);
-        animationNode.position = ccp(-70,-150);
+        animationNode.position = ccp(512,384);
         [self addChild:animationNode ];
         //[self performSelector:@selector(waitLoad) withObject:nil afterDelay:5.0f];
     }

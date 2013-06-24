@@ -9,7 +9,6 @@
 #import "Role.h"
 
 #import "GameScene.h"
-
 #pragma mark -
 #pragma mark ShaderBlur
 
@@ -25,7 +24,7 @@
 		blur_ = ccp(1/s.width, 1/s.height);
 		sub_[0] = sub_[1] = sub_[2] = sub_[3] = 0;
         
-		GLchar * fragSource = (GLchar*) [[NSString stringWithContentsOfFile:[[CCFileUtils sharedFileUtils] fullPathForFilenameIgnoringResolutions:@"Shaders/Blur.frag"] encoding:NSUTF8StringEncoding error:nil] UTF8String];      
+		GLchar * fragSource = (GLchar*) [[NSString stringWithContentsOfFile:[[CCFileUtils sharedFileUtils] fullPathForFilenameIgnoringResolutions:@"Blur.frag"] encoding:NSUTF8StringEncoding error:nil] UTF8String];      
         
 		self.shaderProgram = [[CCGLProgram alloc] initWithVertexShaderByteArray:ccPositionTextureColor_vert fragmentShaderByteArray:fragSource];
         
@@ -105,6 +104,8 @@
 
 
 @implementation Role
+
+@synthesize animationNode;
 -(id)initWithFrameName:(NSString*)frameName  // AniCount:(int[4])count
 {
     //    _aniCount[0] = count[0];
@@ -119,63 +120,59 @@
 }
 -(void)initAnimation
 {
-    CCAnimation *anion = [aniCache animationByName:@"role_run"];
     
-    _acRun = [CCAnimate actionWithAnimation:anion];
     
-    anion = [aniCache animationByName:@"role_jump"];
-    _acJump = [CCAnimate actionWithAnimation:anion];
+    self.opacity = 0;
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"s_role_ani.plist"];
     
-    anion = [aniCache animationByName:@"role_scare"];
-    _acScare= [CCAnimate actionWithAnimation:anion];
+    _acRun = @"pao";
+    _acFall = @"shuai";
+    _acScare = @"jing";
+    _acJump = @"tiao";
     
-    anion = [aniCache animationByName:@"role_fall"];
-    _acFall= [CCAnimate actionWithAnimation:anion];
-    [self schedule:@selector(Run) interval:0];
+    NSString *aniFileStr = @"role_ani";
+    animationNode = [CCSkeletonAnimation skeletonWithFile:[NSString stringWithFormat:@"%@.json",aniFileStr] atlasFile:[NSString stringWithFormat:@"%@.atlas",aniFileStr]  scale:0.5];
+    animationNode.timeScale = 1.0f;
+    animationNode.visible = YES;
+    animationNode.position = ccp(self.contentSize.width/2,0);
+    [self addChild:animationNode z:3];
+    
+    [self Run];
     
 }
+
 -(void)Jump
 {
-    [self stopAllActions];
-    [self runAction:[CCSequence actions:_acJump,[CCCallBlock actionWithBlock:^{
-        [self Run];
-        //[self schedule:@selector(Run) interval:_delayTime];
-    }],nil]];
+    [animationNode addAnimation:_acJump loop:NO afterDelay:_delayTime];
 }
 -(void)Run
 {
     [self unschedule:_cmd];
-    CCActionInterval * a = [CCRepeatForever actionWithAction:_acRun];
-    [self runAction:a];
+    [animationNode addAnimation:_acRun loop:YES afterDelay:_delayTime];
 }
 -(void)Scare
 {
-    [self stopAllActions];
-    [self runAction:[CCSequence actions:_acScare,[CCCallBlock actionWithBlock:^{
-        [self Run];
-        //[self schedule:@selector(Run) interval:_delayTime];
-    }],nil]];
+     [animationNode addAnimation:_acScare loop:YES afterDelay:_delayTime];
     
 }
 -(void)Fall
 {
-    [self stopAllActions];
-    [self runAction:[CCSequence actions:_acFall,[CCCallBlock actionWithBlock:^{
-        [self Run];
-        //[self schedule:@selector(Run) interval:_delayTime];
-    }],nil]];
-    
+
+    [animationNode addAnimation:_acFall loop:NO afterDelay:_delayTime];
 }
 -(void)faceGood
 {
     face = [CCSprite spriteWithSpriteFrameName:@"s_role_face_t"];
     [self addChild:face z:1];
-    face.position = ccp(face.contentSize.width*1.5,face.contentSize.height*1.5);
-    [face runAction:[CCSequence actions:[CCFadeIn actionWithDuration:0.2],[CCDelayTime actionWithDuration:0.8],[CCFadeOut actionWithDuration:0.2],nil]];
+    face.position = ccp(face.contentSize.width*1.6,face.contentSize.height*1.6);
+    [face runAction:[CCSequence actions:[CCFadeIn actionWithDuration:0.2],[CCDelayTime actionWithDuration:0.8],[CCFadeOut actionWithDuration:0.2],[CCCallBlock actionWithBlock:^{ [self removeChild:face cleanup:YES];}],nil]];
 }
 -(void)faceBad
 {
-    
+    face = [CCSprite spriteWithSpriteFrameName:@"s_role_face_f"];
+    [self addChild:face z:1];
+    face.position = ccp(face.contentSize.width*1.6,face.contentSize.height*1.6);
+    [face runAction:[CCSequence actions:[CCFadeIn actionWithDuration:0.2],[CCDelayTime actionWithDuration:0.8],[CCFadeOut actionWithDuration:0.2],[CCCallBlock actionWithBlock:^{ [self removeChild:face cleanup:YES];}],nil]];
 }
 -(void)remove
 {
@@ -193,149 +190,14 @@
     _delayTime = time;
     aniCache = [CCAnimationCache sharedAnimationCache];
     _canAction = YES;
+    
+    
+    
     return [self initWithSpriteFrameName:frameName];
     
 }
 -(void)initAnimation
-{
-    CCAnimation *anion = [aniCache animationByName:@"catcher_run"];
-    if (_isBack) {
-        anion = [aniCache animationByName:@"catcher_run_back"];
-    }
-    _acRun = [CCAnimate actionWithAnimation:anion];
-    
-    anion = [aniCache animationByName:@"catcher_jump"];
-    if (_isBack) {
-        anion = [aniCache animationByName:@"catcher_jump_back"];
-    }
-    _acJump = [CCAnimate actionWithAnimation:anion];
-    
-    
-     
-    NSMutableArray *animFrames = [NSMutableArray arrayWithCapacity:10];
-    //speedup0
-    {
-        CCAnimation* animation1;
-        //CCAnimation *animation   = [CCAnimation animation];
-        for (int i = 1; i <4; i ++) {
-            CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_catcher_speedUp0_%d",i]];
-            [animFrames addObject:frame];
-            //[animation addSpriteFrame:frame];
-            animation1.restoreOriginalFrame = NO;
-            animation1.delayPerUnit = 0.1;
-        }
-        animation1 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
-        id a1 = [CCAnimate actionWithAnimation:animation1];
-        id as1 = [CCRepeat actionWithAction:a1 times:12];
-        [animFrames removeAllObjects];
-        
-        CCAnimation *animation2;
-        for (int i = 1; i <4; i ++) {
-            CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"s_catcher_speedUp0_back_%d",i]];
-            [animFrames addObject:frame];
-            animation2.restoreOriginalFrame = NO;
-            animation2.delayPerUnit = 0.1;
-        }
-         animation2 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
-        id a2 = [CCAnimate actionWithAnimation:animation2];
-        id as2 = [CCRepeat actionWithAction:a2 times:12];
-        [animFrames removeAllObjects];
-        
-        if (!_isBack)
-        {
-            acSpeedUp[0] = as1;
-        }
-        else
-        {
-            acSpeedUp[0] = as2;
-        }
-    }
-    //speedup1
-    {
-        
-        CCAnimation* animation1;
-        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_speedUp1_1"]];
-        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_speedUp1_2"]];
-        animation1.restoreOriginalFrame = NO;
-        animation1.delayPerUnit = 0.1;
-        animation1 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
-        [animFrames removeAllObjects];
-        
-        id a1 = [CCAnimate actionWithAnimation:animation1];
-        
-        CCAnimation* animation2;
-        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_speedUp1_3"]];
-        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_speedUp1_4"]];
-        animation2.restoreOriginalFrame = NO;
-        animation2.delayPerUnit = 0.1;
-        animation2 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
-        [animFrames removeAllObjects];
-        id a2 =  [CCAnimate actionWithAnimation:animation2];
-        id as1 = [CCSequence actions:a1,[CCRepeat actionWithAction:a2 times:15], nil];
-        
-        
-         CCAnimation* animation3;
-        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_speedUp1_back_1"]];
-        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_speedUp1_back_2"]];
-        animation3.restoreOriginalFrame = NO;
-        animation3.delayPerUnit = 0.1;
-        animation3 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
-        [animFrames removeAllObjects];
-        id a3 = [CCAnimate actionWithAnimation:animation3];
-        
-        CCAnimation* animation4;
-        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_speedUp1_back_3"]];
-        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"s_catcher_speedUp1_back_4"]];
-        animation4.restoreOriginalFrame = NO;
-        animation4.delayPerUnit = 0.1;
-        animation4 = [CCAnimation animationWithSpriteFrames:animFrames delay:0.1];
-        [animFrames removeAllObjects];
-        
-        
-        //id am = [CCMoveBy actionWithDuration:0 position:ccp(0, 80)];
-        id a4 =  [CCAnimate actionWithAnimation:animation4];
-        id as2 = [CCSequence actions:a3,[CCRepeat actionWithAction:a4 times:15], nil];
-        
-        
-        if (!_isBack)
-        {
-            acSpeedUp[1] = as1;
-        }
-        else {
-            acSpeedUp[1] = as2;
-        }
-        
-    }
-    //acDrop[0] = [CCAnimate action];
-    {
-        CCAnimation *dropA = [aniCache animationByName:@"s_catcher_drop0"];
-        acDrop[0] = [CCAnimate actionWithAnimation:dropA];
-    }
-    {
-        CCAnimation *dropA = [aniCache animationByName:@"s_catcher_drop1"];
-        acDrop[1] = [CCAnimate actionWithAnimation:dropA];
-    }
-    {
-        CCAnimation *dropA = [aniCache animationByName:@"s_catcher_drop2_1"];
-        CCAnimation *dropB = [aniCache animationByName:@"s_catcher_drop2_2"];
-        
-        id a1 = [CCAnimate actionWithAnimation:dropA];
-        id a2 = [CCAnimate actionWithAnimation:dropB];
-        acDrop[2] = [CCSequence actions:a1,a2, nil];
-    }
-    {
-        CCAnimation *dropA = [aniCache animationByName:@"s_catcher_drop3_1"];
-        CCAnimation *dropB = [aniCache animationByName:@"s_catcher_drop3_2"];
-        
-        id a1 = [CCAnimate actionWithAnimation:dropA];
-        id a2 = [CCAnimate actionWithAnimation:dropB];
-        acDrop[3] = [CCSequence actions:a1,a2, nil];
-    }
-    
-    //[aniCache addAnimationsWithFile:@"s_catcher_drop"];
-    
-    
-    [self schedule:@selector(Run) interval:_delayTime];
+{    
 }
 -(void)Jump:(float)delay
 {
@@ -384,19 +246,283 @@
 -(void)speedDown
 {
 }
--(void)drop
+-(void)drop:(int)efid
 {
+    
     _isDrop = YES;
     [self stopAllActions];
-    int a = [GameScene createRandomsizeValueInt:0 toInt:3];
-    [self runAction:[CCSequence actions:acDrop[a],[CCCallBlock actionWithBlock:^{
-        if (a == 1) {
+    
+    [self runAction:[CCSequence actions:acDrop[efid-1],[CCCallBlock actionWithBlock:^{
+        if (efid == 1) {
             [self runAction:[CCMoveBy actionWithDuration:3 position:ccp(0,1000)]];
         }
-        [_delegate CatcherDropDidFinished:self WithType:a];
+        [_delegate CatcherDropDidFinished:self WithType:efid];
     }],nil]];
     
    
+}
+-(void)Fall
+{
+    
+}
+-(void)remove
+{
+    if (_isDrop) {
+        [self removeFromParent];
+    }
+}
+
+-(void)gameOver
+{
+
+    [animationNode addAnimation:_acSpeedUpStr[0] loop:YES afterDelay:_delayTime];
+}
+@end
+
+
+@implementation CatcherSheep
+-(id)initWithFrameName:(NSString*)frameName  Delay:(float)time// AniCount:(int[4])count
+{
+    //    _aniCount[0] = count[0];
+    //    _aniCount[1] = count[1];
+    //    _aniCount[2] = count[2];
+    //    _aniCount[3] = count[3];
+    _delayTime = time;
+    aniCache = [CCAnimationCache sharedAnimationCache];
+    _canAction = YES;
+    
+    return [self initWithSpriteFrameName:frameName];
+    
+}
+-(void)initAnimation
+{
+    self.opacity = 0;
+    if (_isBack) {
+        _acRunStr  = @"Hpa";
+        _acJumpStr = @"Hta";
+        _acDropStr[0] = @"Yjiansud";
+        _acDropStr[1] = @"Yjiansub";
+        _acDropStr[2] = @"Yjiansuc";
+        _acDropStr[3] = @"Yjiansua";
+        
+        _acSpeedUpStr[0] = @"YHjiasua";
+        _acSpeedUpStr[1] = @"YHjiasub";
+    }
+    else
+    {
+        _acRunStr  = @"Qpa";
+        _acJumpStr = @"Qta";
+        _acDropStr[0] = @"Yjiansud";
+        _acDropStr[1] = @"Yjiansub";
+        _acDropStr[2] = @"Yjiansuc";
+        _acDropStr[3] = @"Yjiansua";
+        
+        _acSpeedUpStr[0] = @"YQjiasua";
+        _acSpeedUpStr[1] = @"YQjiasub";
+    }
+    
+    NSString *aniFileStr = @"sheep_ani";
+    animationNode = [CCSkeletonAnimation skeletonWithFile:[NSString stringWithFormat:@"%@.json",aniFileStr] atlasFile:[NSString stringWithFormat:@"%@.atlas",aniFileStr]  scale:0.5];
+    animationNode.timeScale = 1.0f;
+    animationNode.visible = YES;
+    animationNode.position = ccp(self.contentSize.width/2,0);
+    [self addChild:animationNode z:3];
+    [self Run];
+   
+}
+-(void)Jump:(float)delay
+{
+    if (!_canAction) {
+        return;
+    }
+    
+    [self runAction:[CCSequence actions:[CCDelayTime actionWithDuration:_delayTime],[CCCallBlock actionWithBlock:^{
+        [self stopActionByTag:11];
+    }],_acJump,[CCCallBlock actionWithBlock:^{
+        [self Run];
+        _canAction = YES;
+    }],nil]];
+    _canAction = NO;
+    
+    
+    /* [self runAction:[CCSequence actions:_acJump,[CCCallBlock actionWithBlock:^{
+     [self Run];
+     _canAction = YES;
+     //[self schedule:@selector(Run) interval:_delayTime];
+     }],nil]];*/
+    //[self runAction:[CCSequence actionOne:ani two:<#(CCFiniteTimeAction *)#>]]
+    //CCAction * a = [CCRepeatForever actionWithAction:ani];
+}
+-(void)speedUp:(int)a
+{
+    
+    
+    //CCLOG(@"%d",a);
+    
+    float delayTime = 120/30.0f + _delayTime;
+    if (a == 0) {
+        [animationNode addAnimation:_acSpeedUpStr[a] loop:YES afterDelay:_delayTime];
+    }
+    else
+        [animationNode addAnimation:_acSpeedUpStr[a] loop:NO afterDelay:_delayTime];
+    
+    id as = [CCSequence actions: [CCDelayTime actionWithDuration:delayTime],[CCCallBlock actionWithBlock:^{
+        [self Run];
+        [_delegate CatcherAnimationDidFinished:self WithType:a];
+    }],nil];
+    [self runAction:as];
+    //[self setBlurSize:3];
+    
+}
+-(void)Run
+{
+    [self unschedule:_cmd];
+    [animationNode addAnimation:_acRunStr loop:YES afterDelay:_delayTime];
+}
+-(void)speedDown
+{
+}
+-(void)Fall
+{
+    [animationNode addAnimation:@"Yt" loop:NO afterDelay:_delayTime];
+}
+-(void)drop:(int)efid
+{
+    //efid = 3;
+    _isDrop = YES;
+    animationNode.timeScale = 1;
+    [animationNode addAnimation:_acDropStr[efid-1] loop:NO afterDelay:0];
+    [self runAction:[CCSequence actions:[CCDelayTime actionWithDuration:efid!=3 ? 48/30.0f:20/30.0f],[CCCallBlock actionWithBlock:^{
+        //[self Run];
+        [_delegate CatcherDropDidFinished:self WithType:efid];
+    }],nil]];
+    
+}
+-(void)remove
+{
+    if (_isDrop) {
+        [self removeFromParent];
+    }
+}
+@end
+
+@implementation CatcherHorse
+-(id)initWithFrameName:(NSString*)frameName  Delay:(float)time// AniCount:(int[4])count
+{
+    //    _aniCount[0] = count[0];
+    //    _aniCount[1] = count[1];
+    //    _aniCount[2] = count[2];
+    //    _aniCount[3] = count[3];
+    _delayTime = time;
+    aniCache = [CCAnimationCache sharedAnimationCache];
+    _canAction = YES;
+    
+    return [self initWithSpriteFrameName:frameName];
+    
+}
+-(void)initAnimation
+{
+    self.opacity = 0;
+    if (_isBack) {
+        _acRunStr  = @"Hpa";
+        _acJumpStr = @"Hta";
+        _acDropStr[0] = @"Yjiansud";
+        _acDropStr[1] = @"Yjiansub";
+        _acDropStr[2] = @"Yjiansuc";
+        _acDropStr[3] = @"Yjiansua";
+        
+        _acSpeedUpStr[0] = @"YHjiasua";
+        _acSpeedUpStr[1] = @"YHjiasub";
+    }
+    else
+    {
+        _acRunStr  = @"Qpa";
+        _acJumpStr = @"Qta";
+        _acDropStr[0] = @"Yjiansud";
+        _acDropStr[1] = @"Yjiansub";
+        _acDropStr[2] = @"Yjiansuc";
+        _acDropStr[3] = @"Yjiansua";
+        
+        _acSpeedUpStr[0] = @"YQjiasua";
+        _acSpeedUpStr[1] = @"YQjiasub";
+    }
+    
+    NSString *aniFileStr = @"sheep_ani";
+    animationNode = [CCSkeletonAnimation skeletonWithFile:[NSString stringWithFormat:@"%@.json",aniFileStr] atlasFile:[NSString stringWithFormat:@"%@.atlas",aniFileStr]  scale:0.5];
+    animationNode.timeScale = 1.0f;
+    animationNode.visible = YES;
+    animationNode.position = ccp(self.contentSize.width/2,0);
+    [self addChild:animationNode z:3];
+    [self Run];
+    
+}
+-(void)Jump:(float)delay
+{
+    if (!_canAction) {
+        return;
+    }
+    
+    [self runAction:[CCSequence actions:[CCDelayTime actionWithDuration:_delayTime],[CCCallBlock actionWithBlock:^{
+        [self stopActionByTag:11];
+    }],_acJump,[CCCallBlock actionWithBlock:^{
+        [self Run];
+        _canAction = YES;
+    }],nil]];
+    _canAction = NO;
+    
+    
+    /* [self runAction:[CCSequence actions:_acJump,[CCCallBlock actionWithBlock:^{
+     [self Run];
+     _canAction = YES;
+     //[self schedule:@selector(Run) interval:_delayTime];
+     }],nil]];*/
+    //[self runAction:[CCSequence actionOne:ani two:<#(CCFiniteTimeAction *)#>]]
+    //CCAction * a = [CCRepeatForever actionWithAction:ani];
+}
+-(void)speedUp:(int)a
+{
+    
+    
+    //CCLOG(@"%d",a);
+    
+    float delayTime = 120/30.0f + _delayTime;
+    if (a == 0) {
+        [animationNode addAnimation:_acSpeedUpStr[a] loop:YES afterDelay:_delayTime];
+    }
+    else
+        [animationNode addAnimation:_acSpeedUpStr[a] loop:NO afterDelay:_delayTime];
+    
+    id as = [CCSequence actions: [CCDelayTime actionWithDuration:delayTime],[CCCallBlock actionWithBlock:^{
+        [self Run];
+        [_delegate CatcherAnimationDidFinished:self WithType:a];
+    }],nil];
+    [self runAction:as];
+    //[self setBlurSize:3];
+    
+}
+-(void)Run
+{
+    [self unschedule:_cmd];
+    [animationNode addAnimation:_acRunStr loop:YES afterDelay:_delayTime];
+}
+-(void)speedDown
+{
+}
+-(void)Fall
+{
+    [animationNode addAnimation:@"Yt" loop:NO afterDelay:_delayTime];
+}
+-(void)drop:(int)efid
+{
+    //efid = 3;
+    _isDrop = YES;
+    animationNode.timeScale = 1;
+    [animationNode addAnimation:_acDropStr[efid-1] loop:NO afterDelay:0];
+    [self runAction:[CCSequence actions:[CCDelayTime actionWithDuration:efid!=3 ? 48/30.0f:20/30.0f],[CCCallBlock actionWithBlock:^{
+        //[self Run];
+        [_delegate CatcherDropDidFinished:self WithType:efid];
+    }],nil]];
+    
 }
 -(void)remove
 {
