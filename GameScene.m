@@ -947,7 +947,7 @@
     }
     
     int type =[GameScene createRandomsizeValueInt:0 toInt:2];
-    type = 2;
+    //type = 2;
     int index;   
 
     

@@ -218,7 +218,6 @@
 		2CC67CA1173B4E9800A12452 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CC67CA0173B4E9800A12452 /* vec4.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2CC67CA6173B4E9800A12452 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC67CA5173B4E9800A12452 /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2CC67CA9173B4E9800A12452 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC67CA8173B4E9800A12452 /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		2CC67CAC173B4E9900A12452 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC67CAB173B4E9900A12452 /* HelloWorldLayer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2CC67CAF173B4E9900A12452 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC67CAE173B4E9900A12452 /* IntroLayer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2CE259891744CDB000796DBF /* QuestionDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE259881744CDB000796DBF /* QuestionDB.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2CF0536E176353D000DABE5A /* Loading.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2CF0536B176353D000DABE5A /* Loading.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -762,8 +761,6 @@
 		2CC67CA5173B4E9800A12452 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CC67CA7173B4E9800A12452 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2CC67CA8173B4E9800A12452 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2CC67CAA173B4E9800A12452 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		2CC67CAB173B4E9900A12452 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		2CC67CAD173B4E9900A12452 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		2CC67CAE173B4E9900A12452 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		2CE259871744CDB000796DBF /* QuestionDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDB.h; sourceTree = SOURCE_ROOT; };
@@ -1152,8 +1149,6 @@
 				2C64B30C1749C97300EE9A91 /* Role.m */,
 				2CC67CA7173B4E9800A12452 /* AppDelegate.h */,
 				2CC67CA8173B4E9800A12452 /* AppDelegate.m */,
-				2CC67CAA173B4E9800A12452 /* HelloWorldLayer.h */,
-				2CC67CAB173B4E9900A12452 /* HelloWorldLayer.m */,
 				2CC67CAD173B4E9900A12452 /* IntroLayer.h */,
 				2CC67CAE173B4E9900A12452 /* IntroLayer.m */,
 				2CC67B1A173B4E9600A12452 /* Resources */,
@@ -2175,7 +2170,6 @@
 				2CC67CA1173B4E9800A12452 /* vec4.c in Sources */,
 				2CC67CA6173B4E9800A12452 /* main.m in Sources */,
 				2CC67CA9173B4E9800A12452 /* AppDelegate.m in Sources */,
-				2CC67CAC173B4E9900A12452 /* HelloWorldLayer.m in Sources */,
 				2CC67CAF173B4E9900A12452 /* IntroLayer.m in Sources */,
 				2C1D55071740EA26006A31A6 /* GameScene.m in Sources */,
 				2CE259891744CDB000796DBF /* QuestionDB.m in Sources */,

@@ -93,8 +93,13 @@
             item1.position = ccp(512,384);
             
             CCMenuItemSprite *item2 = [CCMenuItemSprite itemWithNormalSprite:[CCSprite spriteWithSpriteFrameName:@"game_sheep1"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"game_sheep1"]  block:^(id sender){
+                if (isTouched) {
+                    return ;
+                }
+                isTouched = YES;
                 [animationNode setAnimation:@"jiaqvyang" loop:YES];
                 [animationNode runAction:[CCSequence actions:[CCMoveTo actionWithDuration:2.5 position:ccp(203,162)],[CCCallBlock actionWithBlock:^{
+
                     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[LoadingGame initWithTargetScene:@"GameScene"]]];
                 }],nil]];
             }];

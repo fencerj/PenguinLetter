@@ -52,12 +52,12 @@
 	if(director.runningScene == nil) {
 		// Add the first scene to the stack. The director will draw it immediately into the framebuffer. (Animation is started automatically when the view is displayed.)
 		// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-		[director runWithScene: [GameScene scene]];
+		//[director runWithScene: [GameScene scene]];
         //[director runWithScene: [Map scene]];
         //[director runWithScene: [GameOverScene sceneWin:10]];
          //[director runWithScene: [GameOverScene sceneGameOver:4]];
         //[director runWithScene:[MainMenu scene]];
-        //[director runWithScene: [LoadingScene scene]];
+        [director runWithScene: [LoadingScene scene]];
 	}
 }
 @end

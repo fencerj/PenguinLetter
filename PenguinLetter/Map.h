@@ -23,7 +23,7 @@
 @interface Map : CCLayer {
     CCSkeletonAnimation *animationNode;
     CCSprite  *pic;
-
+    BOOL isTouched;
 }
 +(CCScene *) scene;
 @end

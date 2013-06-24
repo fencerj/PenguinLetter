@@ -171,7 +171,7 @@
     [self addChild:labelCount z:1];
     labelCount.opacity =0;
     
-    labelTime = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%.2f",time] fontName:@"IMPACT.TTF" fontSize:42];
+    labelTime = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%.2fS",time] fontName:@"IMPACT.TTF" fontSize:42];
     labelTime.position = ccp(495.9+20, 452.7);
     [self addChild:labelTime z:1];
     labelTime.opacity =0;
